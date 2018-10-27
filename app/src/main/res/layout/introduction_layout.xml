@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.nstuinfo.SecondActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/md_grey_300">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/introduction_title_card_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="2dp"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardElevation="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginStart="2dp">
+
+                <TextView
+                    android:id="@+id/introduction_title_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/introduction"
+                    android:textColor="@color/md_white_1000"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textAlignment="center"
+                    android:padding="5dp"/>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="3dp"
+                app:cardBackgroundColor="@color/md_white_1000"
+                app:cardElevation="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp">
+
+                <TextView
+                    android:id="@+id/introduction_details_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/introduction_details"
+                    android:textColor="@color/md_black_1000"
+                    android:textStyle="normal"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textAlignment="textStart"
+                    android:layout_gravity="start"
+                    android:padding="5dp"/>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="3dp"
+                app:cardBackgroundColor="@color/md_white_1000"
+                app:cardElevation="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp">
+
+                <TextView
+                    android:id="@+id/introduction_info_1_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/introduction_info_1"
+                    android:textColor="@color/md_black_1000"
+                    android:textStyle="normal"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textAlignment="textStart"
+                    android:layout_gravity="start"
+                    android:padding="5dp"/>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="3dp"
+                app:cardBackgroundColor="@color/md_white_1000"
+                app:cardElevation="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp">
+
+                <TextView
+                    android:id="@+id/introduction_info_2_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/introduction_info_2"
+                    android:textColor="@color/md_black_1000"
+                    android:textStyle="normal"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textAlignment="textStart"
+                    android:layout_gravity="start"
+                    android:padding="5dp"/>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="3dp"
+                app:cardBackgroundColor="@color/md_white_1000"
+                app:cardElevation="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:id="@+id/introduction_info_3_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/introduction_info_3"
+                    android:textColor="@color/md_black_1000"
+                    android:textStyle="normal"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textAlignment="textStart"
+                    android:layout_gravity="start"
+                    android:padding="5dp"/>
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

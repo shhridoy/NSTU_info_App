@@ -1,0 +1,741 @@
+<resources>
+    <string name="app_name">NSTUinfo</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_second">SecondActivity</string>
+
+
+    <!-- INTRODUCTION -->
+
+    <string name="introduction">Introduction</string>
+    <string name="introduction_details">
+        The natural setting along with its human habitations of the Southern regions of Bangladesh has been endowed with the vast and immense potentials that can fully be harnessed only through creation of a band of skilled manpower equipped with the latest knowledge of science and technology. In the beginning of its age and expending its activities to spread the light of modern education of Science and Technology and practising wisdom in every field of knowledge\n\n
+        <b>Noakhali Science and Technology University</b> was established with immense hope for maintaining the high quality education. Since its establishment, it is running without any session jam and student politics. This University family is fully determined to gain its ultimate goal of success. Here are all details about the university.
+    </string>
+
+    <string name="introduction_info_1">
+        <b>Vice Chancellor</b>\n
+        Prof. Dr. M Wahiduzzaman\n
+        Telephone: <a href="tel:+880-321-62833">+880-321-62833</a>, <a href="tel:62733">62733</a>, <a href="tel:62655">62655</a>\n
+        Mobile: <a href="tel:01730042888">01730042888</a>\n
+        Email: <a href="mailto:mdwahid@yahoo.com">mdwahid@yahoo.com</a>
+    </string>
+
+    <string name="introduction_info_2">
+        <b>Pro Vice Chancellor</b>\n
+        DR. MD. ABUL HOSSAIN\n
+        Phone: <a href="tel:+88032171484">+88032171484</a>\n
+        Mobile: <a href="tel:01713012916">01713012916</a>\n
+        Fax: <a href="tel:+88032162788">+88032162788</a>
+    </string>
+
+    <string name="introduction_info_3">
+
+        <u><b>Establishment:</b></u>\n
+        <b>Bill Passed at:</b> 15th July, 2001\n
+        <b>Bill Effective at:</b> 25th August, 2003\n
+        <b>Academic program started from:</b> 22nd June, 2006\n
+        <b>Location:</b> 8 Kilometer south from Noakhali Town, and at the west side of Sonapur-SubornoChar road.\n
+        <b>Area:</b> 101 Acres.\n
+        <b>Faculty:</b> 3\n
+        <ul>
+            <li>Faculty of Science</li>\n
+            <li>Faculty of Engineering &amp; Technology</li>\n
+            <li>Faculty of Social Science &amp; Business Administration</li>
+        </ul>
+        \n\n
+
+        <u><b>Departments:</b></u>\n
+        01. Computer Science and Telecommunication Engineering (CSTE) (<a href="http://cste.nstu.edu.bd/">cste.nstu.edu.bd</a>) \n
+        02. Fisheries and Marine Science (FIMS) (<a href="http://www.fims-nstu.org">www.fims-nstu.org</a>)\n
+        03. Pharmacy \n
+        04. Applied Chemistry &amp; Chemical Engineering (ACCE)\n
+        05. Microbiology\n
+        06. Applied Mathematics(A. MTH)\n
+        07. English\n
+        08. Food Technology and Nutrition Science(FTNS)\n
+        09. Environmental Science and Disaster Management (ESDM)\n
+        10. Business Administration(BA)\n
+        11. Information and Communication Engineering (ICE)\n
+        12. Biotechnology and Genetic Engineering(BGE)\n
+        13. Department of Economics\n
+        14. Agriculture\n
+        15. Department of Statistics\n
+        16. Department of Electrical and Electronic Engineering\n
+        17. Department of Bangladesh and Liberation War Studies\n
+
+        \n
+        <u><b>Institutes:</b></u>\n
+        01. Institute of Information Science (IIS)\n
+        02. Institute of Information Technology (IIT)\n
+        \n
+        
+        <b>Medium:</b> English\n
+        <b>Students: </b>4700\n
+        <b>Teachers:</b> 162\n
+        <b>Officers:</b> 76\n
+        <b>Staffs: </b>154\n
+        <b>Academic Buildings: </b>2\n
+        <b>Administrative Building(s):</b> 1\n
+        <b><u>Halls</u>: </b>2\n
+        1. Vasha Shaheed Abdus Salam Hall\n
+        2. Hajrat Bibi Khadija Hall\n
+        3. Abdul Malek Hall\n
+        4. Bangabandhu Sheikh Mujibur Rahman Hall(in construct)\n
+        5. Sheikh Fazilatunnesa  Hall (in construct)\n
+        
+        \n
+        <b>Dormitory:</b> 2 (Teachers Dormatory &amp; Staffs Dormatory)\n
+        <b>Apartment:</b> 1\n
+        \n
+
+        <b>Others : </b>Great Freedom Fighter Hazi Mohammad Edris
+        Auditorium, BongoBondu Mural, Shaheed Minar, Liberation Sculpture, TSC Building, Central Mosque, VIP Guest House, Canteen Shed, Ansar Shed.\n
+        <b>Central Library: </b>9067 books, 428 journal. Ebooks 5 lakh\n
+        <b>Official website:</b> <a href="http://www.nstu.edu.bd">www.nstu.edu.bd</a>\n
+        <b>Email:</b> <a href="mailto:info@nstu.edu.bd">info@nstu.edu.bd</a>
+
+    </string>
+
+
+    <!-- REGENT BOARD -->
+
+    <string name="regent_chairman_title">Chairman</string>
+
+    <string name="regent_chairman_details">
+        <b>Vice Chancellor</b>\n
+        Telephone: <a href="tel:+880-321-62833">+880-321-62833</a>, <a href="tel:62733">62733</a>, <a href="tel:62655">62655</a>
+    </string>
+
+    <string name="regent_member_title">Members</string>
+
+    <string name="regent_member_1">
+        <b>Pro Vice Chancellor</b>\n
+        DR. MD. ABUL HOSSAIN\n
+        Phone: <a href="tel:+88032171484">+88032171484</a>\n
+        Mobile: <a href="tel:01713012916">01713012916</a>\n
+        Fax: <a href="tel:+88032162788">+88032162788</a>\n
+    </string>
+
+    <string name="regent_member_hint_1">
+        <ul><li>Two parliamentary members nominated by parliament leader, one of them should be from greater Noakhali region:</li></ul>
+    </string>
+
+    <string name="regent_member_2">
+        <b>Mr. Mohammed Ekramul Karim Chowdhury</b>\n
+        MP Noakhali-4, Noakhali.\n
+        Mobile: <a href="tel:01713210140">01713210140</a>
+    </string>
+
+    <string name="regent_member_3">
+        <b>Mr. A.B.M Fazle Karim Chowdhury</b>\n
+        MP Chittagong-6, Chittagong\n
+        Mobile: <a href="tel:01726000480">01726000480</a>
+    </string>
+
+    <string name="regent_member_hint_2">
+        <ul><li>Two members of joint-secretary rank nominated by the government.</li></ul>
+    </string>
+
+    <string name="regent_member_4">
+        <b>Additional Secretary (Development) Ministry of Education</b>,\n
+        The People\'s Republic of Bangladesh Government Bangladesh Secretariat,\n
+        Dhaka-1000.\n
+        Telephone: <a href="tel:+88029556789">+880-2-9556789</a>
+    </string>
+
+    <string name="regent_member_5">
+        <b>Additional Secretary (University) Ministry of Education</b>,\n
+            The People\'s Republic of Bangladesh Government Bangladesh Secretariat,\n
+            Dhaka-1000.\n
+            Telephone: <a href="tel:+88029512282">+880-2-9512282</a>
+    </string>
+
+    <string name="regent_member_hint_3">
+        <ul><li>Three members from the research institute of Science and Technology Affairs nominated by the government.</li></ul>
+    </string>
+
+    <string name="regent_member_6">
+        <b>Md. Nazrul Islam</b>\n
+        Chairman,\n
+        BCSIR.\n
+        Dr. Qudrat-E-Khuda road,\n
+        Dhanmondi, Dhaka-1205.\n
+        Mobile: <a href="tel:01199375278">01199375278</a>
+    </string>
+
+    <string name="regent_member_7">
+        <b>Nurul Islam Nazem</b>\n
+        Professor, Department of Geography and Environment\n
+        University of Dhaka.\n
+        Phone: <a href="tel:01819234025">01819234025</a>
+    </string>
+
+    <string name="regent_member_8">
+        <b>Dr. Shirin Akter</b>\n
+        Director\n
+        Atomic Energy Centre, Dhaka\n
+        Phone: <a href="tel:01715882330">01715882330</a>
+    </string>
+
+    <string name="regent_member_hint_4">
+        <ul><li>Three prominent educationist nominated by the Chancellor.</li></ul>
+    </string>
+
+    <string name="regent_member_9">
+        <b>Prof. Dr. Shariff Enamul Kabir</b>\n
+            Department of Chemistry,\n
+            Jahangirnagar University Savar, Dhaka.\n
+            Phone: <a href="tel:01713464698">01713464698</a>
+    </string>
+
+    <string name="regent_member_10">
+        <b>Dr. Md. Anwar Hossain</b>\n
+        Microbiology Department\n
+        University of Dhaka.\n
+        Mobile: <a href="tel:01715363753">01715363753</a>
+    </string>
+
+    <string name="regent_member_11">
+        <b>Md. Alamgir Kabir</b>\n
+        Vice Chancellor.\n
+        KUET.\n
+        Phone: <a href="tel:01711884044">01711884044</a>
+    </string>
+
+    <string name="regent_member_12">
+        <b>Chairman</b>\n
+        Intermediate and Secondary Education Boards,\n
+        Chittagong,\n
+        Bangladesh Chairman Intermediate and Secondary Education Board.\n
+        Chittagong.\n
+        Phone: <a href="tel:0312553144">031-2553144</a>\n
+        Phone: <a href="tel:01711723224">01711723224</a>
+    </string>
+
+    <string name="regent_member_hint_5">
+        <ul><li>Three representatives from the teachers of this university nominated by the academic council.</li></ul>
+    </string>
+
+    <string name="regent_member_13">
+        <b>Dr. Md. Jahangir Sarkar</b>\n
+        Associate Professor\n
+        Department of Fisheries and Marine Science\n
+        Mobile: <a href="tel:01733910237">01733910237</a>
+    </string>
+
+    <string name="regent_member_14">
+        <b>Dr. Muhammed Yousuf Miah</b>\n
+        Associate Professor\n
+        Applied Chemistry &amp; Chemical Engineering\n
+        Mobile: <a href='tel:01742710338'>01742710338</a>\n
+        Email: <a href="mailto:yan19742003@yahoo.com">yan19742003@yahoo.com</a>
+    </string>
+
+    <string name="regent_member_15">
+        <b>Muhammad Mushfiqur Rahman</b>\n
+        Assistant Professor\n
+        Dept of English\n
+        Phone: <a href="tel:01818085418">01818085418</a>\n
+        Email: <a href="mailto:mmrs1981@yahoo.com">mmrs1981@yahoo.com</a>
+    </string>
+
+
+    <!-- ACADEMIC COUNCIL -->
+
+    <string name="academic_council_chairman_title">Chairman</string>
+
+    <string name="academic_council_chairman_details">
+        <b>Vice Chancellor</b>\n
+        Telephone: <a href="tel:+880-321-62833">+880-321-62833</a>, <a href="tel:62733">62733</a>, <a href="tel:62655">62655</a>
+    </string>
+
+    <string name="academic_council_member_title">Members</string>
+
+    <string name="ac_hint_1">
+        <ul><li>Chairman of the departments</li></ul>
+    </string>
+
+    <string name="ac_member_1">
+        Pro Vice Chancellor\n
+        Dean of the Faculty\n
+        Dean, Science Faculty.
+    </string>
+
+    <string name="ac_member_2">
+        <b>Chairman</b>\n
+        Computer Science and Telecommunication Engineering (CSTE)
+    </string>
+
+    <string name="ac_member_3">
+        <b>Chairman</b>\n
+        Fisheries and Marine Science (FIMS)
+    </string>
+
+    <string name="ac_member_4">
+        <b>Chairman</b>\n
+        Pharmacy
+    </string>
+
+    <string name="ac_member_5">
+        <b>Chairman</b>\n
+        Applied Chemistry &amp; Chemical Engineering (ACCE)
+    </string>
+
+    <string name="ac_member_6">
+        <b>Chairman</b>\n
+        Microbiology
+    </string>
+
+    <string name="ac_member_7">
+        <b>Chairman</b>
+        Applied Mathematics
+    </string>
+
+    <string name="ac_member_8">
+        <b>Chairman</b>\n
+        English
+    </string>
+
+    <string name="ac_member_9">
+        <b>Chairman</b>\n
+        Food Technology and Nutrition Science(FTNS)
+    </string>
+
+    <string name="ac_member_10">
+        <b>Chairman</b>\n
+        Environmental Science and Disaster Management (ESDM)
+    </string>
+
+    <string name="ac_member_11">
+        <b>Chairman</b>\n
+        Business Administration(BA)
+    </string>
+
+    <string name="ac_member_12">
+        <b>Chairman</b>\n
+        Information and Communication Engineering (ICE)
+    </string>
+
+    <string name="ac_member_13">
+        <b>Chairman</b>\n         
+        Biotechnology and Genetic Engineering(BGE)
+    </string>
+
+    <string name="ac_member_14">
+        <b>Chairman</b>\n
+        Department of Economics
+    </string>
+
+    <string name="ac_member_15">
+        <b>Chairman</b>\n
+        Agriculture
+    </string>
+
+    <string name="ac_member_16">
+        <b>Chairman</b>\n
+        Department of Statistics
+    </string>
+
+    <string name="ac_member_17">
+        <b>Chairman</b>\n
+        Department of Electrical and Electronic Engineering
+    </string>
+
+    <string name="ac_member_18">
+        <b>Chairman</b>\n
+        Department of Bangladesh and Liberation War Studies
+    </string>
+
+    <string name="ac_member_19">
+        <b>Md Jahangir Hossain</b>\n
+        Librarian\n
+        Phone: <a href="tel:71481">71481</a>\n
+        Mobile: <a href="01716068982">01716068982</a>
+    </string>
+
+    <string name="ac_member_20">
+        <b>Md. Javed Hossain</b>\n
+        Mobile: <a href="tel:01718175139">01718175139</a>\n
+        Email: <a href="mailto:javed.nstu@gmail.com">javed.nstu@gmail.com</a>
+    </string>
+
+    <string name="ac_member_21">
+        <b>Md. Towhidul Islam</b>\n
+        Phone: <a href="tel:01712593494">01712593494</a>\n
+        Email: <a href="mailto:towhid.du@yahoo.com">towhid.du@yahoo.com</a>
+    </string>
+
+    <string name="ac_member_22">
+        <b>Professor Dr. M Kamruzzaman</b>
+        Department of Agricultural Economics
+        Bangabandhu Sheikh Mujibur Rahman Agricultural University
+        Gazipur
+        Mobile: <a href="tel:01912980044">01912980044</a>
+    </string>
+
+    <string name="ac_member_23">
+        <b>Narayan Saha</b>\n
+        Professor of Forestry and Environmental Science,\n
+        SUST\n
+        Mobile: <a href="tel:01716072440">01716072440</a>
+    </string>
+
+    <string name="ac_member_24">
+        <b>Dr. Abul Hossain</b>\n
+        Chairman, Dept of Social work \n
+        Jagannath University, Dhaka\n
+        Mobile: <a href="tel:01939050966">01939050966</a>
+    </string>
+
+    <string name="ac_member_25">
+        <b>Dr. S. M. Abdur Rahman</b>\n
+        Department of Clinical Pharmacy and Pharmacology\n
+        University of Dhaka\n
+        Phone: <a href="tel:01732477343">01732477343</a>
+    </string>
+
+    <string name="ac_member_26">
+        <b>Md. Nasir Uddin</b>\n
+        Library and Information Science Department\n
+        National University\n
+        Gazipur\n
+        Phone: <a href="tel:01713092792">01713092792</a>
+    </string>
+
+    <string name="ac_member_27">
+        Controller of Examinations(Addtional)\n
+        <b>Vice Chancellors</b>
+    </string>
+
+    <string name="ac_member_28">
+        Registrar\n
+        <b>Professor Md. Mominul Haque</b>\n
+        Phone <a href="tel:62812">62812</a>, <a href="tel:71314">71314</a>\n
+        Mobile: <a href="tel:01720197824">01720197824</a>  
+    </string>
+
+    <!-- COMMITTEES -->
+
+    <string name="com_title_1">
+        Finance Committee
+    </string>
+
+    <string name="com_chairman_title">
+        <b>Chairman</b>
+    </string>
+
+    <string name="com_chairman_details">
+        Vice Chancellor
+    </string>
+
+    <string name="com_members_title">
+        Members
+    </string>
+
+    <string name="com_member_1_1">
+        Dean, Science Faculty.\n
+        Phone: <a href="tel:62823">62823</a>\n
+        Mobile: <a href="tel:0173012916">0173012916</a>
+    </string>
+
+    <string name="com_member_1_2">
+        Registrar\n
+        <b>Professor Md. Mominul Haque</b>\n
+        Phone <a href="tel:62812">62812</a>, <a href="tel:71314">71314</a>\n
+        Mobile: <a href="tel:01720197824">01720197824</a>
+    </string>
+
+    <string name="com_member_1_3">
+        <b>Professor Md. Shah Sufian </b>\n
+        Ex-Principal\n
+        Senbag Govt. College, Noakhali\n
+        Phone: <a href="tel:62336">62336</a>\n
+        Mobile: <a href="tel:01918530083">01918530083</a>
+    </string>
+
+    <string name="com_member_1_4">
+        Director(Finance and accounting)\n
+        <b>Mr. Abdul Jolil</b>\n
+        Phone: <a href="tel:62815">62815</a>\n
+        Mobile: <a href="tel:01720197823">01720197823</a>
+    </string>
+
+    <string name="com_title_2">
+        Planning Development Committee
+    </string>
+
+    <string name="com_member_2_1">
+        Pro Vice Chancellor\n
+        <b>Professor Dr. Md Abul Hossain</b>\n
+        Mobile: <a href="tel:01713012916">01713012916</a>
+    </string>
+
+    <string name="com_member_2_2">
+        Dean, Faculty of Science.
+    </string>
+
+    <string name="com_member_2_3">
+        Dean,Faculty of Engineering &amp; Technology.
+    </string>
+
+    <string name="com_member_2_4">
+        Dean, Faculty of Social Science &amp; Business Administration.
+    </string>
+
+    <string name="com_member_2_5">
+        <b>Mr. Mohammed Ekramul Karim Chowdhury</b>\n
+        MP Noakhali-4, Noakhali.\n
+        Mobile: <a href="tel:01713210140">01713210140</a>
+    </string>
+
+    <string name="com_member_2_6">
+        Registrar\n
+        <b>Professor Md. Mominul Haque</b>\n
+        Phone <a href="tel:62812">62812</a>, <a href="tel:71314">71314</a>\n
+        Mobile: <a href="tel:01720197824">01720197824</a>
+    </string>
+
+    <string name="com_member_2_7">
+        <b>Managing Engineer</b>\n
+        Roads Circle, Roads and Highways Department\n
+        Noakhali - 3000\n
+        Phone: <a href="tel:61092">61092</a>, <a href="tel:61027">61027</a>\n
+        Mobile: <a href="tel:01711882619">01711882619</a>
+    </string>
+
+    <string name="com_member_2_8">
+        <b>Mr. Oli Mahmud</b>\n
+        Architect\n
+        170-171 Elephant Road, B -1,\n
+        Hatirpool Dhaka, BD , 1205\n
+        Phone: <a href="tel:9668945">9668945</a>\n
+        Mobile: <a href="tel:01713047052">01713047052</a>
+    </string>
+
+    <string name="com_member_2_9">
+        <b>Professor Md. Shah Sufian</b>\n
+        Ex-Principal\n
+        Senbag Govt. College, Noakhali\n
+        Phone: <a href="tel:62336">62336</a>\n
+        Mobile: <a href="tel:01918530083">01918530083</a>
+    </string>
+
+    <string name="com_member_2_10">
+        Director(Finance and accounting)\n
+        <b>Mr. Abdul Jolil</b>\n
+        Phone: <a href="tel:62815">62815</a>\n
+        Mobile: <a href="tel:01720197823">01720197823</a>
+    </string>
+
+    <string name="com_member_2_11">
+        <b>A H M Nizam Uddin</b>\n
+        Director\n
+        Phone: <a href="tel:62824">62824</a>\n
+        Mobile: <a href="tel:01720197825">01720197825</a>
+    </string>
+
+    <string name="com_title_3">
+        Library Committee
+    </string>
+
+    <string name="com_member_3_1">
+        Dean, Faculty of Science.
+    </string>
+
+    <string name="com_member_3_2">
+        Dean, Faculty of Engineering &amp; Technology.
+    </string>
+
+    <string name="com_member_3_3">
+        Dean, Faculty of Social Science &amp; Business Administration.
+    </string>
+
+    <string name="com_member_3_4">
+        <b>Chairman</b>\n
+        Agriculture
+    </string>
+
+    <string name="com_member_3_5">
+        <b>Chairman</b>\n
+        Business Administration.\n
+        Mobile: <a href="tel:01719883107">01719883107</a>
+    </string>
+
+    <string name="com_member_3_6">
+        <b>A H M Nizam Uddin</b>\n
+        Director, Planning and development\n
+        Phone: <a href="tel:62824">62824</a>\n
+        Mobile: <a href="tel:01720197825">01720197825</a>
+    </string>
+
+    <string name="com_member_3_7">
+        <b>Dr. Mohammed Humayun Kabir</b>\n
+        Associate Professor\n
+        Dept of CSTE\n
+        Office: <a href="tel:71486">71486</a>, <a href="tel:01814405238">01814405238</a>\n
+        Email: <a href="mailto:hkabir269@gmail.com">hkabir269@gmail.com</a>
+    </string>
+
+    <string name="com_member_3_8">
+        <b>Muhammad Mushfiqur Rahman</b>\n
+        Assistant Professor\n
+        Dept of English\n
+        Phone: <a href="tel:01818085418">01818085418</a>\n
+        Email: <a href="mailto:mmrs1981@yahoo.com">mmrs1981@yahoo.com</a>
+    </string>
+
+    <string name="com_member_3_9">
+        <b>Dr. Mohammad Safiqul Islam</b>\n
+        Associate Professor\n
+        Department of Pharmacy\n
+        Phone: <a href="tel:01727658650">01727658650</a>\n
+        Email: <a href="mailto:research_safiq@yahoo.com">research_safiq@yahoo.com</a>
+    </string>
+
+    <string name="com_member_3_10">
+        <b>Md Jahangir Hossen</b>\n
+        Librarian\nPhone: <a href="tel:71481">71481</a>\n
+        Mobile: <a href="tel:01716068982">01716068982</a>
+    </string>
+
+
+    <!-- CENTRAL LIBRARY -->
+
+    <string name="central_library_intro">
+        Library of NSTU is well furnished containing about 8000 books and around 500 local and foreign journals. Most important feature of this library is online library. Its construction has not been completed yet fully. When it will be started with its full bloom, students as well as other registered people of this university will be able to issue books from the library through online, and also can read the books. It is being developed day by day.
+        \n\nYou can download the Academic booklist in PDF format.
+        \n\n<a href="http://goo.gl/MMhnyU">Download from here</a>
+        \n\nFor any information You can contact with them:
+    </string>
+
+    <string name="central_library_mem_1">
+        Librarian\n
+        <b>Mr Md Jahangir Hossain</b>\n
+        Phone:<a href="tel:+88032171481">+880-321-71481</a>\n
+        Mobile:<a href="tel:01716068982">01716068982</a>\n
+        Email:<a href="mailto:nstulib9@yahoo.com">nstulib9@yahoo.com</a>
+    </string>
+
+    <string name="central_library_mem_2">
+        Assistant Librarian\n
+        <b>Md Salim Mia</b>\n
+        Mobile:<a href="tel:01724571661">01724571661</a>\n
+        Email:<a href="mailto:mdsalimmia5178@gmail.com">mdsalimmia5178@gmail.com</a>
+    </string>
+
+    <string name="central_library_mem_3">
+        Documentation Officer\n
+        <b>Md.  Babor Ali</b>\n
+        Phone: <a href="tel:01722936805">01722-936805</a>\n
+        Email: <a href="mailto:baborali.ru@gmail.com">baborali.ru@gmail.com</a>
+    </string>
+
+    <string name="central_library_mem_4">
+        Section officer\n
+        <b>Mr Mohammad Abdullah Al Mamun</b>\n
+        Mobile:<a href="tel:01720175283">01720175283</a>\n
+        Email:<a href="mailto:nstu_library@yahoo.com">nstu_library@yahoo.com</a>\n
+        <b>Sayed Hossain</b>\n
+        Mobile:<a href="tel:01920664044">01920664044</a>
+    </string>
+
+    <string name="central_library_mem_5">
+        Cataloguer\n
+        <b>Helal Uddin</b>\n
+        Phone: <a href="tel:01723967788">01723967788</a>\n
+        Email: <a href="mailto:helaluddin2928@gmail.com">helaluddin2928@gmail.com</a>
+    </string>
+    <string name="title_activity_home">HomeActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+
+    <!-- INTRODUCTION JSON CONTENT -->
+
+    <!--
+    <string name="intro_content_1">
+        The natural setting along with its human habitations of the Southern regions of Bangladesh has been endowed with the vast and immense potentials that can fully be harnessed only through creation of a band of skilled manpower equipped with the latest knowledge of science and technology. In the beginning of its age and expending its activities to spread the light of modern education of Science and Technology and practising wisdom in every field of knowledge<br /><br /><strong>Noakhali Science and Technology University</strong> was established with immense hope for maintaining the high quality education. Since its establishment, it is running without any session jam and student politics. This University family is fully determined to gain its ultimate goal of success. Here are all details about the university.
+    </string>
+
+    <string name="intro_content_2">
+        <strong>Vice Chancellor</strong><br />
+        Prof. Dr. M Wahiduzzaman<br/>
+        Telephone: <a class='telephone' href='tel:+880-321-62833'>+880-321-62833</a>, <a class='telephone' href='tel:62733'>62733</a>, <a class='telephone' href='tel:62655'>62655</a><br/>
+        Mobile: <a class='telephone' href='tel:01730042888'>01730042888</a><br />
+        Email: <a class='email' href='mailto:mdwahid@yahoo.com'>mdwahid@yahoo.com</a>
+    </string>
+
+    <string name="intro_content_3">
+        <strong>Pro Vice Chancellor</strong><br />
+        DR. MD. ABUL HOSSAIN<br />
+        Phone: <a class='telephone' href='tel:+88032171484'>+88032171484</a><br/>
+        Mobile: <a class='telephone' href='tel:01713012916'>01713012916</a><br/>
+        Fax: <a class='telephone' href='tel:+88032162788'>+88032162788</a>
+    </string>
+
+    <string name="intro_content_4">
+        <p><u><strong>Establishment:</strong> </u><br />
+<strong>Bill Passed at:</strong> 15th July, 2001<br />
+<strong>Bill Effective at:</strong> 25th August, 2003<br />
+<strong>Academic program started from:</strong> 22nd June, 2006<br />
+<strong>Location:</strong> 8 Kilometer south from Noakhali Town, and at the west side of Sonapur-SubornoChar road.<br />
+<strong>Area:</strong> 101 Acres.<br />
+<strong>Faculty:</strong> 3</p>
+
+<ul>
+    <li>Faculty of Science</li>
+	<li>Faculty of Engineering &amp; Technology</li>
+	<li>Faculty of Social Science &amp; Business Administration&nbsp;</li>
+</ul>
+
+<u><strong>Departments:</strong> </u><br />
+01. Computer Science and Telecommunication Engineering (CSTE) (<a href='http://cste.nstu.edu.bd/'>cste.nstu.edu.bd</a>) <br />
+02. Fisheries and Marine Science (FIMS) (<a href='http://www.fims-nstu.org'>www.fims-nstu.org</a>)<br />
+03. Pharmacy <br />
+04. Applied Chemistry &amp; Chemical Engineering (ACCE)<br />
+05. Microbiology<br />
+06. Applied Mathematics(A. MTH)<br />
+07. English<br />
+08. Food Technology and Nutrition Science(FTNS)<br />
+09. Environmental Science and Disaster Management (ESDM)<br />
+10. Business Administration(BA)<br />
+11. Information and Communication Engineering (ICE)<br />
+12. Biotechnology and Genetic Engineering(BGE)<br />
+13. Department of Economics<br />
+14. Agriculture<br />
+15. Department of Statistics<br />
+16. Department of Electrical and Electronic Engineering<br />
+17. Department of Bangladesh and Liberation War Studies<br />
+
+<br />
+<p><u><strong>Institutes:</strong> </u><br />
+01. Institute of Information Science (IIS)<br/>
+02. Institute of Information Technology (IIT)<br/>
+<br/>
+<strong>Medium:</strong> English<br />
+<strong>Students: </strong>4700<br />
+<strong>Teachers:</strong> 162<br />
+<strong>Officers:</strong> 76<br />
+<strong>Staffs: </strong>154<br />
+<strong>Academic Buildings: </strong>2<br />
+<strong>Administrative Building(s):</strong> 1<br />
+<strong><u>Halls</u>: </strong>2<br />
+1. Vasha Shaheed Abdus Salam Hall<br />
+2. Hajrat Bibi Khadija Hall<br />
+3. Abdul Malek Hall<br />
+4. Bangabandhu Sheikh Mujibur Rahman Hall(in construct)<br />
+5. Sheikh Fazilatunnesa  Hall ( in construct)<br />
+
+&nbsp;<br />
+<strong>Dormitory:</strong> 2 (Teachers&#39; Dormatory &amp; Staffs&#39; Dormatory)<br />
+<strong>Apartment:</strong> 1<br />
+&nbsp;<br />
+<strong>Others : </strong>Great Freedom Fighter Hazi Mohammad Edris
+Auditorium, BongoBondu Mural, Shaheed Minar, Liberation Sculpture, TSC Building, Central Mosque, VIP Guest House, Canteen Shed, Ansar Shed.<br />
+<strong>Central Library: </strong>9067 books, 428 journal. Ebooks 5 lakh</p>
+<strong>Official website:</strong> <a href='http://www.nstu.edu.bd'>www.nstu.edu.bd</a><br />
+<strong>Email:</strong> <a class='email' href='mailto:info@nstu.edu.bd'>info@nstu.edu.bd</a>
+    </string> -->
+
+</resources>

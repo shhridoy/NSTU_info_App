@@ -1,0 +1,925 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.nstuinfo.SecondActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/md_grey_300">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="2dp"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardElevation="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginStart="2dp">
+
+                <TextView
+                    android:id="@+id/com_title_1_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/com_title_1"
+                    android:textColor="@color/md_white_1000"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textAlignment="center"
+                    android:padding="5dp"/>
+
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:id="@+id/com_chairman_title_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/com_chairman_title"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:padding="5dp"/>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="3dp"
+                app:cardBackgroundColor="@color/md_white_1000"
+                app:cardElevation="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp">
+
+                <TextView
+                    android:id="@+id/com_chairman_details_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/com_chairman_details"
+                    android:textColor="@color/md_black_1000"
+                    android:textStyle="normal"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textAlignment="textStart"
+                    android:layout_gravity="start"
+                    android:padding="5dp"/>
+
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:id="@+id/com_member_title_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/com_members_title"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:padding="5dp"/>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="3dp"
+                app:cardBackgroundColor="@color/md_white_1000"
+                app:cardElevation="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp">
+
+                <TextView
+                    android:id="@+id/com_member_1_1_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/com_member_1_1"
+                    android:textColor="@color/md_black_1000"
+                    android:textStyle="normal"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textAlignment="textStart"
+                    android:layout_gravity="start"
+                    android:padding="5dp"/>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="3dp"
+                app:cardBackgroundColor="@color/md_white_1000"
+                app:cardElevation="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp">
+
+                <TextView
+                    android:id="@+id/com_member_1_2_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/com_member_1_2"
+                    android:textColor="@color/md_black_1000"
+                    android:textStyle="normal"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textAlignment="textStart"
+                    android:layout_gravity="start"
+                    android:padding="5dp"/>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="3dp"
+                app:cardBackgroundColor="@color/md_white_1000"
+                app:cardElevation="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="0dp">
+
+                <TextView
+                    android:id="@+id/com_member_1_3_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/com_member_1_3"
+                    android:textColor="@color/md_black_1000"
+                    android:textStyle="normal"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textAlignment="textStart"
+                    android:layout_gravity="start"
+                    android:padding="5dp"/>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="3dp"
+                app:cardBackgroundColor="@color/md_white_1000"
+                app:cardElevation="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="0dp">
+
+                <TextView
+                    android:id="@+id/com_member_1_4_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/com_member_1_4"
+                    android:textColor="@color/md_black_1000"
+                    android:textStyle="normal"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textAlignment="textStart"
+                    android:layout_gravity="start"
+                    android:padding="5dp"/>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="2dp"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardElevation="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginStart="2dp">
+
+                <TextView
+                    android:id="@+id/com_title_2_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/com_title_2"
+                    android:textColor="@color/md_white_1000"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textAlignment="center"
+                    android:padding="5dp"/>
+
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:id="@+id/com_chairman_title_2_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/com_chairman_title"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:padding="5dp"/>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="3dp"
+                app:cardBackgroundColor="@color/md_white_1000"
+                app:cardElevation="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp">
+
+                <TextView
+                    android:id="@+id/com_chairman_details_2_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/com_chairman_details"
+                    android:textColor="@color/md_black_1000"
+                    android:textStyle="normal"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textAlignment="textStart"
+                    android:layout_gravity="start"
+                    android:padding="5dp"/>
+
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:id="@+id/com_member_title_2_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/com_members_title"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:padding="5dp"/>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="3dp"
+                app:cardBackgroundColor="@color/md_white_1000"
+                app:cardElevation="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="0dp">
+
+                <TextView
+                    android:id="@+id/com_member_2_1_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/com_member_2_1"
+                    android:textColor="@color/md_black_1000"
+                    android:textStyle="normal"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textAlignment="textStart"
+                    android:layout_gravity="start"
+                    android:padding="5dp"/>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="3dp"
+                app:cardBackgroundColor="@color/md_white_1000"
+                app:cardElevation="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="0dp">
+
+                <TextView
+                    android:id="@+id/com_member_2_2_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/com_member_2_2"
+                    android:textColor="@color/md_black_1000"
+                    android:textStyle="normal"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textAlignment="textStart"
+                    android:layout_gravity="start"
+                    android:padding="5dp"/>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="3dp"
+                app:cardBackgroundColor="@color/md_white_1000"
+                app:cardElevation="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="0dp">
+
+                <TextView
+                    android:id="@+id/com_member_2_3_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/com_member_2_3"
+                    android:textColor="@color/md_black_1000"
+                    android:textStyle="normal"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textAlignment="textStart"
+                    android:layout_gravity="start"
+                    android:padding="5dp"/>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="3dp"
+                app:cardBackgroundColor="@color/md_white_1000"
+                app:cardElevation="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="0dp">
+
+                <TextView
+                    android:id="@+id/com_member_2_4_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/com_member_2_4"
+                    android:textColor="@color/md_black_1000"
+                    android:textStyle="normal"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textAlignment="textStart"
+                    android:layout_gravity="start"
+                    android:padding="5dp"/>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="3dp"
+                app:cardBackgroundColor="@color/md_white_1000"
+                app:cardElevation="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="0dp">
+
+                <TextView
+                    android:id="@+id/com_member_2_5_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/com_member_2_5"
+                    android:textColor="@color/md_black_1000"
+                    android:textStyle="normal"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textAlignment="textStart"
+                    android:layout_gravity="start"
+                    android:padding="5dp"/>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="3dp"
+                app:cardBackgroundColor="@color/md_white_1000"
+                app:cardElevation="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="0dp">
+
+                <TextView
+                    android:id="@+id/com_member_2_6_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/com_member_2_6"
+                    android:textColor="@color/md_black_1000"
+                    android:textStyle="normal"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textAlignment="textStart"
+                    android:layout_gravity="start"
+                    android:padding="5dp"/>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="3dp"
+                app:cardBackgroundColor="@color/md_white_1000"
+                app:cardElevation="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="0dp">
+
+                <TextView
+                    android:id="@+id/com_member_2_7_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/com_member_2_7"
+                    android:textColor="@color/md_black_1000"
+                    android:textStyle="normal"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textAlignment="textStart"
+                    android:layout_gravity="start"
+                    android:padding="5dp"/>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="3dp"
+                app:cardBackgroundColor="@color/md_white_1000"
+                app:cardElevation="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="0dp">
+
+                <TextView
+                    android:id="@+id/com_member_2_8_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/com_member_2_8"
+                    android:textColor="@color/md_black_1000"
+                    android:textStyle="normal"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textAlignment="textStart"
+                    android:layout_gravity="start"
+                    android:padding="5dp"/>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="3dp"
+                app:cardBackgroundColor="@color/md_white_1000"
+                app:cardElevation="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="0dp">
+
+                <TextView
+                    android:id="@+id/com_member_2_9_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/com_member_2_9"
+                    android:textColor="@color/md_black_1000"
+                    android:textStyle="normal"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textAlignment="textStart"
+                    android:layout_gravity="start"
+                    android:padding="5dp"/>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="3dp"
+                app:cardBackgroundColor="@color/md_white_1000"
+                app:cardElevation="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="0dp">
+
+                <TextView
+                    android:id="@+id/com_member_2_10_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/com_member_2_10"
+                    android:textColor="@color/md_black_1000"
+                    android:textStyle="normal"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textAlignment="textStart"
+                    android:layout_gravity="start"
+                    android:padding="5dp"/>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="3dp"
+                app:cardBackgroundColor="@color/md_white_1000"
+                app:cardElevation="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="0dp">
+
+                <TextView
+                    android:id="@+id/com_member_2_11_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/com_member_2_11"
+                    android:textColor="@color/md_black_1000"
+                    android:textStyle="normal"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textAlignment="textStart"
+                    android:layout_gravity="start"
+                    android:padding="5dp"/>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="2dp"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardElevation="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginStart="2dp">
+
+                <TextView
+                    android:id="@+id/com_title_3_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/com_title_3"
+                    android:textColor="@color/md_white_1000"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textAlignment="center"
+                    android:padding="5dp"/>
+
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:id="@+id/com_chairman_title_3_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/com_chairman_title"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:padding="5dp"/>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="3dp"
+                app:cardBackgroundColor="@color/md_white_1000"
+                app:cardElevation="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp">
+
+                <TextView
+                    android:id="@+id/com_chairman_details_3_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/com_chairman_details"
+                    android:textColor="@color/md_black_1000"
+                    android:textStyle="normal"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textAlignment="textStart"
+                    android:layout_gravity="start"
+                    android:padding="5dp"/>
+
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:id="@+id/com_member_title_3_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/com_members_title"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:padding="5dp"/>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="3dp"
+                app:cardBackgroundColor="@color/md_white_1000"
+                app:cardElevation="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="0dp">
+
+                <TextView
+                    android:id="@+id/com_member_3_1_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/com_member_3_1"
+                    android:textColor="@color/md_black_1000"
+                    android:textStyle="normal"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textAlignment="textStart"
+                    android:layout_gravity="start"
+                    android:padding="5dp"/>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="3dp"
+                app:cardBackgroundColor="@color/md_white_1000"
+                app:cardElevation="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="0dp">
+
+                <TextView
+                    android:id="@+id/com_member_3_2_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/com_member_3_2"
+                    android:textColor="@color/md_black_1000"
+                    android:textStyle="normal"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textAlignment="textStart"
+                    android:layout_gravity="start"
+                    android:padding="5dp"/>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="3dp"
+                app:cardBackgroundColor="@color/md_white_1000"
+                app:cardElevation="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="0dp">
+
+                <TextView
+                    android:id="@+id/com_member_3_3_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/com_member_3_3"
+                    android:textColor="@color/md_black_1000"
+                    android:textStyle="normal"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textAlignment="textStart"
+                    android:layout_gravity="start"
+                    android:padding="5dp"/>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="3dp"
+                app:cardBackgroundColor="@color/md_white_1000"
+                app:cardElevation="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="0dp">
+
+                <TextView
+                    android:id="@+id/ac_member_3_4_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/com_member_3_4"
+                    android:textColor="@color/md_black_1000"
+                    android:textStyle="normal"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textAlignment="textStart"
+                    android:layout_gravity="start"
+                    android:padding="5dp"/>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="3dp"
+                app:cardBackgroundColor="@color/md_white_1000"
+                app:cardElevation="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="0dp">
+
+                <TextView
+                    android:id="@+id/com_member_3_5_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/com_member_3_5"
+                    android:textColor="@color/md_black_1000"
+                    android:textStyle="normal"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textAlignment="textStart"
+                    android:layout_gravity="start"
+                    android:padding="5dp"/>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="3dp"
+                app:cardBackgroundColor="@color/md_white_1000"
+                app:cardElevation="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="0dp">
+
+                <TextView
+                    android:id="@+id/com_member_3_6_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/com_member_3_6"
+                    android:textColor="@color/md_black_1000"
+                    android:textStyle="normal"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textAlignment="textStart"
+                    android:layout_gravity="start"
+                    android:padding="5dp"/>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="3dp"
+                app:cardBackgroundColor="@color/md_white_1000"
+                app:cardElevation="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="0dp">
+
+                <TextView
+                    android:id="@+id/com_member_3_7_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/com_member_3_7"
+                    android:textColor="@color/md_black_1000"
+                    android:textStyle="normal"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textAlignment="textStart"
+                    android:layout_gravity="start"
+                    android:padding="5dp"/>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="3dp"
+                app:cardBackgroundColor="@color/md_white_1000"
+                app:cardElevation="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="0dp">
+
+                <TextView
+                    android:id="@+id/com_member_3_8_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/com_member_3_8"
+                    android:textColor="@color/md_black_1000"
+                    android:textStyle="normal"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textAlignment="textStart"
+                    android:layout_gravity="start"
+                    android:padding="5dp"/>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="3dp"
+                app:cardBackgroundColor="@color/md_white_1000"
+                app:cardElevation="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="0dp">
+
+                <TextView
+                    android:id="@+id/com_member_3_9_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/com_member_3_9"
+                    android:textColor="@color/md_black_1000"
+                    android:textStyle="normal"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textAlignment="textStart"
+                    android:layout_gravity="start"
+                    android:padding="5dp"/>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="3dp"
+                app:cardBackgroundColor="@color/md_white_1000"
+                app:cardElevation="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:id="@+id/com_member_3_10_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/com_member_3_10"
+                    android:textColor="@color/md_black_1000"
+                    android:textStyle="normal"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textAlignment="textStart"
+                    android:layout_gravity="start"
+                    android:padding="5dp"/>
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
