@@ -160,7 +160,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
             linearLayout = layout.findViewById(R.id.mainLL);
         }
 
-        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams( (int) (width*.9), (int) (height*.8) );
+        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams( (int) (width*.95), (int) (height*.88) );
         if (mainRL != null) {
             mainRL.setLayoutParams(params);
         }
@@ -173,13 +173,14 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
             }
         });
 
-        assert mainRL != null;
-        mainRL.setOnClickListener(new View.OnClickListener() {
+        assert linearLayout != null;
+        linearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // nothing to do
             }
         });
+
 
         ExtractJson extractJson = new ExtractJson(context, ReadWriteJson.readFile(context), linearLayout);
         extractJson.getPopUpView(title, tvTitle);

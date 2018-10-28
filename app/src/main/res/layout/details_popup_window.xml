@@ -4,18 +4,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/dimRL"
-    android:background="#B3000000"
+    android:background="#C0000000"
     android:gravity="center">
 
     <RelativeLayout
         android:id="@+id/main_popup"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/md_grey_300">
+        android:layout_height="wrap_content"
+        android:gravity="center">
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="@color/md_grey_300">
 
             <LinearLayout
                 android:id="@+id/mainLL"
