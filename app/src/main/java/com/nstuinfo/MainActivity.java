@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void loadRecyclerView() {
-        myAdapter = new MyAdapter(MainActivity.this, itemsList);
+        myAdapter = new MyAdapter(MainActivity.this, itemsList, "main");
         mRecyclerView.setAdapter(myAdapter);
     }
 
@@ -140,6 +140,8 @@ public class MainActivity extends AppCompatActivity {
                         } else {
                             ReadWriteJson.saveFile(MainActivity.this, response);
                         }
+
+                        Log.i("INFO", ReadWriteJson.readFile(MainActivity.this));
 
                     }
                 },

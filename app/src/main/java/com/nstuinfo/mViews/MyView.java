@@ -5,6 +5,8 @@ import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Build;
 import android.support.v7.widget.CardView;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.text.Html;
 import android.text.util.Linkify;
 import android.view.Gravity;
@@ -14,6 +16,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.nstuinfo.R;
+import com.nstuinfo.mRecyclerView.MyAdapter;
+
+import java.util.List;
 
 /**
  * Created by whoami on 10/26/2018.
@@ -133,6 +138,20 @@ public class MyView {
 
         cardView.addView(textView);
         linearLayout.addView(cardView);
+    }
+
+    public static void setRecyclerView (Context context, List<String> itemsList, String title, LinearLayout linearLayout) {
+        RecyclerView recyclerView = new RecyclerView(context);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(context));
+        LinearLayout.LayoutParams params1 = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        params1.setMargins(0, 0, 0, 8);
+        recyclerView.setLayoutParams(params1);
+
+        MyAdapter myAdapter = new MyAdapter(context, itemsList, title, "second");
+        recyclerView.setAdapter(myAdapter);
+
+        linearLayout.addView(recyclerView);
     }
 
 }
