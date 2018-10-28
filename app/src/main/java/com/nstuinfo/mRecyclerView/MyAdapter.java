@@ -19,7 +19,7 @@ import android.widget.TextView;
 import com.amulyakhare.textdrawable.TextDrawable;
 import com.amulyakhare.textdrawable.util.ColorGenerator;
 import com.nstuinfo.R;
-import com.nstuinfo.SecondActivity;
+import com.nstuinfo.DetailsActivity;
 import com.nstuinfo.mJsonUtils.ExtractJson;
 import com.nstuinfo.mJsonUtils.ReadWriteJson;
 import com.nstuinfo.mOtherUtils.AnimationUtils;
@@ -126,7 +126,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
             if (tag.equalsIgnoreCase("second")) {
                 detailsPopUpWindow(titleTV.getText().toString().trim());
             } else {
-                Intent intent = new Intent(context, SecondActivity.class);
+                Intent intent = new Intent(context, DetailsActivity.class);
                 intent.putExtra("TITLE", titleTV.getText().toString().trim());
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intent);

@@ -4,7 +4,7 @@
     android:orientation="vertical"
     xmlns:tools="http://schemas.android.com/tools"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.nstuinfo.SecondActivity"
+    tools:context="com.nstuinfo.DetailsActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/md_grey_300">
@@ -34,12 +34,6 @@
             android:orientation="vertical"
             android:paddingBottom="3dp"
             android:paddingTop="3dp">
-
-            <TextView
-                android:id="@+id/tstTV"
-                android:visibility="gone"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
 
 
         </LinearLayout>

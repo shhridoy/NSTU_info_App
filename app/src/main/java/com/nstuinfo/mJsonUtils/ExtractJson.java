@@ -139,7 +139,7 @@ public class ExtractJson {
                                         if (detailsObject.has("hint")) {
                                             String hint = detailsObject.getString("hint");
                                             if (!hint.equalsIgnoreCase("")) {
-                                                MyView.setSubtitleView(context, hint, linearLayout);
+                                                MyView.setHintView(context, hint, linearLayout);
                                             }
                                         }
 
@@ -233,7 +233,7 @@ public class ExtractJson {
                                                         if (contentsObject.has("hint")) {
                                                             String hint = contentsObject.getString("hint");
                                                             if (!hint.equalsIgnoreCase("")) {
-                                                                MyView.setSubtitleView(context, hint, linearLayout);
+                                                                MyView.setHintView(context, hint, linearLayout);
                                                             }
                                                         }
 
