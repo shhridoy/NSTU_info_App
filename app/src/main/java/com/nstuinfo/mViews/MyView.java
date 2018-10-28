@@ -113,6 +113,7 @@ public class MyView {
             layout = inflater.inflate(R.layout.json_test,null);
         }
 
+
         assert layout != null;
         TextView tv = layout.findViewById(R.id.testTV);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
