@@ -4,7 +4,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/md_grey_300"
+    android:background="@android:color/transparent"
     android:paddingTop="3dp"
     android:paddingBottom="3dp"
     android:paddingLeft="5dp"
@@ -15,7 +15,7 @@
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardBackgroundColor="@color/colorPrimary"
+        app:cardBackgroundColor="@color/list_item_color"
         app:cardElevation="0dp"
         app:cardCornerRadius="3dp">
 

@@ -216,7 +216,7 @@ public class ExtractJson {
 
                                                     JSONArray contentsArray = detailsObject.getJSONArray("contents");
 
-                                                    MyView.setTitleView(context, title, linearLayout);
+                                                    //MyView.setTitleView(context, title, linearLayout);
 
                                                     for (int l=0; l<contentsArray.length(); l++) {
 

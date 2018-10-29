@@ -3,6 +3,7 @@ package com.nstuinfo;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.net.ConnectivityManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -18,6 +19,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.android.volley.DefaultRetryPolicy;
@@ -29,6 +31,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.nstuinfo.mJsonUtils.ExtractJson;
 import com.nstuinfo.mJsonUtils.ReadWriteJson;
+import com.nstuinfo.mOtherUtils.ExtraUtils;
 import com.nstuinfo.mRecyclerView.MyAdapter;
 
 import java.util.List;
@@ -40,6 +43,7 @@ public class HomeActivity extends AppCompatActivity
     private FloatingActionButton fab;
     private DrawerLayout drawer;
     private NavigationView navigationView;
+    private LinearLayout navLL;
 
     private static final String URL = "https://jsonblob.com/api/6a1a5234-d30f-11e8-9c58-b1987dc5c254";
 
@@ -105,6 +109,27 @@ public class HomeActivity extends AppCompatActivity
 
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        navLL = navigationView.getHeaderView(0).findViewById(R.id.navLL);
+
+        int rand = ExtraUtils.getRandomNumber(1,4);
+        if (rand == 1) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                navLL.setBackground(getResources().getDrawable(R.drawable.nstu_cover_1));
+            }
+        } else if (rand == 2) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                navLL.setBackground(getResources().getDrawable(R.drawable.nstu_cover_2));
+            }
+        } else if (rand == 3) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                navLL.setBackground(getResources().getDrawable(R.drawable.nstu_cover_3));
+            }
+        } else {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                navLL.setBackground(getResources().getDrawable(R.drawable.nstu_cover_4));
+            }
+        }
     }
 
     private void loadRecyclerView() {

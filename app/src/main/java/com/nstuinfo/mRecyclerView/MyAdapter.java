@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -73,10 +74,10 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
             if (tag.equalsIgnoreCase("second")) {
                 view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recyler_view_model_second, parent, false);
             } else {
-                view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recycler_view_model, parent, false);
+                view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recycler_view_model_home, parent, false);
             }
         } else {
-            view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recycler_view_model, parent, false);
+            view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recycler_view_model_home, parent, false);
         }
 
         return new ViewHolder(view);
@@ -111,6 +112,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
     class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
+        CardView cardView;
         TextView titleTV, titleHintTV;
         ImageView imageView;
 
@@ -119,12 +121,14 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
             imageView = itemView.findViewById(R.id.recyclerImageView);
             titleTV = itemView.findViewById(R.id.recyclerTextViewTitle);
             titleHintTV = itemView.findViewById(R.id.recyclerTVHint);
+            cardView = itemView.findViewById(R.id.list_model_second_cardView);
             itemView.setOnClickListener(this);
         }
 
         @Override
         public void onClick(View v) {
             if (tag.equalsIgnoreCase("second")) {
+                cardView.setCardBackgroundColor(context.getResources().getColor(R.color.list_item_selection_color));
                 detailsPopUpWindow(titleTV.getText().toString().trim());
             } else {
                 Intent intent = new Intent(context, DetailsActivity.class);
@@ -154,17 +158,21 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         RelativeLayout backDimRL = null;
         RelativeLayout mainRL = null;
         LinearLayout linearLayout = null;
+        TextView textView = null;
 
         if (layout != null) {
             backDimRL = layout.findViewById(R.id.dimRL);
             mainRL = layout.findViewById(R.id.main_popup);
             linearLayout = layout.findViewById(R.id.mainLL);
+            textView = layout.findViewById(R.id.popUpTitleTV);
         }
 
         RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams( (int) (width*.95), (int) (height*.88) );
-        if (mainRL != null) {
-            mainRL.setLayoutParams(params);
-        }
+
+        assert mainRL != null;
+        mainRL.setLayoutParams(params);
+
+        textView.setText(tvTitle);
 
         assert backDimRL != null;
         backDimRL.setOnClickListener(new View.OnClickListener() {
