@@ -118,12 +118,12 @@ public class ExtractJson {
 
                                         JSONObject detailsObject = (JSONObject) detailsArray.get(k);
 
-                                        if (detailsObject.has("title_hint")) {
+                                        /*if (detailsObject.has("title_hint")) {
                                             String title_hint = detailsObject.getString("title_hint");
                                             if (!title_hint.equalsIgnoreCase("")) {
                                                 MyView.setTitleView(context, title_hint, linearLayout);
                                             }
-                                        }
+                                        }*/
 
                                         if (detailsObject.has("title")) {
                                             String title = detailsObject.getString("title");
@@ -200,12 +200,12 @@ public class ExtractJson {
 
                                         JSONObject detailsObject = (JSONObject) detailsArray.get(k);
 
-                                        if (detailsObject.has("title_hint")) {
+                                        /*if (detailsObject.has("title_hint")) {
                                             String title_hint = detailsObject.getString("title_hint");
                                             if (!title_hint.equalsIgnoreCase("")) {
                                                 MyView.setTitleView(context, title_hint, linearLayout);
                                             }
-                                        }
+                                        }*/
 
                                         if (detailsObject.has("title")) {
                                             String title = detailsObject.getString("title");

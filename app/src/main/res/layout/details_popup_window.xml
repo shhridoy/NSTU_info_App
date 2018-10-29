@@ -16,7 +16,7 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/md_grey_300">
+            android:background="@drawable/pop_up_shape">
 
             <LinearLayout
                 android:id="@+id/mainLL"

@@ -111,13 +111,14 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
     class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
-        TextView titleTV;
+        TextView titleTV, titleHintTV;
         ImageView imageView;
 
         ViewHolder(View itemView) {
             super(itemView);
             imageView = itemView.findViewById(R.id.recyclerImageView);
             titleTV = itemView.findViewById(R.id.recyclerTextViewTitle);
+            titleHintTV = itemView.findViewById(R.id.recyclerTVHint);
             itemView.setOnClickListener(this);
         }
 
