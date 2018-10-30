@@ -27,6 +27,7 @@ import com.nstuinfo.mJsonUtils.ExtractJson;
 import com.nstuinfo.mJsonUtils.ReadWriteJson;
 import com.nstuinfo.mOtherUtils.AnimationUtils;
 import com.nstuinfo.mOtherUtils.Preferences;
+import com.nstuinfo.mViews.FontAppearance;
 
 import java.util.Arrays;
 import java.util.List;
@@ -90,6 +91,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     public void onBindViewHolder(@NonNull final ViewHolder holder, @SuppressLint("RecyclerView") int position) {
 
         holder.titleTV.setText(itemsList.get(position));
+
+        FontAppearance.setPrimaryTextSize(context, holder.titleTV);
 
         if (!tag.equalsIgnoreCase("second")) {
 
@@ -203,6 +206,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         mainRL.setLayoutParams(params);
 
         textView.setText(tvTitle);
+
+        FontAppearance.setPrimaryTextSize(context, textView);
 
         if (Preferences.isDarkTheme(context)) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {

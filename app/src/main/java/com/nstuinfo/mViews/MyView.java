@@ -60,6 +60,8 @@ public class MyView {
             tv.setText(Html.fromHtml(text));
         }
 
+        FontAppearance.setPrimaryTextSize(context, tv);
+
         Linkify.addLinks(tv, Linkify.WEB_URLS | Linkify.EMAIL_ADDRESSES | Linkify.PHONE_NUMBERS);
         tv.setLinksClickable(true);
 
@@ -85,6 +87,8 @@ public class MyView {
         if (Preferences.isDarkTheme(context)) {
             tv.setTextColor(Color.WHITE);
         }
+
+        FontAppearance.setSecondaryTextSize(context, tv);
 
         Linkify.addLinks(tv, Linkify.WEB_URLS | Linkify.EMAIL_ADDRESSES | Linkify.PHONE_NUMBERS);
         tv.setLinksClickable(true);
@@ -114,6 +118,8 @@ public class MyView {
         } else {
             tv.setText(Html.fromHtml(content));
         }
+
+        FontAppearance.setSecondaryTextSize(context, tv);
 
         Linkify.addLinks(tv, Linkify.WEB_URLS | Linkify.EMAIL_ADDRESSES | Linkify.PHONE_NUMBERS);
         tv.setLinksClickable(true);

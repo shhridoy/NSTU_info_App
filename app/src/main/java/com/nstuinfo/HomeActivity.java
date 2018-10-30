@@ -1,6 +1,7 @@
 package com.nstuinfo;
 
 import android.annotation.SuppressLint;
+import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.res.ColorStateList;
@@ -9,6 +10,7 @@ import android.net.ConnectivityManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.provider.MediaStore;
 import android.support.constraint.ConstraintLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -27,8 +29,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.Window;
+import android.widget.CompoundButton;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
+import android.widget.RadioButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -47,6 +52,9 @@ import com.nstuinfo.mJsonUtils.ReadWriteJson;
 import com.nstuinfo.mOtherUtils.ExtraUtils;
 import com.nstuinfo.mOtherUtils.Preferences;
 import com.nstuinfo.mRecyclerView.MyAdapter;
+import com.nstuinfo.mViews.FontAppearance;
+
+import org.w3c.dom.Text;
 
 import java.util.List;
 
@@ -72,6 +80,8 @@ public class HomeActivity extends AppCompatActivity
 
     private PopupWindow mPopUpWindow;
 
+    private String initialFont;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -80,6 +90,8 @@ public class HomeActivity extends AppCompatActivity
         initViews();
 
         setTheme();
+
+        initialFont = Preferences.getFontAppearance(this);
 
         if (ReadWriteJson.readFile(this).equals("")) {
             if (isInternetOn()) {
@@ -90,11 +102,17 @@ public class HomeActivity extends AppCompatActivity
         } else {
             if (isInternetOn()) {
                 jsonExtract = new ExtractJson(this, ReadWriteJson.readFile(this));
+                if (itemsList != null) {
+                    itemsList.clear();
+                }
                 itemsList = jsonExtract.getMainItemsList();
                 loadRecyclerView();
                 parseJson(false);
             } else {
                 jsonExtract = new ExtractJson(this, ReadWriteJson.readFile(this));
+                if (itemsList != null) {
+                    itemsList.clear();
+                }
                 itemsList = jsonExtract.getMainItemsList();
                 loadRecyclerView();
             }
@@ -102,9 +120,35 @@ public class HomeActivity extends AppCompatActivity
 
     }
 
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
+        if (hasFocus) {
+            if (!initialFont.equals(Preferences.getFontAppearance(this))) {
+                jsonExtract = new ExtractJson(this, ReadWriteJson.readFile(this));
+                if (itemsList != null) {
+                    itemsList.clear();
+                }
+                itemsList = jsonExtract.getMainItemsList();
+                loadRecyclerView();
+                initialFont = Preferences.getFontAppearance(this);
+            }
+        }
+    }
+
     private void initViews() {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                parseJson(true);
+                //Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                // .setAction("Action", null).show();
+            }
+        });
 
         mRecyclerView = findViewById(R.id.recyclerView);
         mRecyclerView.setHasFixedSize(true);
@@ -112,16 +156,30 @@ public class HomeActivity extends AppCompatActivity
         //mRecyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
         //mRecyclerView.setItemAnimator(new DefaultItemAnimator());
 
-        mConstraintLayout = findViewById(R.id.homeConstraintLayout);
-
-        fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        mRecyclerView.setOnTouchListener(new View.OnTouchListener() {
             @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+            public boolean onTouch(View v, MotionEvent event) {
+
+                if (event.getAction() == MotionEvent.ACTION_DOWN ||
+                        event.getAction() == MotionEvent.ACTION_UP||
+                        event.getAction() == MotionEvent.ACTION_SCROLL) {
+
+                    fab.show();
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            fab.hide();
+                        }
+                    }, 6000);
+
+                }
+
+                return false;
             }
         });
+
+        mConstraintLayout = findViewById(R.id.homeConstraintLayout);
 
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -134,6 +192,11 @@ public class HomeActivity extends AppCompatActivity
 
         navLL = navigationView.getHeaderView(0).findViewById(R.id.navLL);
 
+        navViewImageAlteration();
+
+    }
+
+    private void navViewImageAlteration() {
         int rand = ExtraUtils.getRandomNumber(1,4);
         if (rand == 1) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
@@ -152,7 +215,6 @@ public class HomeActivity extends AppCompatActivity
                 navLL.setBackground(getResources().getDrawable(R.drawable.nstu_cover_4));
             }
         }
-
     }
 
     private void setTheme() {
@@ -190,6 +252,9 @@ public class HomeActivity extends AppCompatActivity
                             progressDialog.dismiss();
                             ReadWriteJson.saveFile(HomeActivity.this, response);
                             jsonExtract = new ExtractJson(HomeActivity.this, response);
+                            if (itemsList != null) {
+                                itemsList.clear();
+                            }
                             itemsList = jsonExtract.getMainItemsList();
                             loadRecyclerView();
                         } else {
@@ -273,15 +338,11 @@ public class HomeActivity extends AppCompatActivity
 
         if (id == R.id.nav_theme) {
             popupThemeWindow();
-        } else if (id == R.id.nav_gallery) {
-
+        } else if (id == R.id.nav_font_appearance) {
+            fontAppearanceDialog();
         } else if (id == R.id.nav_slideshow) {
 
         } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
 
         }
 
@@ -316,12 +377,14 @@ public class HomeActivity extends AppCompatActivity
             circleMenu = layout.findViewById(R.id.circleMenu);
         }
 
-        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams( (int) (width*.95), (int) (height*.86) );
+        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams( (int) (width*.95), (int) (height*.8) );
 
         assert mainRL != null;
         mainRL.setLayoutParams(params);
 
         titleTV.setText("Theme");
+
+        FontAppearance.setPrimaryTextSize(this, titleTV);
 
         if (Preferences.isDarkTheme(HomeActivity.this)) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
@@ -393,6 +456,67 @@ public class HomeActivity extends AppCompatActivity
         mPopUpWindow.setAnimationStyle(android.R.style.Animation_Dialog);
         mPopUpWindow.setContentView(layout);
         mPopUpWindow.showAtLocation(layout, Gravity.CENTER, 0, 0);
+    }
+
+    private void fontAppearanceDialog() {
+        final Dialog dialog = new Dialog(this);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.font_appearance_dialog);
+        dialog.setCancelable(true);
+
+        RelativeLayout dlgMainRL = dialog.findViewById(R.id.dialogMainRL);
+        TextView dlgTitleTV = dialog.findViewById(R.id.fontDialogTitleTV);
+        final RadioButton smallRB = dialog.findViewById(R.id.smallFontRB);
+        final RadioButton mediumRB = dialog.findViewById(R.id.mediumFontRB);
+        final RadioButton largeRB = dialog.findViewById(R.id.largeFontRB);
+
+        FontAppearance.setPrimaryTextSize(this, dlgTitleTV);
+
+        if (Preferences.getFontAppearance(HomeActivity.this).equals(Preferences.MEDIUM_FONT)){
+            mediumRB.setChecked(true);
+        } else if (Preferences.getFontAppearance(HomeActivity.this).equals(Preferences.LARGE_FONT)){
+            largeRB.setChecked(true);
+        } else {
+            smallRB.setChecked(true);
+        }
+
+        smallRB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                smallRB.setChecked(true);
+                mediumRB.setChecked(false);
+                largeRB.setChecked(false);
+                Preferences.setFontAppearance(HomeActivity.this, Preferences.SMALL_FONT);
+            }
+        });
+
+        mediumRB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                smallRB.setChecked(false);
+                mediumRB.setChecked(true);
+                largeRB.setChecked(false);
+                Preferences.setFontAppearance(HomeActivity.this, Preferences.MEDIUM_FONT);
+            }
+        });
+
+        largeRB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                smallRB.setChecked(false);
+                mediumRB.setChecked(false);
+                largeRB.setChecked(true);
+                Preferences.setFontAppearance(HomeActivity.this, Preferences.LARGE_FONT);
+            }
+        });
+
+        dialog.show();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        navViewImageAlteration();
     }
 
     @Override
