@@ -21,18 +21,6 @@
         android:background="?attr/selectableItemBackground">
 
         <TextView
-            android:id="@+id/recyclerTVHint"
-            android:visibility="gone"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/md_grey_300"
-            android:text="This is title hint"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textStyle="normal"
-            android:textColor="@android:color/black"
-            android:textAlignment="center"/>
-
-        <TextView
             android:id="@+id/recyclerTextViewTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

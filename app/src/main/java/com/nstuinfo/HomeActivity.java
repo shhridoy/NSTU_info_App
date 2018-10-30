@@ -1,15 +1,23 @@
 package com.nstuinfo;
 
+import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
+import android.support.constraint.ConstraintLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.Gravity;
+import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -20,6 +28,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.LinearLayout;
+import android.widget.PopupWindow;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.DefaultRetryPolicy;
@@ -29,9 +40,12 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.hitomi.cmlibrary.CircleMenu;
+import com.hitomi.cmlibrary.OnMenuSelectedListener;
 import com.nstuinfo.mJsonUtils.ExtractJson;
 import com.nstuinfo.mJsonUtils.ReadWriteJson;
 import com.nstuinfo.mOtherUtils.ExtraUtils;
+import com.nstuinfo.mOtherUtils.Preferences;
 import com.nstuinfo.mRecyclerView.MyAdapter;
 
 import java.util.List;
@@ -45,6 +59,8 @@ public class HomeActivity extends AppCompatActivity
     private NavigationView navigationView;
     private LinearLayout navLL;
 
+    private ConstraintLayout mConstraintLayout;
+
     private static final String URL = "https://jsonblob.com/api/6a1a5234-d30f-11e8-9c58-b1987dc5c254";
 
     private RecyclerView mRecyclerView;
@@ -54,12 +70,16 @@ public class HomeActivity extends AppCompatActivity
 
     private int jsonVersion = 0;
 
+    private PopupWindow mPopUpWindow;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
         initViews();
+
+        setTheme();
 
         if (ReadWriteJson.readFile(this).equals("")) {
             if (isInternetOn()) {
@@ -91,6 +111,8 @@ public class HomeActivity extends AppCompatActivity
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         //mRecyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
         //mRecyclerView.setItemAnimator(new DefaultItemAnimator());
+
+        mConstraintLayout = findViewById(R.id.homeConstraintLayout);
 
         fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -129,6 +151,18 @@ public class HomeActivity extends AppCompatActivity
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
                 navLL.setBackground(getResources().getDrawable(R.drawable.nstu_cover_4));
             }
+        }
+
+    }
+
+    private void setTheme() {
+        if (Preferences.isDarkTheme(this)) {
+            mConstraintLayout.setBackgroundColor(getResources().getColor(R.color.dark_color_primary));
+            toolbar.setBackgroundColor(Color.BLACK);
+            toolbar.setPopupTheme(R.style.PopupMenuDark);
+            navigationView.setBackgroundColor(getResources().getColor(R.color.dark_color_secondary));
+            navigationView.setItemTextColor(ColorStateList.valueOf(Color.WHITE));
+            navigationView.setItemIconTintList(ColorStateList.valueOf(Color.WHITE));
         }
     }
 
@@ -237,8 +271,8 @@ public class HomeActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-
+        if (id == R.id.nav_theme) {
+            popupThemeWindow();
         } else if (id == R.id.nav_gallery) {
 
         } else if (id == R.id.nav_slideshow) {
@@ -256,4 +290,124 @@ public class HomeActivity extends AppCompatActivity
         return true;
     }
 
+    @SuppressLint("InflateParams")
+    private void popupThemeWindow(){
+
+        LayoutInflater inflater = (LayoutInflater) this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View layout = null;
+        if (inflater != null) {
+            layout = inflater.inflate(R.layout.theme_popup_window,null);
+        }
+
+        int width = getResources().getDisplayMetrics().widthPixels;
+        int height = getResources().getDisplayMetrics().heightPixels;
+
+        mPopUpWindow = new PopupWindow(layout, width, height, true);
+
+        RelativeLayout backDimRL = null;
+        RelativeLayout mainRL = null;
+        TextView titleTV = null;
+        CircleMenu circleMenu = null;
+
+        if (layout != null) {
+            backDimRL = layout.findViewById(R.id.dimRL);
+            mainRL = layout.findViewById(R.id.main_popup);
+            titleTV = layout.findViewById(R.id.popUpTitleTV);
+            circleMenu = layout.findViewById(R.id.circleMenu);
+        }
+
+        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams( (int) (width*.95), (int) (height*.86) );
+
+        assert mainRL != null;
+        mainRL.setLayoutParams(params);
+
+        titleTV.setText("Theme");
+
+        if (Preferences.isDarkTheme(HomeActivity.this)) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                mainRL.setBackground(getResources().getDrawable(R.drawable.popup_dark_shape));
+                titleTV.setBackground(getResources().getDrawable(R.drawable.popup_dark_title_shape));
+            } else {
+                mainRL.setBackgroundColor(getResources().getColor(R.color.dark_color_primary));
+                titleTV.setBackgroundColor(Color.BLACK);
+            }
+            backDimRL.setBackgroundColor(getResources().getColor(R.color.dim_white));
+        }
+
+        assert backDimRL != null;
+        backDimRL.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mPopUpWindow.dismiss();
+            }
+        });
+
+        mainRL.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // nothing to do
+            }
+        });
+
+        circleMenu.setMainMenu(
+                getResources().getColor(R.color.colorPrimary),
+                R.mipmap.ic_add,
+                R.mipmap.ic_remove)
+                .addSubMenu(Color.WHITE, R.mipmap.ic_sun)
+                .addSubMenu(Color.BLACK, R.mipmap.ic_cloud)
+                .setOnMenuSelectedListener(new OnMenuSelectedListener() {
+                    @Override
+                    public void onMenuSelected(int index) {
+                        if (index == 0) {
+                            Preferences.setDarkTheme(HomeActivity.this, false);
+                            Toast.makeText(getApplicationContext(), "Activating Light Theme...", Toast.LENGTH_LONG).show();
+                        } else if (index == 1) {
+                            Preferences.setDarkTheme(HomeActivity.this, true);
+                            Toast.makeText(getApplicationContext(), "Activating Dark Theme...", Toast.LENGTH_LONG).show();
+                        }
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                finish();
+                                startActivity(getIntent());
+                            }
+                        }, 1500);
+                    }
+                });
+
+        //Set up touch closing outside of pop-up
+        mPopUpWindow.setBackgroundDrawable(getResources().getDrawable(R.drawable.pop_up_bg));
+        mPopUpWindow.setAnimationStyle(android.R.style.Animation_Dialog);
+        mPopUpWindow.setTouchInterceptor(new View.OnTouchListener() {
+            @SuppressLint("ClickableViewAccessibility")
+            public boolean onTouch(View v, MotionEvent event) {
+                if(event.getAction() == MotionEvent.ACTION_OUTSIDE) {
+                    mPopUpWindow.dismiss();
+                    return true;
+                }
+                return false;
+            }
+        });
+        mPopUpWindow.setOutsideTouchable(true);
+
+        mPopUpWindow.setAnimationStyle(android.R.style.Animation_Dialog);
+        mPopUpWindow.setContentView(layout);
+        mPopUpWindow.showAtLocation(layout, Gravity.CENTER, 0, 0);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        if (mPopUpWindow != null) {
+            mPopUpWindow.dismiss();
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (mPopUpWindow != null) {
+            mPopUpWindow.dismiss();
+        }
+    }
 }

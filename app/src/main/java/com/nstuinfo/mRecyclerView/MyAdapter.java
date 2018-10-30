@@ -3,6 +3,8 @@ package com.nstuinfo.mRecyclerView;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
+import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -24,6 +26,7 @@ import com.nstuinfo.DetailsActivity;
 import com.nstuinfo.mJsonUtils.ExtractJson;
 import com.nstuinfo.mJsonUtils.ReadWriteJson;
 import com.nstuinfo.mOtherUtils.AnimationUtils;
+import com.nstuinfo.mOtherUtils.Preferences;
 
 import java.util.Arrays;
 import java.util.List;
@@ -89,10 +92,30 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         holder.titleTV.setText(itemsList.get(position));
 
         if (!tag.equalsIgnoreCase("second")) {
+
+            // SET THEME AT HOME RECYCLER VIEW
+            if (Preferences.isDarkTheme(context)) {
+                holder.modelMainRL.setBackgroundColor(context.getResources().getColor(R.color.dark_color_secondary));
+                holder.titleTV.setTextColor(Color.WHITE);
+            } else {
+                holder.modelMainRL.setBackgroundColor(Color.WHITE);
+                holder.titleTV.setTextColor(Color.BLACK);
+            }
+
             // G-MAIL STYLE IMAGE BACKGROUND
             String letter = String.valueOf(itemsList.get(position).charAt(0));
             TextDrawable drawable = TextDrawable.builder().buildRound(letter, generator.getRandomColor());
             holder.imageView.setImageDrawable(drawable);
+
+        } else {
+
+            // SET THEME AT DETAILS RECYCLER VIEW
+            if (Preferences.isDarkTheme(context)) {
+                holder.cardView.setCardBackgroundColor(context.getResources().getColor(R.color.dark_color_secondary));
+            } else {
+                holder.cardView.setCardBackgroundColor(context.getResources().getColor(R.color.list_item_color));
+            }
+
         }
 
         if (position > previousPosition) { // scrolling down
@@ -113,14 +136,15 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
         CardView cardView;
-        TextView titleTV, titleHintTV;
+        TextView titleTV;
         ImageView imageView;
+        RelativeLayout modelMainRL;
 
         ViewHolder(View itemView) {
             super(itemView);
+            modelMainRL = itemView.findViewById(R.id.recyclerModelMainRL);
             imageView = itemView.findViewById(R.id.recyclerImageView);
             titleTV = itemView.findViewById(R.id.recyclerTextViewTitle);
-            titleHintTV = itemView.findViewById(R.id.recyclerTVHint);
             cardView = itemView.findViewById(R.id.list_model_second_cardView);
             itemView.setOnClickListener(this);
         }
@@ -128,7 +152,11 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         @Override
         public void onClick(View v) {
             if (tag.equalsIgnoreCase("second")) {
-                cardView.setCardBackgroundColor(context.getResources().getColor(R.color.list_item_selection_color));
+                if (Preferences.isDarkTheme(context)) {
+                    cardView.setCardBackgroundColor(Color.BLACK);
+                } else {
+                    cardView.setCardBackgroundColor(context.getResources().getColor(R.color.list_item_selection_color));
+                }
                 detailsPopUpWindow(titleTV.getText().toString().trim());
             } else {
                 Intent intent = new Intent(context, DetailsActivity.class);
@@ -159,12 +187,14 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         RelativeLayout mainRL = null;
         LinearLayout linearLayout = null;
         TextView textView = null;
+        RelativeLayout rlPopup = null;
 
         if (layout != null) {
             backDimRL = layout.findViewById(R.id.dimRL);
             mainRL = layout.findViewById(R.id.main_popup);
             linearLayout = layout.findViewById(R.id.mainLL);
             textView = layout.findViewById(R.id.popUpTitleTV);
+            rlPopup = layout.findViewById(R.id.popUpThemeRL);
         }
 
         RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams( (int) (width*.95), (int) (height*.88) );
@@ -173,6 +203,17 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         mainRL.setLayoutParams(params);
 
         textView.setText(tvTitle);
+
+        if (Preferences.isDarkTheme(context)) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                rlPopup.setBackground(context.getResources().getDrawable(R.drawable.popup_dark_shape));
+                textView.setBackground(context.getResources().getDrawable(R.drawable.popup_dark_title_shape));
+            } else {
+                rlPopup.setBackgroundColor(context.getResources().getColor(R.color.dark_color_primary));
+                textView.setBackgroundColor(Color.BLACK);
+            }
+            backDimRL.setBackgroundColor(context.getResources().getColor(R.color.dim_white));
+        }
 
         assert backDimRL != null;
         backDimRL.setOnClickListener(new View.OnClickListener() {

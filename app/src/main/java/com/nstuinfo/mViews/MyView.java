@@ -24,6 +24,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.nstuinfo.R;
+import com.nstuinfo.mOtherUtils.Preferences;
 import com.nstuinfo.mOtherUtils.StringUtil;
 import com.nstuinfo.mRecyclerView.MyAdapter;
 
@@ -37,7 +38,9 @@ public class MyView {
 
     @SuppressLint("InflateParams")
     public static void setTitleView(Context context, String text, LinearLayout linearLayout) {
+
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
         View layout = null;
         if (inflater != null) {
             layout = inflater.inflate(R.layout.title_view,null);
@@ -45,11 +48,18 @@ public class MyView {
 
         assert layout != null;
         TextView tv = layout.findViewById(R.id.titleTV);
+        CardView cardView = layout.findViewById(R.id.title_item_view_card);
+
+        if (Preferences.isDarkTheme(context)) {
+            cardView.setCardBackgroundColor(Color.BLACK);
+        }
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             tv.setText(Html.fromHtml(text, Html.FROM_HTML_MODE_LEGACY));
         } else {
             tv.setText(Html.fromHtml(text));
         }
+
         Linkify.addLinks(tv, Linkify.WEB_URLS | Linkify.EMAIL_ADDRESSES | Linkify.PHONE_NUMBERS);
         tv.setLinksClickable(true);
 
@@ -71,6 +81,11 @@ public class MyView {
         } else {
             tv.setText(Html.fromHtml(content));
         }
+
+        if (Preferences.isDarkTheme(context)) {
+            tv.setTextColor(Color.WHITE);
+        }
+
         Linkify.addLinks(tv, Linkify.WEB_URLS | Linkify.EMAIL_ADDRESSES | Linkify.PHONE_NUMBERS);
         tv.setLinksClickable(true);
 
@@ -87,6 +102,13 @@ public class MyView {
 
         assert layout != null;
         TextView tv = layout.findViewById(R.id.contentTV);
+        CardView cardView = layout.findViewById(R.id.content_item_view_card);
+
+        if (Preferences.isDarkTheme(context)) {
+            cardView.setCardBackgroundColor(context.getResources().getColor(R.color.dark_color_secondary));
+            tv.setTextColor(Color.WHITE);
+        }
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             tv.setText(Html.fromHtml(content, Html.FROM_HTML_MODE_LEGACY));
         } else {

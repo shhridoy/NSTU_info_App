@@ -2,7 +2,7 @@
 <resources>
     <color name="colorPrimary">#1976D2</color>
     <color name="colorPrimaryDark">#0D47A1</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#4FC3F7</color>
 
     <color name="colorPrimary2">#0288D1</color>
     <color name="colorPrimaryDark2">#01579B</color>
@@ -39,4 +39,33 @@
     <color name="indigo_300">#7986CB</color>
     <color name="indigo_400">#5C6BC0</color>
     <color name="indigo_200">#9FA8DA</color>
+
+
+    <color name="dim_white">#C0757575</color>
+
+    <!--
+    Opacity list
+100% — FF
+95% — F2
+90% — E6
+85% — D9
+80% — CC
+75% — BF
+70% — B3
+65% — A6
+60% — 99
+55% — 8C
+50% — 80
+45% — 73
+40% — 66
+35% — 59
+30% — 4D
+25% — 40
+20% — 33
+15% — 26
+10% — 1A
+5% — 0D
+0% — 00
+-->
+
 </resources>

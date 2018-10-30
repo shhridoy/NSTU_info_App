@@ -1,6 +1,7 @@
 package com.nstuinfo;
 
 import android.annotation.SuppressLint;
+import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Build;
@@ -23,12 +24,15 @@ import android.widget.TextView;
 
 import com.nstuinfo.mJsonUtils.ExtractJson;
 import com.nstuinfo.mJsonUtils.ReadWriteJson;
+import com.nstuinfo.mOtherUtils.Preferences;
 
 public class DetailsActivity extends AppCompatActivity {
 
-    String title = null;
+    private String title = null;
 
-    LinearLayout ll;
+    private LinearLayout ll, rootLL;
+
+    private Toolbar toolbar;
 
 
     @Override
@@ -36,11 +40,12 @@ public class DetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.content_details);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         //noinspection ConstantConditions
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        rootLL = findViewById(R.id.detailsMainLL);
         ll = findViewById(R.id.mainLL);
 
         title = getIntent().getStringExtra("TITLE");
@@ -48,11 +53,21 @@ public class DetailsActivity extends AppCompatActivity {
         ExtractJson extractJson = new ExtractJson(this, ReadWriteJson.readFile(this), ll);
 
         if (title != null) {
+            getSupportActionBar().setTitle(title);
             extractJson.getView(title);
         }
 
+        setTheme();
+
     }
 
+    private void setTheme() {
+        if (Preferences.isDarkTheme(this)) {
+            rootLL.setBackgroundColor(getResources().getColor(R.color.dark_color_primary));
+            toolbar.setBackgroundColor(Color.BLACK);
+            toolbar.setPopupTheme(R.style.PopupMenuDark);
+        }
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

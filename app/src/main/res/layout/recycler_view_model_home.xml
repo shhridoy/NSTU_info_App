@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:id="@+id/recyclerModelMainRL"
     android:background="@color/md_white_1000"
     android:layout_marginBottom="1dp">
 
