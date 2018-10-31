@@ -4,18 +4,20 @@ import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.net.ConnectivityManager;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
-import android.provider.MediaStore;
 import android.support.constraint.ConstraintLayout;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.SearchView;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -30,7 +32,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.Window;
-import android.widget.CompoundButton;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.RadioButton;
@@ -52,10 +53,10 @@ import com.nstuinfo.mJsonUtils.ReadWriteJson;
 import com.nstuinfo.mOtherUtils.ExtraUtils;
 import com.nstuinfo.mOtherUtils.Preferences;
 import com.nstuinfo.mRecyclerView.MyAdapter;
+import com.nstuinfo.mRecyclerView.SpacesItemDecoration;
 import com.nstuinfo.mViews.FontAppearance;
 
-import org.w3c.dom.Text;
-
+import java.util.ArrayList;
 import java.util.List;
 
 public class HomeActivity extends AppCompatActivity
@@ -76,11 +77,14 @@ public class HomeActivity extends AppCompatActivity
     private List<String> itemsList;
     private ExtractJson jsonExtract;
 
-    private int jsonVersion = 0;
+    private int jsonOfflineVersion = 0;
+    private int jsonOnlineVersion = 0;
 
     private PopupWindow mPopUpWindow;
 
     private String initialFont;
+    private boolean isInitialThemeDark = false;
+    private boolean isInitialViewGrid = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,6 +96,8 @@ public class HomeActivity extends AppCompatActivity
         setTheme();
 
         initialFont = Preferences.getFontAppearance(this);
+        isInitialThemeDark = Preferences.isDarkTheme(this);
+        isInitialViewGrid = Preferences.isGridView(this);
 
         if (ReadWriteJson.readFile(this).equals("")) {
             if (isInternetOn()) {
@@ -118,21 +124,33 @@ public class HomeActivity extends AppCompatActivity
             }
         }
 
+        if (!ReadWriteJson.readFile(this).equals("")){
+            jsonOfflineVersion = jsonExtract.getJsonVersion();
+        }
+
     }
 
     @Override
     public void onWindowFocusChanged(boolean hasFocus) {
         super.onWindowFocusChanged(hasFocus);
         if (hasFocus) {
+
+            if (isInitialViewGrid != Preferences.isGridView(this)) {
+                loadRecyclerView();
+                isInitialViewGrid = Preferences.isGridView(this);
+            }
+
+            if (isInitialThemeDark != Preferences.isDarkTheme(this)) {
+                setTheme();
+                loadRecyclerView();
+                isInitialThemeDark = Preferences.isDarkTheme(this);
+            }
+
             if (!initialFont.equals(Preferences.getFontAppearance(this))) {
-                jsonExtract = new ExtractJson(this, ReadWriteJson.readFile(this));
-                if (itemsList != null) {
-                    itemsList.clear();
-                }
-                itemsList = jsonExtract.getMainItemsList();
                 loadRecyclerView();
                 initialFont = Preferences.getFontAppearance(this);
             }
+
         }
     }
 
@@ -152,7 +170,8 @@ public class HomeActivity extends AppCompatActivity
 
         mRecyclerView = findViewById(R.id.recyclerView);
         mRecyclerView.setHasFixedSize(true);
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        mRecyclerView.addItemDecoration(new SpacesItemDecoration(1));
+
         //mRecyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
         //mRecyclerView.setItemAnimator(new DefaultItemAnimator());
 
@@ -225,11 +244,25 @@ public class HomeActivity extends AppCompatActivity
             navigationView.setBackgroundColor(getResources().getColor(R.color.dark_color_secondary));
             navigationView.setItemTextColor(ColorStateList.valueOf(Color.WHITE));
             navigationView.setItemIconTintList(ColorStateList.valueOf(Color.WHITE));
+        } else {
+            mConstraintLayout.setBackgroundColor(getResources().getColor(R.color.md_grey_300));
+            toolbar.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+            toolbar.setPopupTheme(R.style.PopupMenuLight);
+            navigationView.setBackgroundColor(Color.WHITE);
+            navigationView.setItemTextColor(ColorStateList.valueOf(Color.BLACK));
+            navigationView.setItemIconTintList(ColorStateList.valueOf(Color.BLACK));
         }
     }
 
     private void loadRecyclerView() {
         myAdapter = new MyAdapter(this, itemsList, "main");
+
+        if (Preferences.isGridView(this)) {
+            mRecyclerView.setLayoutManager(new GridLayoutManager(this, 2));
+        } else {
+            mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        }
+
         mRecyclerView.setAdapter(myAdapter);
     }
 
@@ -258,7 +291,14 @@ public class HomeActivity extends AppCompatActivity
                             itemsList = jsonExtract.getMainItemsList();
                             loadRecyclerView();
                         } else {
-                            ReadWriteJson.saveFile(HomeActivity.this, response);
+
+                            jsonExtract = new ExtractJson(HomeActivity.this, response);
+                            jsonOnlineVersion =  jsonExtract.getJsonVersion();
+
+                            if (jsonOfflineVersion < jsonOnlineVersion) {
+                                ReadWriteJson.saveFile(HomeActivity.this, response);
+                                Toast.makeText(HomeActivity.this, "Data updated!", Toast.LENGTH_SHORT).show();
+                            }
                         }
 
                     }
@@ -324,7 +364,41 @@ public class HomeActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.menu_item_search) {
+            SearchView searchView = (SearchView) item.getActionView();
+            searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+                @Override
+                public boolean onQueryTextSubmit(String query) {
+                    return false;
+                }
+
+                @Override
+                public boolean onQueryTextChange(String newText) {
+
+                    String query = newText.toLowerCase();
+
+                    final List<String> filteredList = new ArrayList<>();
+
+                    for (int i = 0; i < itemsList.size(); i++) {
+                        final String text = itemsList.get(i).toLowerCase();
+                        if (text.contains(query)) {
+                            filteredList.add(itemsList.get(i));
+                        }
+                    }
+
+                    myAdapter = new MyAdapter(HomeActivity.this, filteredList, "main");
+                    if (Preferences.isGridView(HomeActivity.this)) {
+                        mRecyclerView.setLayoutManager(new GridLayoutManager(HomeActivity.this, 2));
+                    } else {
+                        mRecyclerView.setLayoutManager(new LinearLayoutManager(HomeActivity.this));
+                    }
+                    mRecyclerView.setAdapter(myAdapter);
+                    myAdapter.notifyDataSetChanged();
+
+                    return false;
+                }
+            });
+
             return true;
         }
 
@@ -340,10 +414,12 @@ public class HomeActivity extends AppCompatActivity
             popupThemeWindow();
         } else if (id == R.id.nav_font_appearance) {
             fontAppearanceDialog();
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
-
+        } else if (id == R.id.nav_itemview) {
+            itemViewDialog();
+        } else if (id == R.id.nav_web_site) {
+            Uri uri = Uri.parse("http://nstu.edu.bd/");
+            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+            startActivity(intent);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -423,16 +499,15 @@ public class HomeActivity extends AppCompatActivity
                     public void onMenuSelected(int index) {
                         if (index == 0) {
                             Preferences.setDarkTheme(HomeActivity.this, false);
-                            Toast.makeText(getApplicationContext(), "Activating Light Theme...", Toast.LENGTH_LONG).show();
+                            //Toast.makeText(getApplicationContext(), "Activating Light Theme...", Toast.LENGTH_LONG).show();
                         } else if (index == 1) {
                             Preferences.setDarkTheme(HomeActivity.this, true);
-                            Toast.makeText(getApplicationContext(), "Activating Dark Theme...", Toast.LENGTH_LONG).show();
+                            //Toast.makeText(getApplicationContext(), "Activating Dark Theme...", Toast.LENGTH_LONG).show();
                         }
                         new Handler().postDelayed(new Runnable() {
                             @Override
                             public void run() {
-                                finish();
-                                startActivity(getIntent());
+                                mPopUpWindow.dismiss();
                             }
                         }, 1500);
                     }
@@ -472,6 +547,20 @@ public class HomeActivity extends AppCompatActivity
 
         FontAppearance.setPrimaryTextSize(this, dlgTitleTV);
 
+        if (Preferences.isDarkTheme(this)) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                dlgMainRL.setBackground(getResources().getDrawable(R.drawable.popup_dark_shape));
+                dlgTitleTV.setBackground(getResources().getDrawable(R.drawable.popup_dark_title_shape));
+            } else {
+                dlgMainRL.setBackgroundColor(getResources().getColor(R.color.dark_color_primary));
+                dlgTitleTV.setBackgroundColor(getResources().getColor(R.color.dark_color_secondary));
+            }
+            dlgTitleTV.setTextColor(Color.WHITE);
+            smallRB.setTextColor(Color.WHITE);
+            mediumRB.setTextColor(Color.WHITE);
+            largeRB.setTextColor(Color.WHITE);
+        }
+
         if (Preferences.getFontAppearance(HomeActivity.this).equals(Preferences.MEDIUM_FONT)){
             mediumRB.setChecked(true);
         } else if (Preferences.getFontAppearance(HomeActivity.this).equals(Preferences.LARGE_FONT)){
@@ -507,6 +596,59 @@ public class HomeActivity extends AppCompatActivity
                 mediumRB.setChecked(false);
                 largeRB.setChecked(true);
                 Preferences.setFontAppearance(HomeActivity.this, Preferences.LARGE_FONT);
+            }
+        });
+
+        dialog.show();
+    }
+
+    private void itemViewDialog() {
+        final Dialog dialog = new Dialog(this);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.item_view_dialog);
+        dialog.setCancelable(true);
+
+        RelativeLayout dlgMainRL = dialog.findViewById(R.id.dialogMainRL);
+        TextView dlgTitleTV = dialog.findViewById(R.id.viewDialogTitleTV);
+        final RadioButton listRB = dialog.findViewById(R.id.ListRB);
+        final RadioButton gridRB = dialog.findViewById(R.id.GridRB);
+
+        FontAppearance.setPrimaryTextSize(this, dlgTitleTV);
+
+        if (Preferences.isDarkTheme(this)) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                dlgMainRL.setBackground(getResources().getDrawable(R.drawable.popup_dark_shape));
+                dlgTitleTV.setBackground(getResources().getDrawable(R.drawable.popup_dark_title_shape));
+            } else {
+                dlgMainRL.setBackgroundColor(getResources().getColor(R.color.dark_color_primary));
+                dlgTitleTV.setBackgroundColor(getResources().getColor(R.color.dark_color_secondary));
+            }
+            dlgTitleTV.setTextColor(Color.WHITE);
+            listRB.setTextColor(Color.WHITE);
+            gridRB.setTextColor(Color.WHITE);
+        }
+
+        if (Preferences.isGridView(this)){
+            gridRB.setChecked(true);
+        } else {
+            listRB.setChecked(true);
+        }
+
+        listRB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                listRB.setChecked(true);
+                gridRB.setChecked(false);
+                Preferences.setGridView(HomeActivity.this, false);
+            }
+        });
+
+        gridRB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                listRB.setChecked(false);
+                gridRB.setChecked(true);
+                Preferences.setGridView(HomeActivity.this, true);
             }
         });
 

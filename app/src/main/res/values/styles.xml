@@ -27,4 +27,9 @@
         <item name="android:popupBackground">@color/dark_color_primary</item>
     </style>
 
+    <style name="PopupMenuLight" parent="@android:style/Widget.PopupMenu">
+        <item name="android:popupBackground">@color/md_white_1000</item>
+    </style>
+
+
 </resources>

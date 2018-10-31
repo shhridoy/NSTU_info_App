@@ -36,6 +36,31 @@ public class ExtractJson {
         this.linearLayout = linearLayout;
     }
 
+    public int getJsonVersion() {
+        int jsonVersion = 0;
+        try {
+            JSONArray jsonArray = new JSONArray(text);
+
+            for (int i = 0; i < jsonArray.length(); i++) {
+
+                JSONObject object = (JSONObject) jsonArray.get(i);
+
+                if (object.has("data_version")) {
+                    jsonVersion = object.getInt("data_version");
+                }
+            }
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+            Toast.makeText(context, "Execption Arise", Toast.LENGTH_SHORT).show();
+        } catch (Exception e) {
+            e.printStackTrace();
+            Toast.makeText(context, "Execption Arise", Toast.LENGTH_SHORT).show();
+        }
+
+        return jsonVersion;
+    }
+
     public List<String> getMainItemsList() {
         List<String> list = new ArrayList<>();
 
@@ -81,7 +106,7 @@ public class ExtractJson {
 
     public void getView(String itemTag) {
 
-        List<String> itemList = new ArrayList<>();
+        //List<String> itemList = new ArrayList<>();
         String ITEM = null;
 
         try {
@@ -129,7 +154,7 @@ public class ExtractJson {
                                             String title = detailsObject.getString("title");
                                             if (!title.equalsIgnoreCase("")) {
                                                 if (detailsObject.has("contents")) {
-                                                    itemList.add(title);
+                                                    //itemList.add(title);
                                                 } else {
                                                     MyView.setTitleView(context, title, linearLayout);
                                                 }
@@ -152,7 +177,7 @@ public class ExtractJson {
 
                                     }
 
-                                    MyView.setRecyclerView(context, itemList, ITEM, linearLayout);
+                                    //MyView.setRecyclerView(context, itemList, ITEM, linearLayout);
                                 }
                             }
                         }
@@ -266,6 +291,133 @@ public class ExtractJson {
             e.printStackTrace();
             Toast.makeText(context, "Execption Arise", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    public boolean hasContents(String itemTag) {
+
+        boolean contents = false;
+
+        try {
+            JSONArray jsonArray = new JSONArray(text);
+
+            for (int i = 0; i < jsonArray.length(); i++) {
+
+                JSONObject object = (JSONObject) jsonArray.get(i);
+
+                if (object.has("data")) {
+
+                    JSONArray dataArray = object.getJSONArray("data");
+
+                    for (int j=0; j<dataArray.length(); j++) {
+
+                        JSONObject dataObject = (JSONObject) dataArray.get(j);
+
+                        if (dataObject.has("item")) {
+                            String item = dataObject.getString("item");
+
+                            if (item.equalsIgnoreCase(itemTag)) {
+
+                                if (dataObject.has("details")) {
+
+                                    JSONArray detailsArray = dataObject.getJSONArray("details");
+
+                                    for (int k=0; k<detailsArray.length(); k++) {
+
+                                        JSONObject detailsObject = (JSONObject) detailsArray.get(k);
+
+                                        if (detailsObject.has("title")) {
+                                            String title = detailsObject.getString("title");
+                                            if (!title.equalsIgnoreCase("")) {
+                                                if (detailsObject.has("contents")) {
+                                                    contents = true;
+                                                }
+                                            }
+                                        }
+
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+
+                }
+
+            }
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+            Toast.makeText(context, "Execption Arise", Toast.LENGTH_SHORT).show();
+        } catch (Exception e) {
+            e.printStackTrace();
+            Toast.makeText(context, "Execption Arise", Toast.LENGTH_SHORT).show();
+        }
+
+        return contents;
+    }
+
+    public List<String> getSecondaryItemsList (String itemTag) {
+
+        List<String> itemList = new ArrayList<>();
+
+        try {
+            JSONArray jsonArray = new JSONArray(text);
+
+            for (int i = 0; i < jsonArray.length(); i++) {
+
+                JSONObject object = (JSONObject) jsonArray.get(i);
+
+                if (object.has("data")) {
+
+                    JSONArray dataArray = object.getJSONArray("data");
+
+                    for (int j=0; j<dataArray.length(); j++) {
+
+                        JSONObject dataObject = (JSONObject) dataArray.get(j);
+
+                        if (dataObject.has("item")) {
+                            String item = dataObject.getString("item");
+
+                            if (item.equalsIgnoreCase(itemTag)) {
+
+                                if (dataObject.has("details")) {
+
+                                    JSONArray detailsArray = dataObject.getJSONArray("details");
+
+                                    for (int k=0; k<detailsArray.length(); k++) {
+
+                                        JSONObject detailsObject = (JSONObject) detailsArray.get(k);
+
+                                        if (detailsObject.has("title")) {
+                                            String title = detailsObject.getString("title");
+                                            if (!title.equalsIgnoreCase("")) {
+                                                if (detailsObject.has("contents")) {
+                                                    itemList.add(title);
+                                                }
+                                            }
+                                        }
+
+                                    }
+
+                                }
+                            }
+                        }
+
+                    }
+
+                }
+
+            }
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+            Toast.makeText(context, "Execption Arise", Toast.LENGTH_SHORT).show();
+        } catch (Exception e) {
+            e.printStackTrace();
+            Toast.makeText(context, "Execption Arise", Toast.LENGTH_SHORT).show();
+        }
+
+        return itemList;
     }
 
 }

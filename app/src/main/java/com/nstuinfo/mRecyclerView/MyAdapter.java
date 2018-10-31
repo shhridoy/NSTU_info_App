@@ -78,10 +78,14 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
             if (tag.equalsIgnoreCase("second")) {
                 view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recyler_view_model_second, parent, false);
             } else {
-                view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recycler_view_model_home, parent, false);
+                if (Preferences.isGridView(context)) {
+                    view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recycler_view_grid_model_home, parent, false);
+                } else {
+                    view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recycler_view_list_model_home, parent, false);
+                }
             }
         } else {
-            view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recycler_view_model_home, parent, false);
+            view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recycler_view_list_model_home, parent, false);
         }
 
         return new ViewHolder(view);

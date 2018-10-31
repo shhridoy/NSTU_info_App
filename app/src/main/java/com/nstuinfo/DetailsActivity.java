@@ -8,6 +8,10 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.text.util.Linkify;
@@ -20,19 +24,34 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.nstuinfo.mJsonUtils.ExtractJson;
 import com.nstuinfo.mJsonUtils.ReadWriteJson;
 import com.nstuinfo.mOtherUtils.Preferences;
+import com.nstuinfo.mRecyclerView.MyAdapter;
+import com.nstuinfo.mRecyclerView.SpacesItemDecoration;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class DetailsActivity extends AppCompatActivity {
 
     private String title = null;
 
     private LinearLayout ll, rootLL;
+    private ScrollView scrollView;
 
     private Toolbar toolbar;
+
+    private ExtractJson extractJson;
+    private RecyclerView mRecyclerView;
+    private MyAdapter myAdapter;
+    private List<String> itemsList;
+
+    private boolean viewChanged;
 
 
     @Override
@@ -40,21 +59,37 @@ public class DetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.content_details);
 
+        invalidateOptionsMenu();
+
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         //noinspection ConstantConditions
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        scrollView = findViewById(R.id.detailsScroll);
         rootLL = findViewById(R.id.detailsMainLL);
         ll = findViewById(R.id.mainLL);
 
+        viewChanged = false;
+
+        mRecyclerView = findViewById(R.id.recyclerView);
+        mRecyclerView.setHasFixedSize(true);
+        mRecyclerView.addItemDecoration(new SpacesItemDecoration(1));
+
         title = getIntent().getStringExtra("TITLE");
 
-        ExtractJson extractJson = new ExtractJson(this, ReadWriteJson.readFile(this), ll);
+        extractJson = new ExtractJson(this, ReadWriteJson.readFile(this), ll);
 
         if (title != null) {
             getSupportActionBar().setTitle(title);
-            extractJson.getView(title);
+            if (extractJson.hasContents(title)) {
+                mRecyclerView.setVisibility(View.VISIBLE);
+                scrollView.setVisibility(View.GONE);
+                itemsList = extractJson.getSecondaryItemsList(title);
+                loadRecyclerView(true);
+            } else {
+                extractJson.getView(title);
+            }
         }
 
         setTheme();
@@ -69,9 +104,24 @@ public class DetailsActivity extends AppCompatActivity {
         }
     }
 
+    private void loadRecyclerView(boolean isList) {
+        myAdapter = new MyAdapter(this, itemsList, title, "second");
+
+        if (!isList) {
+            mRecyclerView.setLayoutManager(new GridLayoutManager(this, 2));
+        } else {
+            mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        }
+
+        mRecyclerView.setAdapter(myAdapter);
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_details, menu);
+        if (extractJson.hasContents(title)) {
+            getMenuInflater().inflate(R.menu.menu_details, menu);
+        }
+
         return true;
     }
 
@@ -81,10 +131,53 @@ public class DetailsActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.menu_item_view) {
+            if (!viewChanged) {
+                loadRecyclerView(false);
+            } else {
+                loadRecyclerView(true);
+            }
             return true;
         } else if (id == android.R.id.home){
             finish();
+        } else if (id == R.id.menu_item_search){
+            SearchView searchView = (SearchView) item.getActionView();
+            searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+                @Override
+                public boolean onQueryTextSubmit(String query) {
+                    return false;
+                }
+
+                @Override
+                public boolean onQueryTextChange(String newText) {
+
+                    String query = newText.toLowerCase();
+
+                    final List<String> filteredList = new ArrayList<>();
+
+                    for (int i = 0; i < itemsList.size(); i++) {
+                        final String text = itemsList.get(i).toLowerCase();
+                        if (text.contains(query)) {
+                            filteredList.add(itemsList.get(i));
+                        }
+                    }
+
+                    myAdapter = new MyAdapter(DetailsActivity.this, filteredList, title, "second");
+
+                    if (!viewChanged) {
+                        mRecyclerView.setLayoutManager(new GridLayoutManager(DetailsActivity.this, 2));
+                    } else {
+                        mRecyclerView.setLayoutManager(new LinearLayoutManager(DetailsActivity.this));
+                    }
+
+                    mRecyclerView.setAdapter(myAdapter);
+                    myAdapter.notifyDataSetChanged();
+
+                    return false;
+                }
+            });
+
+            return true;
         }
 
         return super.onOptionsItemSelected(item);
