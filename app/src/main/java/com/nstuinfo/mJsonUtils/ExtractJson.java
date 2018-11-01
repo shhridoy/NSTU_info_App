@@ -1,6 +1,10 @@
 package com.nstuinfo.mJsonUtils;
 
 import android.content.Context;
+import android.graphics.Color;
+import android.text.SpannableString;
+import android.text.SpannableStringBuilder;
+import android.text.style.ForegroundColorSpan;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
@@ -438,18 +442,19 @@ public class ExtractJson {
 
                     JSONArray dataArray = object.getJSONArray("data");
 
-                    for (int j=0; j<dataArray.length(); j++) {
+                    for (int j = 0; j < dataArray.length(); j++) {
 
                         JSONObject dataObject = (JSONObject) dataArray.get(j);
 
                         if (dataObject.has("item")) {
+
                             item = dataObject.getString("item");
 
                             if (dataObject.has("details")) {
 
                                 JSONArray detailsArray = dataObject.getJSONArray("details");
 
-                                for (int k=0; k<detailsArray.length(); k++) {
+                                for (int k = 0; k < detailsArray.length(); k++) {
 
                                     JSONObject detailsObject = (JSONObject) detailsArray.get(k);
 
@@ -463,7 +468,7 @@ public class ExtractJson {
 
                                                 JSONArray contentsArray = detailsObject.getJSONArray("contents");
 
-                                                for (int l=0; l<contentsArray.length(); l++) {
+                                                for (int l = 0; l < contentsArray.length(); l++) {
 
                                                     JSONObject contentsObject = (JSONObject) contentsArray.get(l);
 
@@ -483,25 +488,25 @@ public class ExtractJson {
                                                     StringBuilder sb = new StringBuilder();
 
                                                     if (!item.equalsIgnoreCase("")) {
-                                                        sb.append(item).append("<br />");
+                                                        sb.append(item).append("<br /> ");
                                                     }
 
                                                     if (!title.equalsIgnoreCase("")) {
-                                                        sb.append(title).append("<br />");
+                                                        sb.append(title).append("<br /> ");
                                                     }
 
                                                     if (!title1.equalsIgnoreCase("")) {
                                                         tempTitle1 = title1;
-                                                        sb.append(tempTitle1).append("<br />");
+                                                        sb.append(tempTitle1).append("<br /> ");
                                                     } else {
-                                                        sb.append(tempTitle1).append("<br />");
+                                                        sb.append(tempTitle1).append("<br /> ");
                                                     }
 
                                                     if (!hint1.equalsIgnoreCase("")) {
                                                         tempHint1 = hint1;
-                                                        sb.append(tempHint1).append("<br />");
+                                                        sb.append(tempHint1).append("<br /> ");
                                                     } else {
-                                                        sb.append(tempHint1).append("<br />");
+                                                        sb.append(tempHint1).append("<br /> ");
                                                     }
 
                                                     if (!content1.equalsIgnoreCase("")) {
@@ -510,6 +515,9 @@ public class ExtractJson {
 
                                                     itemList.add(sb.toString());
                                                 }
+
+                                                tempTitle1 = "";
+                                                tempHint1 = "";
 
                                             }
                                         }
@@ -526,19 +534,26 @@ public class ExtractJson {
                                     StringBuilder sb1 = new StringBuilder();
 
                                     if (!item.equalsIgnoreCase("")) {
-                                        sb1.append(item).append("<br />");
+                                        sb1.append(item).append("<br /> ");
                                     }
 
-                                    if (!title1.equalsIgnoreCase("")) {
+                                    if (!title.equalsIgnoreCase("")) {
                                         tempTitle = title;
-                                        sb1.append(tempTitle).append("<br />");
+                                        sb1.append(tempTitle).append("<br /> ");
                                     } else {
-                                        sb1.append(tempTitle).append("<br />");
+                                        sb1.append(tempTitle).append("<br /> ");
                                     }
 
                                     if (!hint.equalsIgnoreCase("")) {
-                                        tempHint = hint;
-                                        sb1.append(tempHint).append("<br />");
+                                        if (!hint.contains("One") || !hint.contains("Two") || !hint.contains("Three") || !hint.contains("Four") ||
+                                                !hint.contains("Five") || !hint.contains("one") || !hint.contains("two") || !hint.contains("three") ||
+                                                !hint.contains("four") || !hint.contains("five") || !hint.contains("these") ||
+                                                !hint.contains("These") || !hint.contains("nominated")) {
+
+                                            tempHint = hint;
+                                            sb1.append(tempHint).append("<br /> ");
+
+                                        }
                                     } else {
                                         sb1.append(tempHint).append("<br />");
                                     }
@@ -550,6 +565,9 @@ public class ExtractJson {
                                     itemList.add(sb1.toString());
 
                                 }
+
+                                tempTitle = "";
+                                tempHint = "";
                             }
                         }
 

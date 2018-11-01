@@ -34,6 +34,8 @@ import com.nstuinfo.mOtherUtils.Preferences;
 import com.nstuinfo.mRecyclerView.MyAdapter;
 import com.nstuinfo.mRecyclerView.SpacesItemDecoration;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -45,6 +47,7 @@ public class DetailsActivity extends AppCompatActivity {
     private ScrollView scrollView;
 
     private Toolbar toolbar;
+    private TextView appBarTitleTV;
 
     private ExtractJson extractJson;
     private RecyclerView mRecyclerView;
@@ -66,6 +69,8 @@ public class DetailsActivity extends AppCompatActivity {
         //noinspection ConstantConditions
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        appBarTitleTV = findViewById(R.id.appBarTitleTV);
+
         scrollView = findViewById(R.id.detailsScroll);
         rootLL = findViewById(R.id.detailsMainLL);
         ll = findViewById(R.id.mainLL);
@@ -81,7 +86,7 @@ public class DetailsActivity extends AppCompatActivity {
         extractJson = new ExtractJson(this, ReadWriteJson.readFile(this), ll);
 
         if (title != null) {
-            getSupportActionBar().setTitle(title);
+            appBarTitleTV.setText(title);
             if (extractJson.hasContents(title)) {
                 mRecyclerView.setVisibility(View.VISIBLE);
                 scrollView.setVisibility(View.GONE);
@@ -90,6 +95,8 @@ public class DetailsActivity extends AppCompatActivity {
             } else {
                 extractJson.getView(title);
             }
+        } else {
+            appBarTitleTV.setText(getResources().getString(R.string.app_name));
         }
 
         setTheme();

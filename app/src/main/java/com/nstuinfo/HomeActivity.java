@@ -13,7 +13,9 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.constraint.ConstraintLayout;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -34,6 +36,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.Window;
+import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
@@ -51,6 +55,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.hitomi.cmlibrary.CircleMenu;
 import com.hitomi.cmlibrary.OnMenuSelectedListener;
+import com.nstuinfo.mJsonUtils.Constants;
 import com.nstuinfo.mJsonUtils.ExtractJson;
 import com.nstuinfo.mJsonUtils.ReadWriteJson;
 import com.nstuinfo.mOtherUtils.ExtraUtils;
@@ -66,14 +71,14 @@ public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private Toolbar toolbar;
+    private TextView appBarTitleTV;
     private FloatingActionButton fab;
     private DrawerLayout drawer;
     private NavigationView navigationView;
     private LinearLayout navLL;
 
+    private CoordinatorLayout coordinatorLayout;
     private ConstraintLayout mConstraintLayout;
-
-    private static final String URL = "https://jsonblob.com/api/6a1a5234-d30f-11e8-9c58-b1987dc5c254";
 
     private RecyclerView mRecyclerView;
     private MyAdapter myAdapter;
@@ -158,14 +163,23 @@ public class HomeActivity extends AppCompatActivity
     }
 
     private void initViews() {
+
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        appBarTitleTV = findViewById(R.id.appBarTitleTV);
+        appBarTitleTV.setText(getResources().getString(R.string.app_name));
 
         fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                parseJson(true);
+                if (isInternetOn()) {
+                    parseJson(true);
+                } else {
+                    Toast.makeText(getApplicationContext(), "Please check your data connection!!", Toast.LENGTH_LONG).show();
+                }
+                navViewImageAlteration();
                 //Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 // .setAction("Action", null).show();
             }
@@ -201,6 +215,8 @@ public class HomeActivity extends AppCompatActivity
             }
         });
 
+        coordinatorLayout = findViewById(R.id.coordinatorLayout);
+
         mConstraintLayout = findViewById(R.id.homeConstraintLayout);
 
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -215,11 +231,10 @@ public class HomeActivity extends AppCompatActivity
         navLL = navigationView.getHeaderView(0).findViewById(R.id.navLL);
 
         navViewImageAlteration();
-
     }
 
     private void navViewImageAlteration() {
-        int rand = ExtraUtils.getRandomNumber(1,4);
+        int rand = ExtraUtils.getRandomNumber(1,8);
         if (rand == 1) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
                 navLL.setBackground(getResources().getDrawable(R.drawable.nstu_cover_1));
@@ -232,9 +247,25 @@ public class HomeActivity extends AppCompatActivity
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
                 navLL.setBackground(getResources().getDrawable(R.drawable.nstu_cover_3));
             }
-        } else {
+        } else if (rand == 4) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
                 navLL.setBackground(getResources().getDrawable(R.drawable.nstu_cover_4));
+            }
+        } else if (rand == 5) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                navLL.setBackground(getResources().getDrawable(R.drawable.nstu_cover_5));
+            }
+        } else if (rand == 6) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                navLL.setBackground(getResources().getDrawable(R.drawable.nstu_cover_6));
+            }
+        } else if (rand == 7) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                navLL.setBackground(getResources().getDrawable(R.drawable.nstu_cover_7));
+            }
+        } else {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                navLL.setBackground(getResources().getDrawable(R.drawable.nstu_cover_8));
             }
         }
     }
@@ -278,7 +309,7 @@ public class HomeActivity extends AppCompatActivity
             progressDialog.show();
         }
 
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, URL,
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, Constants.JSON_URL_1,
 
                 new Response.Listener<String>() {
                     @Override
@@ -346,13 +377,28 @@ public class HomeActivity extends AppCompatActivity
         return false;
     }
 
+    boolean backButtonPressedOnce = false;
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            super.onBackPressed();
+            if(backButtonPressedOnce){
+                super.onBackPressed();
+                return;
+            }
+
+            this.backButtonPressedOnce = true;
+            Snackbar snackbar = Snackbar.make(coordinatorLayout, "Please press back again to exit!!", Snackbar.LENGTH_SHORT);
+            snackbar.show();
+
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    backButtonPressedOnce = false;
+                }
+            }, 2000);
         }
     }
 
@@ -368,9 +414,8 @@ public class HomeActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.menu_item_search) {
-
+            navViewImageAlteration();
             searchPopupWindow();
-
             return true;
         }
 
@@ -688,8 +733,6 @@ public class HomeActivity extends AppCompatActivity
                 // nothing to do
             }
         });
-
-
 
         //Set up touch closing outside of pop-up
         mPopUpWindow.setBackgroundDrawable(getResources().getDrawable(R.drawable.pop_up_bg));
