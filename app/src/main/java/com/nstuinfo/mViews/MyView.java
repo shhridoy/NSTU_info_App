@@ -9,11 +9,7 @@ import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.Html;
-import android.text.Spannable;
 import android.text.SpannableString;
-import android.text.TextPaint;
-import android.text.style.URLSpan;
-import android.text.style.UnderlineSpan;
 import android.text.util.Linkify;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -130,13 +126,13 @@ public class MyView {
         mailImg.setVisibility(View.GONE);
 
         if ( content.contains("Phone") || content.contains("Telephone") || content.contains("Mobile") ||
-                content.contains("phone") || content.contains("telephone") || content.contains("mobile") ) {
+                content.contains("phone:") || content.contains("telephone:") || content.contains("mobile:") ) {
 
             callImg.setVisibility(View.VISIBLE);
         }
 
         if (content.contains("Email") || content.contains("E-mail") || content.contains("Mail") ||
-                content.contains("email") || content.contains("e-mail") || content.contains("mail")) {
+                content.contains("email:") || content.contains("e-mail:") || content.contains("mail:")) {
 
             mailImg.setVisibility(View.VISIBLE);
         }

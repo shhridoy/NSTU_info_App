@@ -18,6 +18,8 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -32,6 +34,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.Window;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.RadioButton;
@@ -365,39 +368,8 @@ public class HomeActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.menu_item_search) {
-            SearchView searchView = (SearchView) item.getActionView();
-            searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-                @Override
-                public boolean onQueryTextSubmit(String query) {
-                    return false;
-                }
 
-                @Override
-                public boolean onQueryTextChange(String newText) {
-
-                    String query = newText.toLowerCase();
-
-                    final List<String> filteredList = new ArrayList<>();
-
-                    for (int i = 0; i < itemsList.size(); i++) {
-                        final String text = itemsList.get(i).toLowerCase();
-                        if (text.contains(query)) {
-                            filteredList.add(itemsList.get(i));
-                        }
-                    }
-
-                    myAdapter = new MyAdapter(HomeActivity.this, filteredList, "main");
-                    if (Preferences.isGridView(HomeActivity.this)) {
-                        mRecyclerView.setLayoutManager(new GridLayoutManager(HomeActivity.this, 2));
-                    } else {
-                        mRecyclerView.setLayoutManager(new LinearLayoutManager(HomeActivity.this));
-                    }
-                    mRecyclerView.setAdapter(myAdapter);
-                    myAdapter.notifyDataSetChanged();
-
-                    return false;
-                }
-            });
+            searchPopupWindow();
 
             return true;
         }
@@ -653,6 +625,128 @@ public class HomeActivity extends AppCompatActivity
         });
 
         dialog.show();
+    }
+
+    private void searchPopupWindow() {
+        LayoutInflater inflater = (LayoutInflater) this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View layout = null;
+        if (inflater != null) {
+            layout = inflater.inflate(R.layout.search_popup_window,null);
+        }
+
+        int width = getResources().getDisplayMetrics().widthPixels;
+        int height = getResources().getDisplayMetrics().heightPixels;
+
+        mPopUpWindow = new PopupWindow(layout, width, height, true);
+
+        RelativeLayout backDimRL = null;
+        RelativeLayout mainRL = null;
+        RelativeLayout etBGRL = null;
+        EditText editText = null;
+        RecyclerView recyclerView = null;
+
+        if (layout != null) {
+            backDimRL = layout.findViewById(R.id.dimRL);
+            mainRL = layout.findViewById(R.id.main_popup);
+            etBGRL = layout.findViewById(R.id.ETRL);
+            editText = layout.findViewById(R.id.popUpSearchET);
+            recyclerView = layout.findViewById(R.id.RecyclerVIew);
+        }
+
+        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams( (int) (width*.95), (int) (height*.9) );
+
+        assert mainRL != null;
+        mainRL.setLayoutParams(params);
+
+        recyclerView.setHasFixedSize(true);
+        recyclerView.addItemDecoration(new SpacesItemDecoration(1));
+
+        if (Preferences.isDarkTheme(HomeActivity.this)) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                mainRL.setBackground(getResources().getDrawable(R.drawable.popup_dark_shape));
+                etBGRL.setBackground(getResources().getDrawable(R.drawable.popup_dark_title_shape));
+            } else {
+                mainRL.setBackgroundColor(getResources().getColor(R.color.dark_color_primary));
+                etBGRL.setBackgroundColor(Color.BLACK);
+            }
+            backDimRL.setBackgroundColor(getResources().getColor(R.color.dim_white));
+        }
+
+        searchContent(editText, recyclerView);
+
+        assert backDimRL != null;
+        backDimRL.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mPopUpWindow.dismiss();
+            }
+        });
+
+        mainRL.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // nothing to do
+            }
+        });
+
+
+
+        //Set up touch closing outside of pop-up
+        mPopUpWindow.setBackgroundDrawable(getResources().getDrawable(R.drawable.pop_up_bg));
+        mPopUpWindow.setAnimationStyle(android.R.style.Animation_Dialog);
+        mPopUpWindow.setTouchInterceptor(new View.OnTouchListener() {
+            @SuppressLint("ClickableViewAccessibility")
+            public boolean onTouch(View v, MotionEvent event) {
+                if(event.getAction() == MotionEvent.ACTION_OUTSIDE) {
+                    mPopUpWindow.dismiss();
+                    return true;
+                }
+                return false;
+            }
+        });
+        mPopUpWindow.setOutsideTouchable(true);
+
+        mPopUpWindow.setAnimationStyle(android.R.style.Animation_Dialog);
+        mPopUpWindow.setContentView(layout);
+        mPopUpWindow.showAtLocation(layout, Gravity.CENTER, 0, 0);
+    }
+
+    private void searchContent(EditText editText, final RecyclerView rcView) {
+
+        editText.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                String query = s.toString().toLowerCase();
+
+                List<String> contentList = jsonExtract.getAllContents();
+
+                final List<String> filteredList = new ArrayList<>();
+
+                for (int i = 0; i < contentList.size(); i++) {
+                    final String text = contentList.get(i).toLowerCase();
+                    if (text.contains(query)) {
+                        filteredList.add(contentList.get(i));
+                    }
+                }
+
+                MyAdapter adapter = new MyAdapter(HomeActivity.this, filteredList, "content");
+                rcView.setLayoutManager(new LinearLayoutManager(HomeActivity.this));
+                rcView.setAdapter(adapter);
+                adapter.notifyDataSetChanged();
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
     }
 
     @Override

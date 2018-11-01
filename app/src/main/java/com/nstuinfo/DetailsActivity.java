@@ -106,13 +106,7 @@ public class DetailsActivity extends AppCompatActivity {
 
     private void loadRecyclerView(boolean isList) {
         myAdapter = new MyAdapter(this, itemsList, title, "second");
-
-        if (!isList) {
-            mRecyclerView.setLayoutManager(new GridLayoutManager(this, 2));
-        } else {
-            mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        }
-
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         mRecyclerView.setAdapter(myAdapter);
     }
 
@@ -121,7 +115,6 @@ public class DetailsActivity extends AppCompatActivity {
         if (extractJson.hasContents(title)) {
             getMenuInflater().inflate(R.menu.menu_details, menu);
         }
-
         return true;
     }
 
@@ -131,14 +124,7 @@ public class DetailsActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.menu_item_view) {
-            if (!viewChanged) {
-                loadRecyclerView(false);
-            } else {
-                loadRecyclerView(true);
-            }
-            return true;
-        } else if (id == android.R.id.home){
+        if (id == android.R.id.home){
             finish();
         } else if (id == R.id.menu_item_search){
             SearchView searchView = (SearchView) item.getActionView();
@@ -163,13 +149,7 @@ public class DetailsActivity extends AppCompatActivity {
                     }
 
                     myAdapter = new MyAdapter(DetailsActivity.this, filteredList, title, "second");
-
-                    if (!viewChanged) {
-                        mRecyclerView.setLayoutManager(new GridLayoutManager(DetailsActivity.this, 2));
-                    } else {
-                        mRecyclerView.setLayoutManager(new LinearLayoutManager(DetailsActivity.this));
-                    }
-
+                    mRecyclerView.setLayoutManager(new LinearLayoutManager(DetailsActivity.this));
                     mRecyclerView.setAdapter(myAdapter);
                     myAdapter.notifyDataSetChanged();
 

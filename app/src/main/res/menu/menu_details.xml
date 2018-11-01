@@ -10,12 +10,4 @@
         android:title="Search"
         android:orderInCategory="100"/>
 
-    <item
-        app:showAsAction="ifRoom"
-        android:icon="@drawable/ic_action_view"
-        android:iconTint="@color/md_white_1000"
-        android:id="@+id/menu_item_view"
-        android:title="View"
-        android:orderInCategory="101"/>
-
 </menu>

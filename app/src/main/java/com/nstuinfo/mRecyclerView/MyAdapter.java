@@ -8,6 +8,8 @@ import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
+import android.text.Html;
+import android.text.util.Linkify;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -77,6 +79,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         if (tag != null) {
             if (tag.equalsIgnoreCase("second")) {
                 view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recyler_view_model_second, parent, false);
+            } else if (tag.equalsIgnoreCase("content")) {
+                view = LayoutInflater.from(parent.getContext()).inflate(R.layout.content_view, parent, false);
             } else {
                 if (Preferences.isGridView(context)) {
                     view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recycler_view_grid_model_home, parent, false);
@@ -94,35 +98,73 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull final ViewHolder holder, @SuppressLint("RecyclerView") int position) {
 
-        holder.titleTV.setText(itemsList.get(position));
+        if (tag.equalsIgnoreCase("content")) {
 
-        FontAppearance.setPrimaryTextSize(context, holder.titleTV);
+            String text = itemsList.get(position);
 
-        if (!tag.equalsIgnoreCase("second")) {
-
-            // SET THEME AT HOME RECYCLER VIEW
             if (Preferences.isDarkTheme(context)) {
-                holder.modelMainRL.setBackgroundColor(context.getResources().getColor(R.color.dark_color_secondary));
-                holder.titleTV.setTextColor(Color.WHITE);
-            } else {
-                holder.modelMainRL.setBackgroundColor(Color.WHITE);
-                holder.titleTV.setTextColor(Color.BLACK);
+                holder.contentCard.setCardBackgroundColor(context.getResources().getColor(R.color.dark_color_secondary));
+                holder.contentTv.setTextColor(Color.WHITE);
             }
 
-            // G-MAIL STYLE IMAGE BACKGROUND
-            String letter = String.valueOf(itemsList.get(position).charAt(0));
-            TextDrawable drawable = TextDrawable.builder().buildRound(letter, generator.getRandomColor());
-            holder.imageView.setImageDrawable(drawable);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                holder.contentTv.setText(Html.fromHtml(text, Html.FROM_HTML_MODE_LEGACY));
+            } else {
+                holder.contentTv.setText(Html.fromHtml(text));
+            }
+
+            FontAppearance.setSecondaryTextSize(context, holder.contentTv);
+
+            Linkify.addLinks(holder.contentTv, Linkify.WEB_URLS | Linkify.EMAIL_ADDRESSES | Linkify.PHONE_NUMBERS);
+            holder.contentTv.setLinksClickable(true);
+
+            holder.contentCallImg.setVisibility(View.GONE);
+            holder.contentMailImg.setVisibility(View.GONE);
+
+            if ( text.contains("Phone") || text.contains("Telephone") || text.contains("Mobile") ||
+                    text.contains("phone:") || text.contains("telephone:") || text.contains("mobile:") ) {
+
+                holder.contentCallImg.setVisibility(View.VISIBLE);
+            }
+
+            if (text.contains("Email") || text.contains("E-mail") || text.contains("Mail") ||
+                    text.contains("email:") || text.contains("e-mail:") || text.contains("mail:")) {
+
+                holder.contentMailImg.setVisibility(View.VISIBLE);
+            }
+
 
         } else {
+            holder.titleTV.setText(itemsList.get(position));
 
-            // SET THEME AT DETAILS RECYCLER VIEW
-            if (Preferences.isDarkTheme(context)) {
-                holder.cardView.setCardBackgroundColor(context.getResources().getColor(R.color.dark_color_secondary));
+            FontAppearance.setPrimaryTextSize(context, holder.titleTV);
+
+            if (!tag.equalsIgnoreCase("second")) {
+
+                // SET THEME AT HOME RECYCLER VIEW
+                if (Preferences.isDarkTheme(context)) {
+                    holder.modelMainRL.setBackgroundColor(context.getResources().getColor(R.color.dark_color_secondary));
+                    holder.titleTV.setTextColor(Color.WHITE);
+                } else {
+                    holder.modelMainRL.setBackgroundColor(Color.WHITE);
+                    holder.titleTV.setTextColor(Color.BLACK);
+                }
+
+                // G-MAIL STYLE IMAGE BACKGROUND
+                String letter = String.valueOf(itemsList.get(position).charAt(0));
+                TextDrawable drawable = TextDrawable.builder().buildRound(letter, generator.getRandomColor());
+                holder.imageView.setImageDrawable(drawable);
+
             } else {
-                holder.cardView.setCardBackgroundColor(context.getResources().getColor(R.color.list_item_color));
-            }
 
+                // SET THEME AT DETAILS RECYCLER VIEW
+                if (Preferences.isDarkTheme(context)) {
+                    holder.cardView.setCardBackgroundColor(context.getResources().getColor(R.color.dark_color_secondary));
+                } else {
+                    holder.cardView.setCardBackgroundColor(context.getResources().getColor(R.color.list_item_color));
+                }
+
+            }
         }
 
         if (position > previousPosition) { // scrolling down
@@ -147,12 +189,25 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         ImageView imageView;
         RelativeLayout modelMainRL;
 
+        // Content views
+        TextView contentTv;
+        CardView contentCard;
+        ImageView contentCallImg;
+        ImageView contentMailImg;
+
         ViewHolder(View itemView) {
             super(itemView);
             modelMainRL = itemView.findViewById(R.id.recyclerModelMainRL);
             imageView = itemView.findViewById(R.id.recyclerImageView);
             titleTV = itemView.findViewById(R.id.recyclerTextViewTitle);
             cardView = itemView.findViewById(R.id.list_model_second_cardView);
+
+            // Content views
+            contentTv = itemView.findViewById(R.id.contentTV);
+            contentCard = itemView.findViewById(R.id.content_item_view_card);
+            contentCallImg = itemView.findViewById(R.id.phoneIMGV);
+            contentMailImg = itemView.findViewById(R.id.mailIMGV);
+
             itemView.setOnClickListener(this);
         }
 

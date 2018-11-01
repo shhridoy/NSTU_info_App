@@ -420,4 +420,154 @@ public class ExtractJson {
         return itemList;
     }
 
+
+    public List<String> getAllContents() {
+
+        List<String> itemList = new ArrayList<>();
+        String title="", title1="", item="", hint="", hint1="", content="", content1="";
+        String tempTitle="", tempTitle1="", tempHint = "", tempHint1="";
+
+        try {
+            JSONArray jsonArray = new JSONArray(text);
+
+            for (int i = 0; i < jsonArray.length(); i++) {
+
+                JSONObject object = (JSONObject) jsonArray.get(i);
+
+                if (object.has("data")) {
+
+                    JSONArray dataArray = object.getJSONArray("data");
+
+                    for (int j=0; j<dataArray.length(); j++) {
+
+                        JSONObject dataObject = (JSONObject) dataArray.get(j);
+
+                        if (dataObject.has("item")) {
+                            item = dataObject.getString("item");
+
+                            if (dataObject.has("details")) {
+
+                                JSONArray detailsArray = dataObject.getJSONArray("details");
+
+                                for (int k=0; k<detailsArray.length(); k++) {
+
+                                    JSONObject detailsObject = (JSONObject) detailsArray.get(k);
+
+                                    if (detailsObject.has("title")) {
+
+                                        title = detailsObject.getString("title");
+
+                                        if (!title.equalsIgnoreCase("")) {
+
+                                            if (detailsObject.has("contents")) {
+
+                                                JSONArray contentsArray = detailsObject.getJSONArray("contents");
+
+                                                for (int l=0; l<contentsArray.length(); l++) {
+
+                                                    JSONObject contentsObject = (JSONObject) contentsArray.get(l);
+
+                                                    if (contentsObject.has("title")) {
+                                                        title1 = contentsObject.getString("title");
+                                                    }
+
+
+                                                    if (contentsObject.has("hint")) {
+                                                        hint1 = contentsObject.getString("hint");
+                                                    }
+
+                                                    if (contentsObject.has("content")) {
+                                                        content1 = contentsObject.getString("content");
+                                                    }
+
+                                                    StringBuilder sb = new StringBuilder();
+
+                                                    if (!item.equalsIgnoreCase("")) {
+                                                        sb.append(item).append("<br />");
+                                                    }
+
+                                                    if (!title.equalsIgnoreCase("")) {
+                                                        sb.append(title).append("<br />");
+                                                    }
+
+                                                    if (!title1.equalsIgnoreCase("")) {
+                                                        tempTitle1 = title1;
+                                                        sb.append(tempTitle1).append("<br />");
+                                                    } else {
+                                                        sb.append(tempTitle1).append("<br />");
+                                                    }
+
+                                                    if (!hint1.equalsIgnoreCase("")) {
+                                                        tempHint1 = hint1;
+                                                        sb.append(tempHint1).append("<br />");
+                                                    } else {
+                                                        sb.append(tempHint1).append("<br />");
+                                                    }
+
+                                                    if (!content1.equalsIgnoreCase("")) {
+                                                        sb.append(content1);
+                                                    }
+
+                                                    itemList.add(sb.toString());
+                                                }
+
+                                            }
+                                        }
+                                    }
+
+                                    if (detailsObject.has("hint")) {
+                                        hint = detailsObject.getString("hint");
+                                    }
+
+                                    if (detailsObject.has("content")) {
+                                        content = detailsObject.getString("content");
+                                    }
+
+                                    StringBuilder sb1 = new StringBuilder();
+
+                                    if (!item.equalsIgnoreCase("")) {
+                                        sb1.append(item).append("<br />");
+                                    }
+
+                                    if (!title1.equalsIgnoreCase("")) {
+                                        tempTitle = title;
+                                        sb1.append(tempTitle).append("<br />");
+                                    } else {
+                                        sb1.append(tempTitle).append("<br />");
+                                    }
+
+                                    if (!hint.equalsIgnoreCase("")) {
+                                        tempHint = hint;
+                                        sb1.append(tempHint).append("<br />");
+                                    } else {
+                                        sb1.append(tempHint).append("<br />");
+                                    }
+
+                                    if (!content.equalsIgnoreCase("")) {
+                                        sb1.append(content);
+                                    }
+
+                                    itemList.add(sb1.toString());
+
+                                }
+                            }
+                        }
+
+                    }
+
+                }
+
+            }
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+            Toast.makeText(context, "Execption Arise", Toast.LENGTH_SHORT).show();
+        } catch (Exception e) {
+            e.printStackTrace();
+            Toast.makeText(context, "Execption Arise", Toast.LENGTH_SHORT).show();
+        }
+
+        return itemList;
+    }
+
 }
