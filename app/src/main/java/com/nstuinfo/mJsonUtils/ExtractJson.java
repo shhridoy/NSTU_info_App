@@ -545,14 +545,17 @@ public class ExtractJson {
                                     }
 
                                     if (!hint.equalsIgnoreCase("")) {
-                                        if (!hint.contains("One") || !hint.contains("Two") || !hint.contains("Three") || !hint.contains("Four") ||
-                                                !hint.contains("Five") || !hint.contains("one") || !hint.contains("two") || !hint.contains("three") ||
-                                                !hint.contains("four") || !hint.contains("five") || !hint.contains("these") ||
-                                                !hint.contains("These") || !hint.contains("nominated")) {
+                                        if (hint.contains("One") || hint.contains("Two") || hint.contains("Three") || hint.contains("Four") ||
+                                                hint.contains("Five") || hint.contains("one") || hint.contains("two") || hint.contains("three") ||
+                                                hint.contains("four") || !hint.contains("five") || !hint.contains("these") ||
+                                                hint.contains("These") || hint.contains("nominated")) {
 
+                                            // Nothing to do
+                                            tempHint = "";
+
+                                        } else {
                                             tempHint = hint;
                                             sb1.append(tempHint).append("<br /> ");
-
                                         }
                                     } else {
                                         sb1.append(tempHint).append("<br />");

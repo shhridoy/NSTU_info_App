@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
@@ -16,11 +17,13 @@ import android.support.constraint.ConstraintLayout;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
 import android.text.Editable;
+import android.text.Html;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.Gravity;
@@ -75,7 +78,7 @@ public class HomeActivity extends AppCompatActivity
     private FloatingActionButton fab;
     private DrawerLayout drawer;
     private NavigationView navigationView;
-    private LinearLayout navLL;
+    private RelativeLayout navLL;
 
     private CoordinatorLayout coordinatorLayout;
     private ConstraintLayout mConstraintLayout;
@@ -111,7 +114,7 @@ public class HomeActivity extends AppCompatActivity
             if (isInternetOn()) {
                 parseJson(true);
             } else {
-                Toast.makeText(getApplicationContext(), "Check connection to load data for the first time!!", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Need internet connection to load data for the first time!!", Toast.LENGTH_LONG).show();
             }
         } else {
             if (isInternetOn()) {
@@ -328,10 +331,10 @@ public class HomeActivity extends AppCompatActivity
 
                             jsonExtract = new ExtractJson(HomeActivity.this, response);
                             jsonOnlineVersion =  jsonExtract.getJsonVersion();
+                            ReadWriteJson.saveFile(HomeActivity.this, response);
 
                             if (jsonOfflineVersion < jsonOnlineVersion) {
-                                ReadWriteJson.saveFile(HomeActivity.this, response);
-                                Toast.makeText(HomeActivity.this, "Data updated!", Toast.LENGTH_SHORT).show();
+                                updateNoticeDialog();
                             }
                         }
 
@@ -670,6 +673,24 @@ public class HomeActivity extends AppCompatActivity
         });
 
         dialog.show();
+    }
+
+    private void updateNoticeDialog(){
+
+        AlertDialog.Builder builder=new AlertDialog.Builder(this);
+        // builder.setCancelable(false);
+        builder.setTitle(Html.fromHtml("<font color='#0D47A1'>Notice!!</font>"));
+        builder.setMessage(Html.fromHtml("<font color='#000000'>Data has been updated.</font>"));
+        builder.setPositiveButton(Html.fromHtml("OK"),new DialogInterface.OnClickListener() {
+
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.cancel();
+            }
+        });
+
+        AlertDialog alert = builder.create();
+        alert.show();
     }
 
     private void searchPopupWindow() {
