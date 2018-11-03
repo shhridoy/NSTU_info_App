@@ -2,14 +2,20 @@ package com.nstuinfo.mViews;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
+import android.net.Uri;
 import android.os.Build;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.Html;
 import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.SpannedString;
 import android.text.util.Linkify;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -20,6 +26,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.nstuinfo.R;
+import com.nstuinfo.mJsonUtils.ExtractJson;
+import com.nstuinfo.mJsonUtils.ReadWriteJson;
 import com.nstuinfo.mOtherUtils.Preferences;
 import com.nstuinfo.mOtherUtils.StringUtil;
 import com.nstuinfo.mRecyclerView.MyAdapter;
@@ -143,7 +151,70 @@ public class MyView {
         StringUtil.removeUnderlines(new SpannableString(tv.getText()));
     }
 
-    // VIEWs CREATED PROGRAMMATICALLY
+    public static void setPopupDialog(final Context context, String title, String message, String posBtn, String negBtn, final String posBtnUrl) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+
+        if (title.trim().equalsIgnoreCase("")) {
+            builder.setTitle(Html.fromHtml("<font color='#0D47A1'>Notice!!</font>"));
+        } else {
+            builder.setTitle(Html.fromHtml("<font color='#0D47A1'>"+title+"</font>"));
+        }
+
+        if (!message.trim().equalsIgnoreCase("")) {
+            builder.setMessage(Html.fromHtml("<font color='#000000'>"+message+"</font>"));
+        }
+
+        if (posBtn.trim().equalsIgnoreCase("")) {
+            builder.setPositiveButton(Html.fromHtml("OK"),new DialogInterface.OnClickListener() {
+
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.cancel();
+                }
+            });
+        } else {
+            builder.setPositiveButton(Html.fromHtml(posBtn),new DialogInterface.OnClickListener() {
+
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    if (posBtnUrl.trim().equalsIgnoreCase("")) {
+                        dialog.cancel();
+                    } else {
+                        Uri uri = Uri.parse(posBtnUrl);
+                        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                        context.startActivity(intent);
+                    }
+                }
+            });
+        }
+
+        if (!negBtn.trim().equalsIgnoreCase("")) {
+            builder.setNegativeButton(Html.fromHtml(negBtn),new DialogInterface.OnClickListener() {
+
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.cancel();
+                }
+            });
+        }
+
+        AlertDialog alert = builder.create();
+
+        if (!ReadWriteJson.readFile(context).equalsIgnoreCase("")) {
+            String prevmsg = new ExtractJson(context, ReadWriteJson.readFile(context)).getPopupMessage();
+            if (!message.trim().equalsIgnoreCase("")){
+                if (!prevmsg.equalsIgnoreCase(message)) {
+                    alert.show();
+                }
+            }
+        } else {
+            if (!message.trim().equalsIgnoreCase("")){
+                alert.show();
+            }
+        }
+    }
+
+    // VIEWs CREATED PROGRAMMATICALLY AND UNUSED
     public static void setTitleView2(Context context, String text, LinearLayout linearLayout) {
         CardView cardView = new CardView(context);
         cardView.setCardElevation(0);

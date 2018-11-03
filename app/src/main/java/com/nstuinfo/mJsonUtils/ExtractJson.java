@@ -65,6 +65,31 @@ public class ExtractJson {
         return jsonVersion;
     }
 
+    public String getPopupMessage() {
+        String msg = "";
+        try {
+            JSONArray jsonArray = new JSONArray(text);
+
+            for (int i = 0; i < jsonArray.length(); i++) {
+
+                JSONObject object = (JSONObject) jsonArray.get(i);
+
+                if (object.has("popup_notification_message")) {
+                    msg = object.getString("popup_notification_message").trim();
+                }
+            }
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+            Toast.makeText(context, "Execption Arise", Toast.LENGTH_SHORT).show();
+        } catch (Exception e) {
+            e.printStackTrace();
+            Toast.makeText(context, "Execption Arise", Toast.LENGTH_SHORT).show();
+        }
+
+        return msg;
+    }
+
     public List<String> getMainItemsList() {
         List<String> list = new ArrayList<>();
 
@@ -88,7 +113,7 @@ public class ExtractJson {
                         JSONObject dataObject = (JSONObject) dataArray.get(j);
 
                         if (dataObject.has("item")) {
-                            String item = dataObject.getString("item");
+                            String item = dataObject.getString("item").trim();
                             list.add(item);
                         }
                     }
@@ -133,7 +158,7 @@ public class ExtractJson {
                         JSONObject dataObject = (JSONObject) dataArray.get(j);
 
                         if (dataObject.has("item")) {
-                            String item = dataObject.getString("item");
+                            String item = dataObject.getString("item").trim();
 
                             if (item.equalsIgnoreCase(itemTag)) {
 
@@ -155,7 +180,7 @@ public class ExtractJson {
                                         }*/
 
                                         if (detailsObject.has("title")) {
-                                            String title = detailsObject.getString("title");
+                                            String title = detailsObject.getString("title").trim();
                                             if (!title.equalsIgnoreCase("")) {
                                                 if (detailsObject.has("contents")) {
                                                     //itemList.add(title);
@@ -166,14 +191,14 @@ public class ExtractJson {
                                         }
 
                                         if (detailsObject.has("hint")) {
-                                            String hint = detailsObject.getString("hint");
+                                            String hint = detailsObject.getString("hint").trim();
                                             if (!hint.equalsIgnoreCase("")) {
                                                 MyView.setHintView(context, hint, linearLayout);
                                             }
                                         }
 
                                         if (detailsObject.has("content")) {
-                                            String content = detailsObject.getString("content");
+                                            String content = detailsObject.getString("content").trim();
                                             if (!content.equalsIgnoreCase("")) {
                                                 MyView.setContentView(context, content, linearLayout);
                                             }
@@ -218,7 +243,7 @@ public class ExtractJson {
                         JSONObject dataObject = (JSONObject) dataArray.get(j);
 
                         if (dataObject.has("item")) {
-                            String item = dataObject.getString("item");
+                            String item = dataObject.getString("item").trim();
 
                             if (item.equalsIgnoreCase(titleTag1)) {
                                 if (dataObject.has("details")) {
@@ -237,7 +262,7 @@ public class ExtractJson {
                                         }*/
 
                                         if (detailsObject.has("title")) {
-                                            String title = detailsObject.getString("title");
+                                            String title = detailsObject.getString("title").trim();
 
                                             if (!title.equalsIgnoreCase("") && title.equalsIgnoreCase(titleTag2)) {
 
@@ -252,7 +277,7 @@ public class ExtractJson {
                                                         JSONObject contentsObject = (JSONObject) contentsArray.get(l);
 
                                                         if (contentsObject.has("title")) {
-                                                            String hint = contentsObject.getString("title");
+                                                            String hint = contentsObject.getString("title").trim();
                                                             if (!hint.equalsIgnoreCase("")) {
                                                                 MyView.setTitleView(context, hint, linearLayout);
                                                             }
@@ -260,14 +285,14 @@ public class ExtractJson {
 
 
                                                         if (contentsObject.has("hint")) {
-                                                            String hint = contentsObject.getString("hint");
+                                                            String hint = contentsObject.getString("hint").trim();
                                                             if (!hint.equalsIgnoreCase("")) {
                                                                 MyView.setHintView(context, hint, linearLayout);
                                                             }
                                                         }
 
                                                         if (contentsObject.has("content")) {
-                                                            String content = contentsObject.getString("content");
+                                                            String content = contentsObject.getString("content").trim();
                                                             if (!content.equalsIgnoreCase("")) {
                                                                 MyView.setContentView(context, content, linearLayout);
                                                             }
@@ -317,7 +342,7 @@ public class ExtractJson {
                         JSONObject dataObject = (JSONObject) dataArray.get(j);
 
                         if (dataObject.has("item")) {
-                            String item = dataObject.getString("item");
+                            String item = dataObject.getString("item").trim();
 
                             if (item.equalsIgnoreCase(itemTag)) {
 
@@ -330,7 +355,7 @@ public class ExtractJson {
                                         JSONObject detailsObject = (JSONObject) detailsArray.get(k);
 
                                         if (detailsObject.has("title")) {
-                                            String title = detailsObject.getString("title");
+                                            String title = detailsObject.getString("title").trim();
                                             if (!title.equalsIgnoreCase("")) {
                                                 if (detailsObject.has("contents")) {
                                                     contents = true;
@@ -380,7 +405,7 @@ public class ExtractJson {
                         JSONObject dataObject = (JSONObject) dataArray.get(j);
 
                         if (dataObject.has("item")) {
-                            String item = dataObject.getString("item");
+                            String item = dataObject.getString("item").trim();
 
                             if (item.equalsIgnoreCase(itemTag)) {
 
@@ -393,7 +418,7 @@ public class ExtractJson {
                                         JSONObject detailsObject = (JSONObject) detailsArray.get(k);
 
                                         if (detailsObject.has("title")) {
-                                            String title = detailsObject.getString("title");
+                                            String title = detailsObject.getString("title").trim();
                                             if (!title.equalsIgnoreCase("")) {
                                                 if (detailsObject.has("contents")) {
                                                     itemList.add(title);
@@ -424,7 +449,7 @@ public class ExtractJson {
         return itemList;
     }
 
-
+    // Method for searching
     public List<String> getAllContents() {
 
         List<String> itemList = new ArrayList<>();
@@ -448,7 +473,7 @@ public class ExtractJson {
 
                         if (dataObject.has("item")) {
 
-                            item = dataObject.getString("item");
+                            item = dataObject.getString("item").trim();
 
                             if (dataObject.has("details")) {
 
@@ -460,7 +485,7 @@ public class ExtractJson {
 
                                     if (detailsObject.has("title")) {
 
-                                        title = detailsObject.getString("title");
+                                        title = detailsObject.getString("title").trim();
 
                                         if (!title.equalsIgnoreCase("")) {
 
@@ -473,16 +498,16 @@ public class ExtractJson {
                                                     JSONObject contentsObject = (JSONObject) contentsArray.get(l);
 
                                                     if (contentsObject.has("title")) {
-                                                        title1 = contentsObject.getString("title");
+                                                        title1 = contentsObject.getString("title").trim();
                                                     }
 
 
                                                     if (contentsObject.has("hint")) {
-                                                        hint1 = contentsObject.getString("hint");
+                                                        hint1 = contentsObject.getString("hint").trim();
                                                     }
 
                                                     if (contentsObject.has("content")) {
-                                                        content1 = contentsObject.getString("content");
+                                                        content1 = contentsObject.getString("content").trim();
                                                     }
 
                                                     StringBuilder sb = new StringBuilder();
@@ -524,11 +549,11 @@ public class ExtractJson {
                                     }
 
                                     if (detailsObject.has("hint")) {
-                                        hint = detailsObject.getString("hint");
+                                        hint = detailsObject.getString("hint").trim();
                                     }
 
                                     if (detailsObject.has("content")) {
-                                        content = detailsObject.getString("content");
+                                        content = detailsObject.getString("content").trim();
                                     }
 
                                     StringBuilder sb1 = new StringBuilder();
@@ -590,5 +615,50 @@ public class ExtractJson {
 
         return itemList;
     }
+
+    public void setPopupNotificationDialog() {
+        String popUpTitle = "", popUpMsg = "", popUpPosBtn="", popUpNegBtn="", popUpPosUrlLink="";
+        try {
+            JSONArray jsonArray = new JSONArray(text);
+
+            for (int i = 0; i < jsonArray.length(); i++) {
+
+                JSONObject object = (JSONObject) jsonArray.get(i);
+
+                if (object.has("popup_notification_title")) {
+                    popUpTitle = object.getString("popup_notification_title").trim();
+                }
+
+                if (object.has("popup_notification_message")) {
+                    popUpMsg = object.getString("popup_notification_message").trim();
+                }
+
+                if (object.has("popup_notification_positive_btn")) {
+                    popUpPosBtn = object.getString("popup_notification_positive_btn").trim();
+                }
+
+                if (object.has("popup_notification_positive_url_link")) {
+                    popUpPosUrlLink = object.getString("popup_notification_positive_url_link").trim();
+                }
+
+                if (object.has("popup_notification_negative_btn")) {
+                    popUpNegBtn = object.getString("popup_notification_negative_btn").trim();
+                }
+
+                MyView.setPopupDialog(context, popUpTitle, popUpMsg, popUpPosBtn, popUpNegBtn, popUpPosUrlLink);
+
+            }
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+            Toast.makeText(context, "Execption Arise", Toast.LENGTH_SHORT).show();
+        } catch (Exception e) {
+            e.printStackTrace();
+            Toast.makeText(context, "Execption Arise", Toast.LENGTH_SHORT).show();
+        }
+
+    }
+
+
 
 }

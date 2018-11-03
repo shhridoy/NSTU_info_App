@@ -320,17 +320,21 @@ public class HomeActivity extends AppCompatActivity
 
                         if (pdVisibility) {
                             progressDialog.dismiss();
-                            ReadWriteJson.saveFile(HomeActivity.this, response);
                             jsonExtract = new ExtractJson(HomeActivity.this, response);
                             if (itemsList != null) {
                                 itemsList.clear();
                             }
                             itemsList = jsonExtract.getMainItemsList();
                             loadRecyclerView();
+                            jsonExtract.setPopupNotificationDialog();
+                            ReadWriteJson.saveFile(HomeActivity.this, response);
                         } else {
 
                             jsonExtract = new ExtractJson(HomeActivity.this, response);
                             jsonOnlineVersion =  jsonExtract.getJsonVersion();
+
+                            jsonExtract.setPopupNotificationDialog();
+
                             ReadWriteJson.saveFile(HomeActivity.this, response);
 
                             if (jsonOfflineVersion < jsonOnlineVersion) {
