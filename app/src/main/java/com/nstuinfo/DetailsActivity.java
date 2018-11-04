@@ -68,6 +68,8 @@ public class DetailsActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         //noinspection ConstantConditions
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //noinspection ConstantConditions
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         appBarTitleTV = findViewById(R.id.appBarTitleTV);
 

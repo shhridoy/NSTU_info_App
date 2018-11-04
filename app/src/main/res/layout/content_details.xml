@@ -30,10 +30,8 @@
                 android:maxLines="1"
                 android:ellipsize="end"
                 android:textAlignment="center"
-                android:layout_gravity="center"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textStyle="bold"
-                android:textColor="#ffffff"/>
+                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                android:layout_gravity="center"/>
 
         </android.support.v7.widget.Toolbar>
 

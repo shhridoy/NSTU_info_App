@@ -173,6 +173,9 @@ public class HomeActivity extends AppCompatActivity
         appBarTitleTV = findViewById(R.id.appBarTitleTV);
         appBarTitleTV.setText(getResources().getString(R.string.app_name));
 
+        //noinspection ConstantConditions
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+
         fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
