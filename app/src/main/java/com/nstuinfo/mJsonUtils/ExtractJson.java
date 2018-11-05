@@ -322,6 +322,53 @@ public class ExtractJson {
         }
     }
 
+    public String getUpdatedDate(String itemTag) {
+        String date = "";
+        String item = "";
+
+        try {
+            JSONArray jsonArray = new JSONArray(text);
+
+            for (int i = 0; i < jsonArray.length(); i++) {
+
+                JSONObject object = (JSONObject) jsonArray.get(i);
+
+                if (object.has("data")) {
+
+                    JSONArray dataArray = object.getJSONArray("data");
+
+                    for (int j=0; j<dataArray.length(); j++) {
+
+                        JSONObject dataObject = (JSONObject) dataArray.get(j);
+
+                        if (dataObject.has("item")) {
+                            item = dataObject.getString("item").trim();
+
+                            if (item.equalsIgnoreCase(itemTag)) {
+                                if (dataObject.has("updated_date_notice")) {
+                                    date = dataObject.getString("updated_date_notice");
+                                    break;
+                                }
+                            }
+
+                        }
+                    }
+
+                }
+
+            }
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+            Toast.makeText(context, "Execption Arise", Toast.LENGTH_SHORT).show();
+        } catch (Exception e) {
+            e.printStackTrace();
+            Toast.makeText(context, "Execption Arise", Toast.LENGTH_SHORT).show();
+        }
+
+        return date;
+    }
+
     public boolean hasContents(String itemTag) {
 
         boolean contents = false;

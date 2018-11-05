@@ -48,13 +48,12 @@ public class DetailsActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
     private TextView appBarTitleTV;
+    private TextView footerDateTV;
 
     private ExtractJson extractJson;
     private RecyclerView mRecyclerView;
     private MyAdapter myAdapter;
     private List<String> itemsList;
-
-    private boolean viewChanged;
 
 
     @Override
@@ -72,12 +71,11 @@ public class DetailsActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         appBarTitleTV = findViewById(R.id.appBarTitleTV);
+        footerDateTV = findViewById(R.id.dateTV);
 
         scrollView = findViewById(R.id.detailsScroll);
         rootLL = findViewById(R.id.detailsMainLL);
         ll = findViewById(R.id.mainLL);
-
-        viewChanged = false;
 
         mRecyclerView = findViewById(R.id.recyclerView);
         mRecyclerView.setHasFixedSize(true);
@@ -97,6 +95,12 @@ public class DetailsActivity extends AppCompatActivity {
             } else {
                 extractJson.getView(title);
             }
+
+            if (!extractJson.getUpdatedDate(title).equalsIgnoreCase("")) {
+                footerDateTV.setVisibility(View.VISIBLE);
+                footerDateTV.setText(extractJson.getUpdatedDate(title));
+            }
+
         } else {
             appBarTitleTV.setText(getResources().getString(R.string.app_name));
         }
@@ -110,6 +114,8 @@ public class DetailsActivity extends AppCompatActivity {
             rootLL.setBackgroundColor(getResources().getColor(R.color.dark_color_primary));
             toolbar.setBackgroundColor(Color.BLACK);
             toolbar.setPopupTheme(R.style.PopupMenuDark);
+            footerDateTV.setTextColor(Color.WHITE);
+            footerDateTV.setBackgroundColor(getResources().getColor(R.color.dark_color_primary));
         }
     }
 
