@@ -25,7 +25,7 @@ import com.amulyakhare.textdrawable.TextDrawable;
 import com.amulyakhare.textdrawable.util.ColorGenerator;
 import com.nstuinfo.R;
 import com.nstuinfo.DetailsActivity;
-import com.nstuinfo.mJsonUtils.ExtractJson;
+import com.nstuinfo.mJsonUtils.ExtractDataJson;
 import com.nstuinfo.mJsonUtils.ReadWriteJson;
 import com.nstuinfo.mOtherUtils.AnimationUtils;
 import com.nstuinfo.mOtherUtils.Preferences;
@@ -296,8 +296,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         });
 
 
-        ExtractJson extractJson = new ExtractJson(context, ReadWriteJson.readFile(context), linearLayout);
-        extractJson.getPopUpView(title, tvTitle);
+        ExtractDataJson extractDataJson = new ExtractDataJson(context, ReadWriteJson.readFile(context), linearLayout);
+        extractDataJson.getPopUpView(title, tvTitle);
 
 
         //Set up touch closing outside of pop-up

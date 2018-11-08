@@ -23,71 +23,21 @@ import java.util.List;
  * Created by whoami on 10/24/2018.
  */
 
-public class ExtractJson {
+public class ExtractDataJson {
 
     private Context context;
     private String text;
     private LinearLayout linearLayout;
 
-    public ExtractJson (Context context, String text) {
+    public ExtractDataJson(Context context, String text) {
         this.context  = context;
         this.text = text;
     }
 
-    public ExtractJson(Context context, String text, LinearLayout linearLayout) {
+    public ExtractDataJson(Context context, String text, LinearLayout linearLayout) {
         this.context = context;
         this.text = text;
         this.linearLayout = linearLayout;
-    }
-
-    public int getJsonVersion() {
-        int jsonVersion = 0;
-        try {
-            JSONArray jsonArray = new JSONArray(text);
-
-            for (int i = 0; i < jsonArray.length(); i++) {
-
-                JSONObject object = (JSONObject) jsonArray.get(i);
-
-                if (object.has("data_version")) {
-                    jsonVersion = object.getInt("data_version");
-                }
-            }
-
-        } catch (JSONException e) {
-            e.printStackTrace();
-            Toast.makeText(context, "Execption Arise", Toast.LENGTH_SHORT).show();
-        } catch (Exception e) {
-            e.printStackTrace();
-            Toast.makeText(context, "Execption Arise", Toast.LENGTH_SHORT).show();
-        }
-
-        return jsonVersion;
-    }
-
-    public String getPopupMessage() {
-        String msg = "";
-        try {
-            JSONArray jsonArray = new JSONArray(text);
-
-            for (int i = 0; i < jsonArray.length(); i++) {
-
-                JSONObject object = (JSONObject) jsonArray.get(i);
-
-                if (object.has("popup_notification_message")) {
-                    msg = object.getString("popup_notification_message").trim();
-                }
-            }
-
-        } catch (JSONException e) {
-            e.printStackTrace();
-            Toast.makeText(context, "Execption Arise", Toast.LENGTH_SHORT).show();
-        } catch (Exception e) {
-            e.printStackTrace();
-            Toast.makeText(context, "Execption Arise", Toast.LENGTH_SHORT).show();
-        }
-
-        return msg;
     }
 
     public List<String> getMainItemsList() {
@@ -101,7 +51,7 @@ public class ExtractJson {
                 JSONObject object = (JSONObject) jsonArray.get(i);
 
                 if (object.has("data_version")) {
-                    int data_version = object.getInt("data_version");
+                    String data_version = object.getString("data_version");
                 }
 
                 if (object.has("data")) {
@@ -124,10 +74,10 @@ public class ExtractJson {
 
         } catch (JSONException e) {
             e.printStackTrace();
-            Toast.makeText(context, "Execption Arise", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, "Exception Arise", Toast.LENGTH_SHORT).show();
         } catch (Exception e) {
             e.printStackTrace();
-            Toast.makeText(context, "Execption Arise", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, "Exception Arise", Toast.LENGTH_SHORT).show();
         }
 
         return list;
@@ -146,7 +96,7 @@ public class ExtractJson {
                 JSONObject object = (JSONObject) jsonArray.get(i);
 
                 if (object.has("data_version")) {
-                    int data_version = object.getInt("data_version");
+                    String data_version = object.getString("data_version");
                 }
 
                 if (object.has("data")) {
@@ -219,10 +169,10 @@ public class ExtractJson {
 
         } catch (JSONException e) {
             e.printStackTrace();
-            Toast.makeText(context, "Execption Arise", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, "Exception Arise", Toast.LENGTH_SHORT).show();
         } catch (Exception e) {
             e.printStackTrace();
-            Toast.makeText(context, "Execption Arise", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, "Exception Arise", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -315,10 +265,10 @@ public class ExtractJson {
 
         } catch (JSONException e) {
             e.printStackTrace();
-            Toast.makeText(context, "Execption Arise", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, "Exception Arise", Toast.LENGTH_SHORT).show();
         } catch (Exception e) {
             e.printStackTrace();
-            Toast.makeText(context, "Execption Arise", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, "Exception Arise", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -360,10 +310,10 @@ public class ExtractJson {
 
         } catch (JSONException e) {
             e.printStackTrace();
-            Toast.makeText(context, "Execption Arise", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, "Exception Arise", Toast.LENGTH_SHORT).show();
         } catch (Exception e) {
             e.printStackTrace();
-            Toast.makeText(context, "Execption Arise", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, "Exception Arise", Toast.LENGTH_SHORT).show();
         }
 
         return date;
@@ -423,10 +373,10 @@ public class ExtractJson {
 
         } catch (JSONException e) {
             e.printStackTrace();
-            Toast.makeText(context, "Execption Arise", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, "Exception Arise", Toast.LENGTH_SHORT).show();
         } catch (Exception e) {
             e.printStackTrace();
-            Toast.makeText(context, "Execption Arise", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, "Exception Arise", Toast.LENGTH_SHORT).show();
         }
 
         return contents;
@@ -487,10 +437,10 @@ public class ExtractJson {
 
         } catch (JSONException e) {
             e.printStackTrace();
-            Toast.makeText(context, "Execption Arise", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, "Exception Arise", Toast.LENGTH_SHORT).show();
         } catch (Exception e) {
             e.printStackTrace();
-            Toast.makeText(context, "Execption Arise", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, "Exception Arise", Toast.LENGTH_SHORT).show();
         }
 
         return itemList;
@@ -654,58 +604,13 @@ public class ExtractJson {
 
         } catch (JSONException e) {
             e.printStackTrace();
-            Toast.makeText(context, "Execption Arise", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, "Exception Arise", Toast.LENGTH_SHORT).show();
         } catch (Exception e) {
             e.printStackTrace();
-            Toast.makeText(context, "Execption Arise", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, "Exception Arise", Toast.LENGTH_SHORT).show();
         }
 
         return itemList;
     }
-
-    public void setPopupNotificationDialog() {
-        String popUpTitle = "", popUpMsg = "", popUpPosBtn="", popUpNegBtn="", popUpPosUrlLink="";
-        try {
-            JSONArray jsonArray = new JSONArray(text);
-
-            for (int i = 0; i < jsonArray.length(); i++) {
-
-                JSONObject object = (JSONObject) jsonArray.get(i);
-
-                if (object.has("popup_notification_title")) {
-                    popUpTitle = object.getString("popup_notification_title").trim();
-                }
-
-                if (object.has("popup_notification_message")) {
-                    popUpMsg = object.getString("popup_notification_message").trim();
-                }
-
-                if (object.has("popup_notification_positive_btn")) {
-                    popUpPosBtn = object.getString("popup_notification_positive_btn").trim();
-                }
-
-                if (object.has("popup_notification_positive_url_link")) {
-                    popUpPosUrlLink = object.getString("popup_notification_positive_url_link").trim();
-                }
-
-                if (object.has("popup_notification_negative_btn")) {
-                    popUpNegBtn = object.getString("popup_notification_negative_btn").trim();
-                }
-
-                MyView.setPopupDialog(context, popUpTitle, popUpMsg, popUpPosBtn, popUpNegBtn, popUpPosUrlLink);
-
-            }
-
-        } catch (JSONException e) {
-            e.printStackTrace();
-            Toast.makeText(context, "Execption Arise", Toast.LENGTH_SHORT).show();
-        } catch (Exception e) {
-            e.printStackTrace();
-            Toast.makeText(context, "Execption Arise", Toast.LENGTH_SHORT).show();
-        }
-
-    }
-
-
 
 }

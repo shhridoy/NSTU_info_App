@@ -7,6 +7,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="actionOverflowMenuStyle">@style/OverflowMenu</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
@@ -27,9 +28,12 @@
         <item name="android:popupBackground">@color/dark_color_primary</item>
     </style>
 
-    <style name="PopupMenuLight" parent="@android:style/Widget.PopupMenu">
-        <item name="android:popupBackground">@color/md_white_1000</item>
-    </style>
+    <style name="PopupMenuLight" parent="ThemeOverlay.AppCompat.Light" />
 
+    <style name="OverflowMenu" parent="Widget.AppCompat.PopupMenu.Overflow">
+        <!-- Required for pre-Lollipop. -->
+        <item name="overlapAnchor">false</item>
+        <item name="android:dropDownVerticalOffset">-4.0dip</item>
+    </style>
 
 </resources>

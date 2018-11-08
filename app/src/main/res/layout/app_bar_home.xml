@@ -43,6 +43,6 @@
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
         app:backgroundTint="@color/colorAccent1"
-        app:srcCompat="@android:drawable/ic_popup_sync" />
+        app:srcCompat="@drawable/ic_action_sync" />
 
 </android.support.design.widget.CoordinatorLayout>

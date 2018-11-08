@@ -26,4 +26,13 @@
             android:title="www.nstu.edu.bd" />
     </group>
 
+    <item android:title="@string/about">
+        <menu>
+            <item
+                android:id="@+id/nav_dev_msg"
+                android:icon="@drawable/ic_action_info"
+                android:title="Message from developer" />
+        </menu>
+    </item>
+
 </menu>

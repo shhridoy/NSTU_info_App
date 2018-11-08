@@ -26,7 +26,7 @@
             <TextView
                 android:id="@+id/contentTV"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="@string/com_member_3_10"
+                android:text="This is text"
                 android:textColor="@android:color/black"
                 android:textStyle="normal"
                 android:padding="5dp"
@@ -45,15 +45,15 @@
                     android:id="@+id/phoneIMGV"
                     android:visibility="visible"
                     android:src="@android:drawable/sym_action_call"
-                    android:layout_width="18dp"
-                    android:layout_height="18dp" />
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
 
                 <ImageView
                     android:id="@+id/mailIMGV"
                     android:visibility="visible"
                     android:src="@drawable/ic_action_mail"
-                    android:layout_width="18dp"
-                    android:layout_height="18dp" />
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
 
             </LinearLayout>
 

@@ -16,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="5dp"
-        android:text="@string/ac_hint_1"
+        android:text="Hint"
         android:textColor="@android:color/black"
         android:textStyle="normal"
         android:textAppearance="?android:attr/textAppearanceSmall"/>

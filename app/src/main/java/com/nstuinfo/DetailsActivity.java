@@ -1,40 +1,24 @@
 package com.nstuinfo;
 
-import android.annotation.SuppressLint;
-import android.content.res.ColorStateList;
 import android.graphics.Color;
-import android.graphics.Typeface;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.CardView;
-import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
-import android.text.Html;
-import android.text.util.Linkify;
-import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.MotionEvent;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.LinearLayout;
-import android.widget.PopupWindow;
-import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.nstuinfo.mJsonUtils.ExtractJson;
+import com.nstuinfo.mJsonUtils.ExtractDataJson;
 import com.nstuinfo.mJsonUtils.ReadWriteJson;
 import com.nstuinfo.mOtherUtils.Preferences;
 import com.nstuinfo.mRecyclerView.MyAdapter;
 import com.nstuinfo.mRecyclerView.SpacesItemDecoration;
-
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -50,7 +34,7 @@ public class DetailsActivity extends AppCompatActivity {
     private TextView appBarTitleTV;
     private TextView footerDateTV;
 
-    private ExtractJson extractJson;
+    private ExtractDataJson extractDataJson;
     private RecyclerView mRecyclerView;
     private MyAdapter myAdapter;
     private List<String> itemsList;
@@ -83,22 +67,22 @@ public class DetailsActivity extends AppCompatActivity {
 
         title = getIntent().getStringExtra("TITLE");
 
-        extractJson = new ExtractJson(this, ReadWriteJson.readFile(this), ll);
+        extractDataJson = new ExtractDataJson(this, ReadWriteJson.readFile(this), ll);
 
         if (title != null) {
             appBarTitleTV.setText(title);
-            if (extractJson.hasContents(title)) {
+            if (extractDataJson.hasContents(title)) {
                 mRecyclerView.setVisibility(View.VISIBLE);
                 scrollView.setVisibility(View.GONE);
-                itemsList = extractJson.getSecondaryItemsList(title);
+                itemsList = extractDataJson.getSecondaryItemsList(title);
                 loadRecyclerView(true);
             } else {
-                extractJson.getView(title);
+                extractDataJson.getView(title);
             }
 
-            if (!extractJson.getUpdatedDate(title).equalsIgnoreCase("")) {
+            if (!extractDataJson.getUpdatedDate(title).equalsIgnoreCase("")) {
                 footerDateTV.setVisibility(View.VISIBLE);
-                footerDateTV.setText(extractJson.getUpdatedDate(title));
+                footerDateTV.setText(extractDataJson.getUpdatedDate(title));
             }
 
         } else {
@@ -127,7 +111,7 @@ public class DetailsActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        if (extractJson.hasContents(title)) {
+        if (extractDataJson.hasContents(title)) {
             getMenuInflater().inflate(R.menu.menu_details, menu);
         }
         return true;
