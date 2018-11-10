@@ -1,4 +1,4 @@
-package com.nstuinfo.mRecyclerView;
+package com.mashpy.nstuinfo.mRecyclerView;
 
 import android.graphics.Rect;
 import android.support.v7.widget.RecyclerView;

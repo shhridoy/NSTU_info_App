@@ -1,4 +1,4 @@
-package com.nstuinfo.mJsonUtils;
+package com.mashpy.nstuinfo.mJsonUtils;
 
 import android.content.Context;
 import android.widget.Toast;

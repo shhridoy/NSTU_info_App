@@ -1,4 +1,4 @@
-package com.nstuinfo.mOtherUtils;
+package com.mashpy.nstuinfo.mOtherUtils;
 
 import android.content.Context;
 import android.preference.PreferenceManager;

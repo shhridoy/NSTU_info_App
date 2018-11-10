@@ -1,4 +1,4 @@
-package com.nstuinfo.mOtherUtils;
+package com.mashpy.nstuinfo.mOtherUtils;
 
 import android.text.TextPaint;
 import android.text.style.URLSpan;

@@ -1,4 +1,4 @@
-package com.nstuinfo.mOtherUtils;
+package com.mashpy.nstuinfo.mOtherUtils;
 
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;

@@ -1,22 +1,16 @@
-package com.nstuinfo.mJsonUtils;
+package com.mashpy.nstuinfo.mJsonUtils;
 
 import android.content.Context;
-import android.graphics.Color;
-import android.text.SpannableString;
-import android.text.SpannableStringBuilder;
-import android.text.style.ForegroundColorSpan;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import com.nstuinfo.mRecyclerView.MyAdapter;
-import com.nstuinfo.mViews.MyView;
+import com.mashpy.nstuinfo.mViews.MyView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.ConcurrentModificationException;
 import java.util.List;
 
 /**

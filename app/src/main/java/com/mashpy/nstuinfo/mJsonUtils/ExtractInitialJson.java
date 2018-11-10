@@ -1,9 +1,9 @@
-package com.nstuinfo.mJsonUtils;
+package com.mashpy.nstuinfo.mJsonUtils;
 
 import android.content.Context;
 import android.widget.Toast;
 
-import com.nstuinfo.mViews.MyView;
+import com.mashpy.nstuinfo.mViews.MyView;
 
 import org.json.JSONArray;
 import org.json.JSONException;

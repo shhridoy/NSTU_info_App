@@ -1,9 +1,9 @@
-package com.nstuinfo.mViews;
+package com.mashpy.nstuinfo.mViews;
 
 import android.content.Context;
 import android.widget.TextView;
 
-import com.nstuinfo.mOtherUtils.Preferences;
+import com.mashpy.nstuinfo.mOtherUtils.Preferences;
 
 /**
  * Created by whoami on 10/30/2018.

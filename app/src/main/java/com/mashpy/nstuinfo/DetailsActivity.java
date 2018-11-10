@@ -1,4 +1,4 @@
-package com.nstuinfo;
+package com.mashpy.nstuinfo;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -14,11 +14,11 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
-import com.nstuinfo.mJsonUtils.ExtractDataJson;
-import com.nstuinfo.mJsonUtils.ReadWriteJson;
-import com.nstuinfo.mOtherUtils.Preferences;
-import com.nstuinfo.mRecyclerView.MyAdapter;
-import com.nstuinfo.mRecyclerView.SpacesItemDecoration;
+import com.mashpy.nstuinfo.mOtherUtils.Preferences;
+import com.mashpy.nstuinfo.mRecyclerView.MyAdapter;
+import com.mashpy.nstuinfo.mRecyclerView.SpacesItemDecoration;
+import com.mashpy.nstuinfo.mJsonUtils.ExtractDataJson;
+import com.mashpy.nstuinfo.mJsonUtils.ReadWriteJson;
 
 import java.util.ArrayList;
 import java.util.List;
