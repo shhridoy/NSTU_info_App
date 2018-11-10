@@ -25,6 +25,7 @@ import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
 import android.text.Html;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -108,14 +109,23 @@ public class HomeActivity extends AppCompatActivity
         isInitialThemeDark = Preferences.isDarkTheme(this);
         isInitialViewGrid = Preferences.isGridView(this);
 
+        if (ReadWriteJson.readFile(this).equals("") || ReadWriteJson.readInitialJsonFile(this).equals("")) {
+            ReadWriteJson.saveFile(this, ReadWriteJson.readOfflineJsonFromAssets(this));
+            dataJsonExtract = new ExtractDataJson(this, ReadWriteJson.readFile(this));
+            if (itemsList != null) {
+                itemsList.clear();
+            }
+            itemsList = dataJsonExtract.getMainItemsList();
+            loadRecyclerView();
+        }
 
         if (ReadWriteJson.readInitialJsonFile(this).equals("")) {
             if (isInternetOn()) {
                 parseUrlAndCheckData(true);
-            } else {
+            } /*else {
                 Snackbar snackbar = Snackbar.make(coordinatorLayout, "Need internet connection to load data for the first time!!", Snackbar.LENGTH_SHORT);
                 snackbar.show();
-            }
+            }*/
         } else {
             if (isInternetOn()) {
                 if (ReadWriteJson.readFile(this).equals("")) {

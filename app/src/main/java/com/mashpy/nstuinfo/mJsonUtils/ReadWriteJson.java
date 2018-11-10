@@ -5,6 +5,8 @@ import android.widget.Toast;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
 
 /**
  * Created by whoami on 10/24/2018.
@@ -20,10 +22,8 @@ public class ReadWriteJson {
             FileOutputStream fos = context.openFileOutput(FILE, Context.MODE_PRIVATE);
             fos.write(text.getBytes());
             fos.close();
-            //Toast.makeText(context, "Saved", Toast.LENGTH_SHORT).show();
         } catch (Exception e) {
             e.printStackTrace();
-            //Toast.makeText(context, "Error while saving!!", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -39,7 +39,6 @@ public class ReadWriteJson {
             text = new String(buffer);
         } catch (Exception e) {
             e.printStackTrace();
-            //Toast.makeText(context, "Error while reading!!", Toast.LENGTH_SHORT).show();
         }
         return text;
     }
@@ -49,10 +48,8 @@ public class ReadWriteJson {
             FileOutputStream fos = context.openFileOutput(CHECKING_FILE, Context.MODE_PRIVATE);
             fos.write(text.getBytes());
             fos.close();
-            //Toast.makeText(context, "Saved", Toast.LENGTH_SHORT).show();
         } catch (Exception e) {
             e.printStackTrace();
-            //Toast.makeText(context, "Error while saving!!", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -68,7 +65,23 @@ public class ReadWriteJson {
             text = new String(buffer);
         } catch (Exception e) {
             e.printStackTrace();
-            //Toast.makeText(context, "Error while reading!!", Toast.LENGTH_SHORT).show();
+        }
+        return text;
+    }
+
+
+    @SuppressWarnings("ResultOfMethodCallIgnored")
+    public static String readOfflineJsonFromAssets(Context context) {
+        String text = "";
+        try {
+            InputStream is = context.getAssets().open("offline_json.txt");
+            int size = is.available();
+            byte[] buffer = new byte[size];
+            is.read(buffer);
+            is.close();
+            text = new String(buffer);
+        } catch (IOException e) {
+            e.printStackTrace();
         }
         return text;
     }
