@@ -213,18 +213,20 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
         @Override
         public void onClick(View v) {
-            if (tag.equalsIgnoreCase("second")) {
-                if (Preferences.isDarkTheme(context)) {
-                    cardView.setCardBackgroundColor(Color.BLACK);
+            if (!tag.equalsIgnoreCase("content")) {
+                if (tag.equalsIgnoreCase("second")) {
+                    if (Preferences.isDarkTheme(context)) {
+                        cardView.setCardBackgroundColor(Color.BLACK);
+                    } else {
+                        cardView.setCardBackgroundColor(context.getResources().getColor(R.color.list_item_selection_color));
+                    }
+                    detailsPopUpWindow(titleTV.getText().toString().trim());
                 } else {
-                    cardView.setCardBackgroundColor(context.getResources().getColor(R.color.list_item_selection_color));
+                    Intent intent = new Intent(context, DetailsActivity.class);
+                    intent.putExtra("TITLE", titleTV.getText().toString().trim());
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    context.startActivity(intent);
                 }
-                detailsPopUpWindow(titleTV.getText().toString().trim());
-            } else {
-                Intent intent = new Intent(context, DetailsActivity.class);
-                intent.putExtra("TITLE", titleTV.getText().toString().trim());
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                context.startActivity(intent);
             }
         }
     }

@@ -16,7 +16,7 @@
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:layout_above="@+id/textViewNav"
-        app:srcCompat="@mipmap/ic_launcher_foreground" />
+        app:srcCompat="@mipmap/ic_launcher" />
 
     <TextView
         android:visibility="visible"
@@ -25,9 +25,13 @@
         android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Noakhali Science &amp; Technology University"
+        android:text="Noakhali Science and Technology University"
         android:textColor="@color/md_white_1000"
         android:textStyle="bold"
-        android:textAppearance="?android:attr/textAppearanceSmall"/>
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:paddingStart="2dp"
+        android:paddingLeft="2dp"
+        android:paddingEnd="1dp"
+        android:paddingRight="1dp"/>
 
 </RelativeLayout>

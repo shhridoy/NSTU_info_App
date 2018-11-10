@@ -266,13 +266,9 @@ public class HomeActivity extends AppCompatActivity
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
                 navLL.setBackground(getResources().getDrawable(R.drawable.nstu_cover_6));
             }
-        } else if (rand == 7) {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
-                navLL.setBackground(getResources().getDrawable(R.drawable.nstu_cover_7));
-            }
         } else {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
-                navLL.setBackground(getResources().getDrawable(R.drawable.nstu_cover_8));
+                navLL.setBackground(getResources().getDrawable(R.drawable.nstu_cover_7));
             }
         }
     }
@@ -470,8 +466,8 @@ public class HomeActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.menu_item_search) {
-            navViewImageAlteration();
             searchPopupWindow();
+            navViewImageAlteration();
             return true;
         }
 
@@ -867,8 +863,8 @@ public class HomeActivity extends AppCompatActivity
                     }
                 }
 
-                if (filteredList.size() > 20) {
-                    MyAdapter adapter = new MyAdapter(HomeActivity.this, filteredList.subList(0, 20), "content");
+                if (filteredList.size() > 25) {
+                    MyAdapter adapter = new MyAdapter(HomeActivity.this, filteredList.subList(0, 25), "content");
                     rcView.setLayoutManager(new LinearLayoutManager(HomeActivity.this));
                     rcView.setAdapter(adapter);
                     adapter.notifyDataSetChanged();
