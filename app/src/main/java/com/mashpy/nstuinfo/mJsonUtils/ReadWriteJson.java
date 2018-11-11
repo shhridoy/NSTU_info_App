@@ -1,7 +1,6 @@
 package com.mashpy.nstuinfo.mJsonUtils;
 
 import android.content.Context;
-import android.widget.Toast;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -14,12 +13,12 @@ import java.io.InputStream;
 
 public class ReadWriteJson {
 
-    public static final String FILE = "file1.txt";
-    public static final String CHECKING_FILE = "file2.txt";
+    public static final String DATA_FILE = "dataFile.txt";
+    public static final String INITIAL_FILE = "initialFile.txt";
 
-    public static void saveFile (Context context, String text) {
+    public static void saveDataFile(Context context, String text) {
         try {
-            FileOutputStream fos = context.openFileOutput(FILE, Context.MODE_PRIVATE);
+            FileOutputStream fos = context.openFileOutput(DATA_FILE, Context.MODE_PRIVATE);
             fos.write(text.getBytes());
             fos.close();
         } catch (Exception e) {
@@ -28,10 +27,10 @@ public class ReadWriteJson {
     }
 
     @SuppressWarnings("ResultOfMethodCallIgnored")
-    public static String readFile(Context context) {
+    public static String readDataFile(Context context) {
         String text = "";
         try {
-            FileInputStream fis = context.openFileInput(FILE);
+            FileInputStream fis = context.openFileInput(DATA_FILE);
             int size = fis.available();
             byte[] buffer = new byte[size];
             fis.read(buffer);
@@ -45,7 +44,7 @@ public class ReadWriteJson {
 
     public static void saveInitialJsonFile (Context context, String text) {
         try {
-            FileOutputStream fos = context.openFileOutput(CHECKING_FILE, Context.MODE_PRIVATE);
+            FileOutputStream fos = context.openFileOutput(INITIAL_FILE, Context.MODE_PRIVATE);
             fos.write(text.getBytes());
             fos.close();
         } catch (Exception e) {
@@ -57,7 +56,7 @@ public class ReadWriteJson {
     public static String readInitialJsonFile(Context context) {
         String text = "";
         try {
-            FileInputStream fis = context.openFileInput(CHECKING_FILE);
+            FileInputStream fis = context.openFileInput(INITIAL_FILE);
             int size = fis.available();
             byte[] buffer = new byte[size];
             fis.read(buffer);

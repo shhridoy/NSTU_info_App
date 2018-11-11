@@ -20,6 +20,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.mashpy.nstuinfo.R;
+import com.mashpy.nstuinfo.mOtherUtils.AnimationUtils;
 import com.mashpy.nstuinfo.mOtherUtils.Preferences;
 import com.mashpy.nstuinfo.mOtherUtils.StringUtil;
 
@@ -30,7 +31,7 @@ import com.mashpy.nstuinfo.mOtherUtils.StringUtil;
 public class MyView {
 
     @SuppressLint("InflateParams")
-    public static void setTitleView(Context context, String text, LinearLayout linearLayout) {
+    public static void setTitleView(Context context, String text, LinearLayout linearLayout, int position) {
 
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
@@ -58,11 +59,13 @@ public class MyView {
         Linkify.addLinks(tv, Linkify.WEB_URLS | Linkify.EMAIL_ADDRESSES | Linkify.PHONE_NUMBERS);
         tv.setLinksClickable(true);
 
+        AnimationUtils.rightToLeftAnimation(layout, (700+(position*100)));
+
         linearLayout.addView(layout);
     }
 
     @SuppressLint("InflateParams")
-    public static void setHintView(Context context, String content, LinearLayout linearLayout) {
+    public static void setHintView(Context context, String content, LinearLayout linearLayout, int position) {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View layout = null;
         if (inflater != null) {
@@ -86,11 +89,13 @@ public class MyView {
         Linkify.addLinks(tv, Linkify.WEB_URLS | Linkify.EMAIL_ADDRESSES | Linkify.PHONE_NUMBERS);
         tv.setLinksClickable(true);
 
+        AnimationUtils.rightToLeftAnimation(layout, (700+(position*100)));
+
         linearLayout.addView(layout);
     }
 
     @SuppressLint("InflateParams")
-    public static void setContentView (Context context, String content, LinearLayout linearLayout) {
+    public static void setContentView (Context context, String content, LinearLayout linearLayout, int position) {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View layout = null;
         if (inflater != null) {
@@ -133,6 +138,8 @@ public class MyView {
 
             mailImg.setVisibility(View.VISIBLE);
         }
+
+        AnimationUtils.rightToLeftAnimation(layout, (700+(position*100)));
 
         linearLayout.addView(layout);
 

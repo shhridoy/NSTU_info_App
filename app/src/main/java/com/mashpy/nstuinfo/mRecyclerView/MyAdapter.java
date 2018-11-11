@@ -168,9 +168,9 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         }
 
         if (position > previousPosition) { // scrolling down
-            AnimationUtils.animate(holder.itemView, true);
+            AnimationUtils.animateRecyclerView(holder.itemView, true);
         } else { // scrolling up
-            AnimationUtils.animate(holder.itemView, false);
+            AnimationUtils.animateRecyclerView(holder.itemView, false);
         }
         previousPosition = position;
         AnimationUtils.setFadeAnimation(holder.itemView);
@@ -298,7 +298,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         });
 
 
-        ExtractDataJson extractDataJson = new ExtractDataJson(context, ReadWriteJson.readFile(context), linearLayout);
+        ExtractDataJson extractDataJson = new ExtractDataJson(context, ReadWriteJson.readDataFile(context), linearLayout);
         extractDataJson.getPopUpView(title, tvTitle);
 
 

@@ -9,7 +9,7 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="about"><font color='#0D47A1'>About</font></string>
-
+    <string name="title_activity_webview">WebviewActivity</string>
 
 
 </resources>

@@ -23,7 +23,7 @@ public class ExtractInitialJson {
         this.text = text;
     }
 
-    public Double getDataVersion() {
+    public Double getDataVersionFromInitialJson() {
         double dataVersion = 0.0;
         try {
             JSONArray jsonArray = new JSONArray(text);

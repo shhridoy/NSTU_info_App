@@ -25,7 +25,6 @@ import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
 import android.text.Html;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -109,9 +108,9 @@ public class HomeActivity extends AppCompatActivity
         isInitialThemeDark = Preferences.isDarkTheme(this);
         isInitialViewGrid = Preferences.isGridView(this);
 
-        if (ReadWriteJson.readFile(this).equals("") || ReadWriteJson.readInitialJsonFile(this).equals("")) {
-            ReadWriteJson.saveFile(this, ReadWriteJson.readOfflineJsonFromAssets(this));
-            dataJsonExtract = new ExtractDataJson(this, ReadWriteJson.readFile(this));
+        if (ReadWriteJson.readDataFile(this).equals("") || ReadWriteJson.readInitialJsonFile(this).equals("")) {
+            ReadWriteJson.saveDataFile(this, ReadWriteJson.readOfflineJsonFromAssets(this));
+            dataJsonExtract = new ExtractDataJson(this, ReadWriteJson.readDataFile(this));
             if (itemsList != null) {
                 itemsList.clear();
             }
@@ -122,16 +121,13 @@ public class HomeActivity extends AppCompatActivity
         if (ReadWriteJson.readInitialJsonFile(this).equals("")) {
             if (isInternetOn()) {
                 parseUrlAndCheckData(true);
-            } /*else {
-                Snackbar snackbar = Snackbar.make(coordinatorLayout, "Need internet connection to load data for the first time!!", Snackbar.LENGTH_SHORT);
-                snackbar.show();
-            }*/
+            }
         } else {
             if (isInternetOn()) {
-                if (ReadWriteJson.readFile(this).equals("")) {
-                    parseDataJson();
+                if (ReadWriteJson.readDataFile(this).equals("")) {
+                    parseDataJson(null);
                 }
-                dataJsonExtract = new ExtractDataJson(this, ReadWriteJson.readFile(this));
+                dataJsonExtract = new ExtractDataJson(this, ReadWriteJson.readDataFile(this));
                 if (itemsList != null) {
                     itemsList.clear();
                 }
@@ -139,7 +135,7 @@ public class HomeActivity extends AppCompatActivity
                 loadRecyclerView();
                 parseUrlAndCheckData(false);
             } else {
-                dataJsonExtract = new ExtractDataJson(this, ReadWriteJson.readFile(this));
+                dataJsonExtract = new ExtractDataJson(this, ReadWriteJson.readDataFile(this));
                 if (itemsList != null) {
                     itemsList.clear();
                 }
@@ -248,7 +244,7 @@ public class HomeActivity extends AppCompatActivity
     }
 
     private void navViewImageAlteration() {
-        int rand = ExtraUtils.getRandomNumber(1,8);
+        int rand = ExtraUtils.getRandomNumber(1,7);
         if (rand == 1) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
                 navLL.setBackground(getResources().getDrawable(R.drawable.nstu_cover_1));
@@ -327,17 +323,21 @@ public class HomeActivity extends AppCompatActivity
                         if (pdVisibility) {
                             progressDialog.dismiss();
                             initialJsonExtract = new ExtractInitialJson(HomeActivity.this, response);
-                            jsonOnlineVersion = initialJsonExtract.getDataVersion();
+                            jsonOnlineVersion = initialJsonExtract.getDataVersionFromInitialJson();
                             Constants.JSON_DATA_URL = initialJsonExtract.getDataUrl();
-                            if (ReadWriteJson.readFile(HomeActivity.this).equals("")) {
-                                parseDataJson();
-                            }
+
+                            dataJsonExtract = new ExtractDataJson(HomeActivity.this, ReadWriteJson.readDataFile(HomeActivity.this));
+                            double tempVersion = dataJsonExtract.getDataVersionFromDataJson();
+
                             initialJsonExtract.getPopupNotificationDialog();
                             if (ReadWriteJson.readInitialJsonFile(HomeActivity.this).equals("")) {
                                 ReadWriteJson.saveInitialJsonFile(HomeActivity.this, response);
+                                if (tempVersion < jsonOnlineVersion) {
+                                    parseDataJson(null);
+                                }
                             } else {
                                 initialJsonExtract = new ExtractInitialJson(HomeActivity.this, ReadWriteJson.readInitialJsonFile(HomeActivity.this));
-                                jsonOfflineVersion = initialJsonExtract.getDataVersion();
+                                jsonOfflineVersion = initialJsonExtract.getDataVersionFromInitialJson();
                                 if (jsonOfflineVersion < jsonOnlineVersion) {
                                     updatedDataVersionNoticeDialog(response);
                                 } else {
@@ -347,11 +347,11 @@ public class HomeActivity extends AppCompatActivity
 
                         } else {
                             initialJsonExtract = new ExtractInitialJson(HomeActivity.this, response);
-                            jsonOnlineVersion = initialJsonExtract.getDataVersion();
+                            jsonOnlineVersion = initialJsonExtract.getDataVersionFromInitialJson();
                             initialJsonExtract.getPopupNotificationDialog();
                             Constants.JSON_DATA_URL = initialJsonExtract.getDataUrl();
                             initialJsonExtract = new ExtractInitialJson(HomeActivity.this, ReadWriteJson.readInitialJsonFile(HomeActivity.this));
-                            jsonOfflineVersion = initialJsonExtract.getDataVersion();
+                            jsonOfflineVersion = initialJsonExtract.getDataVersionFromInitialJson();
                             if (jsonOfflineVersion < jsonOnlineVersion) {
                                 updatedDataVersionNoticeDialog(response);
                             }
@@ -362,7 +362,9 @@ public class HomeActivity extends AppCompatActivity
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        progressDialog.dismiss();
+                        if (progressDialog.isShowing()) {
+                            progressDialog.dismiss();
+                        }
                     }
                 });
 
@@ -374,7 +376,7 @@ public class HomeActivity extends AppCompatActivity
         requestQueue.add(stringRequest);
     }
 
-    private void parseDataJson() {
+    private void parseDataJson(final String initialResponse) {
 
         final ProgressDialog progressDialog = new ProgressDialog(this);
         progressDialog.setMessage("Fetching data....");
@@ -394,14 +396,20 @@ public class HomeActivity extends AppCompatActivity
                         }
                         itemsList = dataJsonExtract.getMainItemsList();
                         loadRecyclerView();
-                        ReadWriteJson.saveFile(HomeActivity.this, response);
+                        Toast.makeText(getApplicationContext(), "Data is updated!!", Toast.LENGTH_LONG).show();
+                        ReadWriteJson.saveDataFile(HomeActivity.this, response);
+                        if (initialResponse != null) {
+                            ReadWriteJson.saveInitialJsonFile(HomeActivity.this, initialResponse);
+                        }
 
                     }
                 },
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        progressDialog.dismiss();
+                        if (progressDialog.isShowing()) {
+                            progressDialog.dismiss();
+                        }
                     }
                 });
 
@@ -474,7 +482,6 @@ public class HomeActivity extends AppCompatActivity
         //noinspection SimplifiableIfStatement
         if (id == R.id.menu_item_search) {
             searchPopupWindow();
-            navViewImageAlteration();
             return true;
         }
 
@@ -493,9 +500,10 @@ public class HomeActivity extends AppCompatActivity
         } else if (id == R.id.nav_itemview) {
             itemViewDialog();
         } else if (id == R.id.nav_web_site) {
-            Uri uri = Uri.parse("http://nstu.edu.bd/");
+            /*Uri uri = Uri.parse("http://nstu.edu.bd/");
             Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-            startActivity(intent);
+            startActivity(intent);*/
+            startActivity(new Intent(this, WebviewActivity.class));
         } else if (id == R.id.nav_dev_msg) {
             if (itemsList != null) {
                 Intent intent = new Intent(this, DetailsActivity.class);
@@ -749,8 +757,7 @@ public class HomeActivity extends AppCompatActivity
         builder.setPositiveButton(Html.fromHtml("YES"), new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                parseDataJson();
-                ReadWriteJson.saveInitialJsonFile(HomeActivity.this, response);
+                parseDataJson(response);
                 dialog.cancel();
             }
         });

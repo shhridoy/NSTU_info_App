@@ -67,7 +67,7 @@ public class DetailsActivity extends AppCompatActivity {
 
         title = getIntent().getStringExtra("TITLE");
 
-        extractDataJson = new ExtractDataJson(this, ReadWriteJson.readFile(this), ll);
+        extractDataJson = new ExtractDataJson(this, ReadWriteJson.readDataFile(this), ll);
 
         if (title != null) {
             appBarTitleTV.setText(title);

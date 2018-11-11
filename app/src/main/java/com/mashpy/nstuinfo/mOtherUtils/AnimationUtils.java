@@ -12,34 +12,13 @@ import android.view.animation.TranslateAnimation;
 
 public class AnimationUtils {
 
-    public static void animate(View view , boolean goesDown){
+    public static void animateRecyclerView(View view , boolean goesDown){
         AnimatorSet animatorSet = new AnimatorSet();
 
         ObjectAnimator animatorTranslateY = ObjectAnimator.ofFloat(view, "translationY", goesDown ? 200 : -200, 0);
         animatorTranslateY.setDuration(1000);
 
-        //ObjectAnimator animatorTranslateX = ObjectAnimator.ofFloat(holder.itemView,"translationX",-50,50,-30,30,-20,20,-5,5,0);
-        //animatorTranslateX.setDuration(1000);
-
-        //animatorSet.playTogether(animatorTranslateX,animatorTranslateY);
-
         animatorSet.playTogether(animatorTranslateY);
-        animatorSet.start();
-
-    }
-
-    public static void animate2(View view){
-        AnimatorSet animatorSet = new AnimatorSet();
-
-        ObjectAnimator animatorTranslateY = ObjectAnimator.ofFloat(view, "translationY", 200, 0);
-        animatorTranslateY.setDuration(1000);
-
-        ObjectAnimator animatorTranslateX = ObjectAnimator.ofFloat(view,"translationX",-50,50,-30,30,-20,20,-5,5,0);
-        animatorTranslateX.setDuration(1000);
-
-        animatorSet.playTogether(animatorTranslateX,animatorTranslateY);
-
-        //animatorSet.playTogether(animatorTranslateY);
         animatorSet.start();
 
     }
