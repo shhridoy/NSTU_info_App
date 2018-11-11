@@ -27,6 +27,7 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -39,6 +40,7 @@ import java.util.List;
 public class WebviewActivity extends AppCompatActivity {
 
     private RelativeLayout rootRL;
+    private LinearLayout btnLL;
     private Toolbar toolbar;
     private TextView appBarTitleTV;
     private WebView webView;
@@ -93,6 +95,8 @@ public class WebviewActivity extends AppCompatActivity {
         appBarTitleTV.setText("nstu.edu.bd");
 
         rootRL = findViewById(R.id.RL);
+        btnLL = findViewById(R.id.btnLL);
+        btnLL.setVisibility(View.INVISIBLE);
 
         webView = findViewById(R.id.webView);
         btnBackward = findViewById(R.id.backwardBtn);
@@ -120,16 +124,19 @@ public class WebviewActivity extends AppCompatActivity {
                 }
 
                 if (webView.canGoBack()) {
+                    btnLL.setVisibility(View.VISIBLE);
                     btnBackward.setVisibility(View.VISIBLE);
                 } else {
                     btnBackward.setVisibility(View.INVISIBLE);
                 }
 
                 if (webView.canGoForward()) {
+                    btnLL.setVisibility(View.VISIBLE);
                     btnForward.setVisibility(View.VISIBLE);
                 } else {
                     btnForward.setVisibility(View.INVISIBLE);
                 }
+
             }
         });
 
@@ -153,6 +160,7 @@ public class WebviewActivity extends AppCompatActivity {
     private void setTheme() {
         if (Preferences.isDarkTheme(this)) {
             rootRL.setBackgroundColor(getResources().getColor(R.color.dark_color_primary));
+            btnLL.setBackgroundColor(Color.parseColor("#66000000"));
             toolbar.setBackgroundColor(Color.BLACK);
             toolbar.setPopupTheme(R.style.PopupMenuDark);
         }

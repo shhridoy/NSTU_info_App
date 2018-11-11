@@ -21,11 +21,12 @@
         </WebView>
 
         <LinearLayout
+            android:id="@+id/btnLL"
+            android:background="#661976D2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:orientation="horizontal"
-            android:layout_margin="5dp">
+            android:orientation="horizontal">
 
             <RelativeLayout
                 android:layout_width="match_parent"
