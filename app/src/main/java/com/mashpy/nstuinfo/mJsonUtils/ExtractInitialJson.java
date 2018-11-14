@@ -45,10 +45,8 @@ public class ExtractInitialJson {
 
         } catch (JSONException e) {
             e.printStackTrace();
-            Toast.makeText(context, "Exception Arise", Toast.LENGTH_SHORT).show();
         } catch (Exception e) {
             e.printStackTrace();
-            Toast.makeText(context, "Exception Arise", Toast.LENGTH_SHORT).show();
         }
 
         return dataVersion;
@@ -71,10 +69,8 @@ public class ExtractInitialJson {
 
         } catch (JSONException e) {
             e.printStackTrace();
-            Toast.makeText(context, "Exception Arise", Toast.LENGTH_SHORT).show();
         } catch (Exception e) {
             e.printStackTrace();
-            Toast.makeText(context, "Exception Arise", Toast.LENGTH_SHORT).show();
         }
 
         return dataUrl;
@@ -115,10 +111,8 @@ public class ExtractInitialJson {
 
         } catch (JSONException e) {
             e.printStackTrace();
-            Toast.makeText(context, "Exception Arise", Toast.LENGTH_SHORT).show();
         } catch (Exception e) {
             e.printStackTrace();
-            Toast.makeText(context, "Exception Arise", Toast.LENGTH_SHORT).show();
         }
 
     }

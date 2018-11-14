@@ -1,7 +1,7 @@
 [
 
 	{
-		"data_version": "1.1",
+		"data_version": "1.3",
 		"data": [
 
 			{
@@ -25,7 +25,7 @@
 					{
 						"title" : "",
 						"hint" : "",
-						"content": "<p><u><strong>Establishment:</strong> </u><br /> <strong>Bill Passed at:</strong> 15th July, 2001<br /> <strong>Bill Effective at:</strong> 25th August, 2003<br /> <strong>Academic program started from:</strong> 22nd June, 2006<br /> <strong>Location:</strong> 8 Kilometer south from Noakhali Town, and at the west side of Sonapur-SubornoChar road.<br /> <strong>Area:</strong> 101 Acres.<br /> <strong>Faculty:</strong> 5<br /> <strong>Departments:</strong> 24</p> <p> <strong>1. Faculty of Engineering & Technology</strong><br /> 01. Department of Computer Science and Telecommunication Engineering (CSTE)<br /> 02. Department of Applied Chemistry & Chemical Engineering (ACCE)<br /> 03. Department of Information & Communication Engineering (ICE)<br /> 04. Department of Electrical & Electronic Engineering (EEE) </p> <p> <strong>2. Faculty of Science</strong><br /> 01. Department of Fisheries & Merine Science (FIMS)<br /> 02. Department of Pharmacy<br /> 03. Department of Microbiology<br /> 04. Department of Applied Mathematics<br /> 05. Department of Statistics<br /> 06. Department of Food Technology & Nutrition Science (FTNS)<br /> 07. Department of Environmental Science & Disaster Management (ESDM)<br /> 08. Department of Biotechnology & Genetic Engineering (BGE)<br /> 09. Department of Agriculture<br /> 10. Department of Oceanography<br /> 11. Department of Biochemistry & Molecular Biology (BMB) </p> <p> <strong>3. Faculty of Social Science & Humanities</strong><br /> 01. Department of Bangladesh & Liberation War Studies (BLWS)<br /> 02. Department of Social Science<br /> 03. Department of English<br /> 04. Department of Bangali<br /> 05. Department of Economics </p> <p> <strong>4. Faculty of Business Administration</strong><br /> 01. Department of Business Administration (DBA)<br /> 02. Department of Tourism & Hospitality Management (THM)<br /> 03. Department of Management Information System (MIS) </p> <p><strong>5. Faculty of Eduction Science</strong><br /> 01. Department of Eduction</p> <p><strong>Institute:</strong> 2</p> <ul> <li>1. Institute of Information Science (IIS)</li> <li>2. Institute of Information Technology (IIT)</li> </ul> <br /> <p> <strong>Medium:</strong> English<br /> <strong>Students: </strong>6270<br /> <strong>Teachers:</strong> 225<br /> <strong>Officers:</strong> 104<br /> <strong>Staffs: </strong>245<br /> <strong>Academic Buildings: </strong>2<br /> <strong>Administrative Building(s):</strong> 1<br /> <strong><u>Halls</u>: </strong><br /> 1. Vasha Shaheed Abdus Salam Hall<br /> 2. Hajrat Bibi Khadija Hall<br /> 3. Abdul Malek Hall<br /> 4. Bangabandhu Sheikh Mujibur Rahman Hall<br /> 5. Sheikh Fazilatunnesa Hall<br /> <br /> <strong>Dormitory:</strong> 2 (Teachers' Dormatory & Staffs' Dormatory)<br /> <strong>Apartment:</strong> 1<br /> �<br /> <strong>Others : </strong>Great Freedom Fighter Hazi Mohammad Edris Auditorium, BongoBondu Mural, Shaheed Minar, Liberation Sculpture, TSC Building, Central Mosque, VIP Guest House, Canteen Shed, Ansar Shed.<br /> <strong>Central Library: </strong>9915 books, 446 journal. Ebooks 4.5 lakh</p> <strong>Official website:</strong> <a href='http://www.nstu.edu.bd'>www.nstu.edu.bd</a><br /> <strong>Email:</strong> <a  href='mailto:info@nstu.edu.bd'>info@nstu.edu.bd</a>"
+						"content": "<p><u><strong>Establishment:</strong> </u><br /> <strong>Bill Passed at:</strong> 15th July, 2001<br /> <strong>Bill Effective at:</strong> 25th August, 2003<br /> <strong>Academic program started from:</strong> 22nd June, 2006<br /> <strong>Location:</strong> 8 Kilometer south from Noakhali Town, and at the west side of Sonapur-SubornoChar road.<br /> <strong>Area:</strong> 101 Acres.<br /> <strong>Faculty:</strong> 6<br /> <strong>Departments:</strong> 27</p> <p> <strong>1. Faculty of Engineering & Technology</strong><br /> 01. Department of Computer Science and Telecommunication Engineering (CSTE)<br /> 02. Department of Applied Chemistry & Chemical Engineering (ACCE)<br /> 03. Department of Information & Communication Engineering (ICE)<br /> 04. Department of Electrical & Electronic Engineering (EEE) </p> <p> <strong>2. Faculty of Science</strong><br /> 01. Department of Fisheries & Merine Science (FIMS)<br /> 02. Department of Pharmacy<br /> 03. Department of Microbiology<br /> 04. Department of Applied Mathematics<br /> 05. Department of Statistics<br /> 06. Department of Food Technology & Nutrition Science (FTNS)<br /> 07. Department of Environmental Science & Disaster Management (ESDM)<br /> 08. Department of Biotechnology & Genetic Engineering (BGE)<br /> 09. Department of Agriculture<br /> 10. Department of Oceanography<br /> 11. Department of Biochemistry & Molecular Biology (BMB) </p> <p> <strong>3. Faculty of Social Science & Humanities</strong><br /> 01. Department of Bangladesh & Liberation War Studies (BLWS)<br /> 02. Department of Sociology<br /> 03. Department of English<br /> 04. Department of Bangali<br /> 05. Department of Economics<br /> 06. Department of Social Welfare </p> <p> <strong>4. Faculty of Business Administration</strong><br /> 01. Department of Business Administration (DBA)<br /> 02. Department of Tourism & Hospitality Management (THM)<br /> 03. Department of Management Information System (MIS) </p> <p><strong>5. Faculty of Eduction Sciences</strong><br /> 01. Department of Eduction<br /> 02. Department of Eduction Administration </p> <p><strong>5. Faculty of Law</strong><br /> 01. Department of Law </p> <p><strong>Institute:</strong> 2</p> <ul> <li>1. Institute of Information Science (IIS)</li> <li>2. Institute of Information Technology (IIT)</li> </ul> <br /> <p> <strong>Medium:</strong> English<br /> <strong>Students:</strong> 6270<br /> <strong>Teachers:</strong> 225<br /> <strong>Officers:</strong> 104<br /> <strong>Staffs:</strong> 245<br /> <strong>Academic Buildings: </strong>2<br /> <strong>Administrative Building(s):</strong> 1<br /> <strong><u>Halls</u>: </strong><br /> 1. Vasha Shaheed Abdus Salam Hall<br /> 2. Hajrat Bibi Khadija Hall<br /> 3. Abdul Malek Hall<br /> 4. Bangabandhu Sheikh Mujibur Rahman Hall<br /> 5. Sheikh Fazilatunnesa Hall<br /> <br /> <strong>Dormitory:</strong> 2 (Teachers' Dormatory & Staffs' Dormatory)<br /> <strong>Apartment:</strong> 1<br />  <br /> <strong>Others : </strong>Great Freedom Fighter Hazi Mohammad Edris Auditorium, BongoBondu Mural, Shaheed Minar, Liberation Sculpture, TSC Building, Central Mosque, VIP Guest House, Canteen Shed, Ansar Shed.<br /> <strong>Central Library:</strong> 9915 books, 446 journal. Ebooks 4.5 lakh</p> <strong>Official website:</strong> <a href='http://www.nstu.edu.bd'>www.nstu.edu.bd</a><br /> <strong>Email:</strong> <a class='email' href='mailto:info@nstu.edu.bd'>info@nstu.edu.bd</a>"
 					}
 				]
 			},
@@ -60,12 +60,12 @@
 					{
 						"title": "",
 						"hint": "Two members of joint-secretary rank nominated by the government.",
-						"content": "<strong>Dr. Aruna Biswas</strong><br /> Additional Secretary (Development) Ministry of Education<br /> The People�s Republic of Bangladesh Government<br /> Bangladesh Secretariat, Dhaka-1000.<br /> Telephone: <a  href='tel:9576636'>9576636</a>"
+						"content": "<strong>Dr. Aruna Biswas</strong><br /> Additional Secretary (Development) Ministry of Education<br /> The People’s Republic of Bangladesh Government<br /> Bangladesh Secretariat, Dhaka-1000.<br /> Telephone: <a  href='tel:9576636'>9576636</a>"
 					},
 					{
 						"title": "",
 						"hint": "",
-						"content": "<strong>Mr. Johir Uddin Babar</strong><br /> Project Director, Additional Secretary (University)<br /> Teaching Quality Improvement-2, in Secondary Education, Ministry of Education<br /> The People�s Republic of Bangladesh Government<br /> Bangladesh Secretariat, Dhaka-1000.<br /> Telephone: <a  href='tel:9512282'>9512282</a>"
+						"content": "<strong>Mr. Johir Uddin Babar</strong><br /> Project Director, Additional Secretary (University)<br /> Teaching Quality Improvement-2, in Secondary Education, Ministry of Education<br /> The People’s Republic of Bangladesh Government<br /> Bangladesh Secretariat, Dhaka-1000.<br /> Telephone: <a  href='tel:9512282'>9512282</a>"
 					},
 					{
 						"title": "",
@@ -129,7 +129,7 @@
 					}
 				]
 			},
-			 
+
 			{
 				"item" : "Academic Council",
 				"details" : [{
@@ -146,17 +146,17 @@
 						"title": "",
 						"hint": "Dean of these faculties",
 						"content": "Dean, Faculty of Engineering & Technology<br /> Phone: <a href='tel:62823'>62823</a><br /> Mobile: <a  href='tel:01814405238'>01814405238</a>"
-					}, 
+					},
 					{
 						"title": "",
 						"hint": "",
 						"content": "Dean, Faculty of Science<br /> Phone: <a href='tel:62823'>62823</a><br /> Mobile: <a  href='tel:01713012916'>01713012916</a>"
-					}, 
+					},
 					{
 						"title": "",
 						"hint": "",
 						"content": "Dean, Faculty of Social Science & Humanity<br /> Phone: <a href='tel:62833'>62833</a><br /> Mobile: <a  href='tel:01730042888'>01730042888</a>"
-					}, 
+					},
 					{
 						"title": "",
 						"hint": "",
@@ -344,7 +344,7 @@
 					}
 				]
 			},
-			
+
 			{
 				"item" : "Committees",
 				"details" : [{
@@ -599,7 +599,7 @@
 					}
 				]
 			},
-			
+
 			{
 				"item" : "Offices",
 				"details" : [{
@@ -648,86 +648,6 @@
 								"title": "",
 								"hint": "",
 								"content": "Section Officer<br /> <strong>Mr. Raihan Kaisar Hasem</strong><br /> Mobile: <a  href='tel:01931018687'>01931018687</a><br /> Email: <a  href='mailto:royhan.kaiser@gmail.com'>royhan.kaiser@gmail.com</a>"
-							}
-						]
-					},
-					{
-						"title": "Public Relation and Publication Branch",
-						"contents": [
-							{
-								"title": "",
-								"hint": "",
-								"content": "Mohammad Anwar Hossen (Chondon Anwar)<br /> Associate Professor & Chairman<br /> Department of Bangla<br /> Mobile: <a  href='tel:01716195717'>01716195717</a>, <a  href='tel:01884469687'>01884469687</a><br /> Email: <a  href='mailto:chondonanwar@gmail.com'>chondonanwar@gmail.com</a>"
-							},
-							{
-								"title": "",
-								"hint": "",
-								"content": "Public Relation Officer (PRO)<br /> <strong>Mr. Iftekhar Hossain (Raju)</strong><br /> Mobile: <a  href='tel:01733998894'>01733998894</a><br /> Email: <a  href='mailto:pronstu@gmail.com'>pronstu@gmail.com</a>"
-							}
-						]
-					},
-					{
-						"title": "Research Cell",
-						"contents": [
-							{
-								"title": "",
-								"hint": "Director (In charge)",
-								"content": "<strong>Dr. Mohammad Belal Hosaain</strong><br/> Associate Professor, FIMS<br /> Mobile: <a  href='tel:01867563826'>01867563826</a><br /> Email: <a  href='mailto:mbhnstu@gmail.com'>mbhnstu@gmail.com</a>"
-							},
-							{
-								"title": "",
-								"hint": "Assistant Director",
-								"content": "<strong>Dr. Gazi Mohammad Mohsin</strong><br/> Mobile: <a  href='tel:01718304137'>01718304137</a><br /> Email: <a  href='mailto:mohsinbreeder97@gmail.com'>mohsinbreeder97@gmail.com</a>"
-							},
-							{
-								"title": "",
-								"hint": "",
-								"content": "<strong>Dr. Dibyaduti Sarkar</strong><br/> Mobile: <a  href='tel:01716887743'>01716887743</a><br /> Email: <a  href='mailto:dibyadyuti.sarkar@gmail.com'>dibyadyuti.sarkar@gmail.com</a>"
-							},
-							{
-								"title": "",
-								"hint": "",
-								"content": "<strong>Dr. Dhirendronath Bormon</strong><br/> Mobile: <a  href='tel:01736657543'>01736657543</a><br /> Email: <a  href='mailto:dhirenbcmb@yahoo.com'>dhirenbcmb@yahoo.com</a>"
-							},
-							{
-								"title": "",
-								"hint": "",
-								"content": "<strong>Dr. Ahsan Habib</strong><br/> Mobile: <a  href='tel:01711010126'>01711010126</a><br /> Email: <a  href='mailto:habibuit@gmail.com'>habibuit@gmail.com</a>"
-							},
-							{
-								"title": "",
-								"hint": "",
-								"content": "<strong>Dr. Shamol Kumar Paul</strong><br/> Mobile: <a  href='tel:01716024079'>01716024079</a><br /> Email: <a  href='mailto:skumarpaul79@gmail.com'>skumarpaul79@gmail.com</a>"
-							},
-							{
-								"title": "",
-								"hint": "",
-								"content": "<strong>Dr. Mohammad Abdul Momin Siddique</strong><br/> Mobile: <a  href='tel:01744134451'>01744134451</a><br /> Email: <a  href='mailto:siddique@frov.jcu.cz'>siddique@frov.jcu.cz</a>"
-							},
-							{
-								"title": "",
-								"hint": "Research Officer",
-								"content": "<strong>Agriculturist Md. Golam Rabbani (Educational leave)</strong><br/> Mobile: <a  href='tel:01712543729'>01712543729</a><br /> Email: <a  href='mailto:rabbaniagls@gmail.com'>rabbaniagls@gmail.com</a>"
-							}
-						]
-					},
-					{
-						"title": "Transport Branch",
-						"contents": [
-							{
-								"title": "",
-								"hint": "Transport Adviser",
-								"content": "<strong>Dr. Nahid Akter</strong><br /> Associate Professor, CSTE<br /> Mobile: <a  href='tel:01776381442'>01776381442</a><br/> Email: <a  href='mailto:kakolinahid@gmail.com'>kakolinahid@gmail.com</a>"
-							},
-							{
-								"title": "",
-								"hint": "Assistant Registrar",
-								"content": "<strong>Mr. Tarek Md. Rashed Uddin</strong><br /> Mobile: <a  href='tel:01717688481'>01717688481</a><br/> Email: <a  href='mailto:tmrashad.nstu@gmail.com'>tmrashad.nstu@gmail.com</a>"
-							},
-							{
-								"title": "",
-								"hint": "Auto Mobile Engineer",
-								"content": "<strong>Mr. Md. Shamsudoha Rakib</strong><br/> Mobile:<a  href='tel:01717494680'>01717494680</a><br /> Email: <a  href='mailto:rakibbd2010@gmail.com'>rakibbd2010@gmail.com</a>"
 							}
 						]
 					},
@@ -878,6 +798,86 @@
 								"title": "",
 								"hint": "<strong><u>Despatch Branch</u></strong>",
 								"content": "Assistant Registrar<br /> <strong>Mr. Md. Masudur Rahman</strong><br /> Mobile: <a  href='tel:01819360174'>01819360174</a><br /> Email: <a  href='mailto:masud.nstu@gmail.com'>masud.nstu@gmail.com</a>"
+							}
+						]
+					},
+					{
+						"title": "Public Relation and Publication Branch",
+						"contents": [
+							{
+								"title": "",
+								"hint": "",
+								"content": "Mohammad Anwar Hossen (Chondon Anwar)<br /> Associate Professor & Chairman<br /> Department of Bangla<br /> Mobile: <a  href='tel:01716195717'>01716195717</a>, <a  href='tel:01884469687'>01884469687</a><br /> Email: <a  href='mailto:chondonanwar@gmail.com'>chondonanwar@gmail.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "Public Relation Officer (PRO)<br /> <strong>Mr. Iftekhar Hossain (Raju)</strong><br /> Mobile: <a  href='tel:01733998894'>01733998894</a><br /> Email: <a  href='mailto:pronstu@gmail.com'>pronstu@gmail.com</a>"
+							}
+						]
+					},
+					{
+						"title": "Research Cell",
+						"contents": [
+							{
+								"title": "",
+								"hint": "Director (In charge)",
+								"content": "<strong>Dr. Mohammad Belal Hosaain</strong><br/> Associate Professor, FIMS<br /> Mobile: <a  href='tel:01867563826'>01867563826</a><br /> Email: <a  href='mailto:mbhnstu@gmail.com'>mbhnstu@gmail.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "Assistant Director",
+								"content": "<strong>Dr. Gazi Mohammad Mohsin</strong><br/> Mobile: <a  href='tel:01718304137'>01718304137</a><br /> Email: <a  href='mailto:mohsinbreeder97@gmail.com'>mohsinbreeder97@gmail.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "<strong>Dr. Dibyaduti Sarkar</strong><br/> Mobile: <a  href='tel:01716887743'>01716887743</a><br /> Email: <a  href='mailto:dibyadyuti.sarkar@gmail.com'>dibyadyuti.sarkar@gmail.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "<strong>Dr. Dhirendronath Bormon</strong><br/> Mobile: <a  href='tel:01736657543'>01736657543</a><br /> Email: <a  href='mailto:dhirenbcmb@yahoo.com'>dhirenbcmb@yahoo.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "<strong>Dr. Ahsan Habib</strong><br/> Mobile: <a  href='tel:01711010126'>01711010126</a><br /> Email: <a  href='mailto:habibuit@gmail.com'>habibuit@gmail.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "<strong>Dr. Shamol Kumar Paul</strong><br/> Mobile: <a  href='tel:01716024079'>01716024079</a><br /> Email: <a  href='mailto:skumarpaul79@gmail.com'>skumarpaul79@gmail.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "<strong>Dr. Mohammad Abdul Momin Siddique</strong><br/> Mobile: <a  href='tel:01744134451'>01744134451</a><br /> Email: <a  href='mailto:siddique@frov.jcu.cz'>siddique@frov.jcu.cz</a>"
+							},
+							{
+								"title": "",
+								"hint": "Research Officer",
+								"content": "<strong>Agriculturist Md. Golam Rabbani (Educational leave)</strong><br/> Mobile: <a  href='tel:01712543729'>01712543729</a><br /> Email: <a  href='mailto:rabbaniagls@gmail.com'>rabbaniagls@gmail.com</a>"
+							}
+						]
+					},
+					{
+						"title": "Transport Branch",
+						"contents": [
+							{
+								"title": "",
+								"hint": "Transport Adviser",
+								"content": "<strong>Dr. Nahid Akter</strong><br /> Associate Professor, CSTE<br /> Mobile: <a  href='tel:01776381442'>01776381442</a><br/> Email: <a  href='mailto:kakolinahid@gmail.com'>kakolinahid@gmail.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "Assistant Registrar",
+								"content": "<strong>Mr. Tarek Md. Rashed Uddin</strong><br /> Mobile: <a  href='tel:01717688481'>01717688481</a><br/> Email: <a  href='mailto:tmrashad.nstu@gmail.com'>tmrashad.nstu@gmail.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "Auto Mobile Engineer",
+								"content": "<strong>Mr. Md. Shamsudoha Rakib</strong><br/> Mobile:<a  href='tel:01717494680'>01717494680</a><br /> Email: <a  href='mailto:rakibbd2010@gmail.com'>rakibbd2010@gmail.com</a>"
 							}
 						]
 					},
@@ -1208,7 +1208,7 @@
 					}
 				]
 			},
-			
+
 			{
 				"item" : "Central Library",
 				"details" : [{
@@ -1248,7 +1248,7 @@
 					}
 				]
 			},
-			
+
 			{
 				"item" : "Departments & Teachers",
 				"details" : [{
@@ -1743,7 +1743,7 @@
 					},
 					{
 						"title_hint": "",
-						"title": "MicroBiology (MBG)",
+						"title": "Microbiology (MBG)",
 						"contents": [{
 								"title": "<u><strong>Assistant Professor &amp; Chairman</strong></u>",
 								"hint": "",
@@ -2278,7 +2278,7 @@
 					},
 					{
 						"title_hint": "",
-						"title": "Social Science",
+						"title": "Department of Sociology",
 						"contents": [{
 								"title": "<u><strong>Chairman (In charge)</strong></u>",
 								"hint": "",
@@ -2473,7 +2473,7 @@
 					}
 				]
 			},
-			
+
 			{
 				"item" : "Institutes",
 				"details" : [{
@@ -2528,7 +2528,7 @@
 					}
 				]
 			},
-			
+
 			{
 				"item" : "Academic Officiary",
 				"details" : [{
@@ -2848,7 +2848,7 @@
 					}
 				]
 			},
-			
+
 			{
 				"item" : "Administrative",
 				"details" : [{
@@ -2988,7 +2988,7 @@
 					}
 				]
 			},
-			
+
 			{
 				"item" : "Transport Section",
 				"details" : [{
@@ -3113,7 +3113,7 @@
 					}
 				]
 			},
-			
+
 			{
 				"item" : "Hall Office",
 				"details" : [{
@@ -3285,70 +3285,10 @@
 						"title": "",
 						"hint": "<u><strong>Assistant Registrar</strong></u>",
 						"content": "<strong>Mr. Md. Golap Hossain</strong><br /> Mobile: <a  href='tel:01827522677'>01827522677</a><br /> Email: <a  href='mailto:golapshah77@yahoo.com'>golapshah77@yahoo.com</a>"
-					},
-					{
-						"title": "Sub Technical officer",
-						"hint": "",
-						"content": "<strong>Eng. Mojibur Rahman</strong><br /> Phone: <a  href='tel:01714777766'>01714777766</a>"
-					},
-					{
-						"title": "",
-						"hint": "",
-						"content": "<strong>Eng. Nahid</strong><br /> Phone: <a  href='tel:01832103742'>01832103742</a>"
-					},
-					{
-						"title": "Web Mineral",
-						"hint": "",
-						"content": "<strong>Masud</strong><br /> Phone: <a  href='tel:01922590780'>01922590780</a>"
-					},
-					{
-						"title": "Dish connection",
-						"hint": "",
-						"content": "<strong>Sodesh</strong><br /> Phone: <a  href='tel:01715692969'>01715692969</a>"
-					},
-					{
-						"title": "Plumber",
-						"hint": "",
-						"content": "<strong>Sobbir</strong><br /> Phone: <a  href='tel:01921749571'>01921749571</a>"
-					},
-					{
-						"title": "Electrician",
-						"hint": "",
-						"content": "<strong>Sohid </strong>(he will work for ASH, BKH)<br /> Phone: <a  href='tel:01825739191'>01825739191</a>"
-					},
-					{
-						"title": "",
-						"hint": "",
-						"content": "<strong>Jakir</strong> (he will work for VC Banglo)<br /> Phone: <a  href='tel:01720607414'>01720607414</a>"
-					},
-					{
-						"title": "Karpenter",
-						"hint": "",
-						"content": "<strong>Abdul Khalek</strong><br /> Phone: <a  href='tel:01923606467'>01923606467</a>"
-					},
-					{
-						"title": "Pump Operator",
-						"hint": "",
-						"content": "<strong>Abu Sayem</strong><br /> Phone: <a  href='tel:01816867870'>01816867870</a>"
-					},
-					{
-						"title": "",
-						"hint": "",
-						"content": "<strong>Sohel</strong><br /> Phone: <a  href='tel:01739745415'>01739745415</a>"
-					},
-					{
-						"title": "Cleaner",
-						"hint": "",
-						"content": "<strong>Abdul Rob</strong><br /> Phone: <a  href='tel:01821916129'>01821916129</a>"
-					},
-					{
-						"title": "",
-						"hint": "",
-						"content": "<strong>Porimol</strong><br /> Phone: <a  href='tel:01812437308'>01812437308</a>"
 					}
 				]
 			},
-			
+
 			{
 				"item" : "Emergency Contacts",
 				"details" : [{
@@ -3731,7 +3671,7 @@
 					}
 				]
 			},
-			
+
 			{
 				"item" : "Class Representative",
 				"details" : [{
@@ -3793,12 +3733,12 @@
 						"contents": [{
 								"title" : "",
 								"hint" : "<strong><u>8th batch</u></strong>",
-								"content" : "<strong>Saikot</strong><br /> Mobile: <a href='tel:01815807458'>01815807458</a>"
+								"content" : "<strong>Shakhawat Hossain</strong><br /> Mobile: <a href='tel:01630445492'>01630445492</a>, <a href='tel:01815807458'>01815807458</a>"
 							},
 							{
 								"title" : "",
 								"hint" : "<strong><u>9th batch</u></strong>",
-								"content" : "<strong>Sohag</strong><br /> Mobile: <a href='tel:01684007742'>01684007742</a>"
+								"content" : "<strong>Shah Jalal</strong><br /> Mobile: <a href='tel:01684128052'>01684128052</a>"
 							},
 							{
 								"title" : "",
@@ -3847,13 +3787,13 @@
 							{
 								"title" : "",
 								"hint" : "<strong><u>9th batch</u></strong>",
-								"content" : "<strong>Riazul haydar Robi</strong><br /> Mobile: <a href='tel:01933056866'>01933056866</a>"
+								"content" : "<strong>Sagar Mahmud</strong><br /> Mobile: <a href='tel:01954618970'>01954618970</a>"
 							},
 							{
 								"title" : "",
 								"hint" : "<strong><u>10th batch</u></strong>",
 								"content" : "Male CR<br /> <strong>Md. Kamrul Hasan</strong><br /> Mobile: <a href='tel:01773138682'>01773138682</a>, <a href='tel:01938618203'>01938618203</a><br /> Email: <a href='mailto:mdkamrulhasan989@gmail.com'>mdkamrulhasan989@gmail.com</a>"
-							}, 
+							},
 							{
 								"title" : "",
 								"hint" : "",
@@ -3868,7 +3808,7 @@
 								"title" : "",
 								"hint" : "<strong><u>12th batch</u></strong>",
 								"content" : "Male CR<br /> <strong>Tawhid Ahmed</strong><br /> Email: <a href='mailto:tawhidahmed98@gmail.com'>tawhidahmed98@gmail.com</a>"
-							}, 
+							},
 							{
 								"title" : "",
 								"hint" : "",
@@ -3878,57 +3818,762 @@
 								"title" : "",
 								"hint" : "<strong><u>13th batch</u></strong>",
 								"content" : "<strong>Md. Nurul Amin</strong><br /> Mobile: <a href='tel:01869603929'>01869603929</a><br /> Email: <a href='mailto:nurulaminnion@gmail.com'>nurulaminnion@gmail.com</a>"
+							}
+						]
+					},
+					{
+						"title": "Electrical and Electronic Engineering (EEE)",
+						"hint": "",
+						"contents": [{
+								"title" : "",
+								"hint" : "<strong><u>12th batch</u></strong><br /> EEE 1st batch",
+								"content" : "Male CR<br /> <strong>Sayem Ul Alam</strong><br /> Mobile: <a href='tel:01689058002'>01689058002</a>, <a href='tel:01521484503'>01521484503</a><br /> Email: <a href='mailto:mdsayem932@gmail.com'>mdsayem932@gmail.com</a>"
 							},
 							{
 								"title" : "",
 								"hint" : "",
-								"content" : ""
+								"content" : "Female CR<br /> <strong>Lutfun Nahar</strong>"
+							},
+							{
+								"title" : "",
+								"hint" : "<strong><u>13th batch</u></strong><br /> 2nd batch",
+								"content" : "1st male CR<br /> <strong>Tanim Hasan</strong><br /> Mobile: <a href='tel:01816831436'>01816831436</a>, <a href='tel:01644244727'>01644244727</a><br /> Email: <a href='mailto:tanimxl@gmail.com'>tanimxl@gmail.com</a>"
 							},
 							{
 								"title" : "",
 								"hint" : "",
-								"content" : ""
-							}, 
-							{
-								"title" : "",
-								"hint" : "",
-								"content" : ""
+								"content" : "2nd female CR<br /> <strong>Saiduzzaman Sakibe</strong><br /> Mobile: <a href='tel:01990953069'>01990953069</a><br /> Email: <a href='mailto:szsakibhasan@gmail.com'>szsakibhasan@gmail.com</a>"
 							},
 							{
 								"title" : "",
 								"hint" : "",
-								"content" : ""
+								"content" : "Female CR<br /> <strong>Jannath Alam Suchi</strong><br /> Email: <a href='mailto:jannathalamsuchi012@gmail.com'>jannathalamsuchi012@gmail.com</a>"
+							}
+						]
+					},
+					{
+						"title": "Fisheries and Merine Science (FIMS)",
+						"hint": "",
+						"contents": [{
+								"title" : "",
+								"hint" : "<strong><u>8th batch</u></strong>",
+								"content" : "<strong>Badsha Fahad</strong><br /> Mobile: <a href='tel:01818967555'>01818967555</a><br />"
+							},
+							{
+								"title" : "",
+								"hint" : "<strong><u>9th batch</u></strong>",
+								"content" : "<strong>Asad uz Zaman Nur</strong><br /> Mobile: <a href='tel:01829745662'>01829745662</a><br />"
+							},
+							{
+								"title" : "",
+								"hint" : "<strong><u>10th batch</u></strong>",
+								"content" : "Male CR<br /> <strong>Rafikul Islam Hridoy</strong><br /> Mobile: <a href='tel:01825603034'>01825603034</a><br /> Email: <a href='mailto:hridoyfimsnstu@gmail.com'>hridoyfimsnstu@gmail.com</a>"
 							},
 							{
 								"title" : "",
 								"hint" : "",
-								"content" : ""
+								"content" : "Female CR<br /> <strong>Sima Rani Karmakar</strong>"
+							},
+							{
+								"title" : "",
+								"hint" : "<strong><u>11th batch</u></strong>",
+								"content" : "Male CR<br /> <strong>Partho Banik</strong><br /> Mobile: <a href='tel:01760678956'>01760678956</a>, <a href='tel:01776399886'>01776399886</a><br /> Email: <a href='mailto:partho.nstu@gmail.com'>partho.nstu@gmail.com</a>"
 							},
 							{
 								"title" : "",
 								"hint" : "",
-								"content" : ""
-							}, 
+								"content" : "Female CR<br /> <strong>Rebeka Islam</strong><br /> Email: <a href='mailto:raha.tuna4@gmail.com'>raha.tuna4@gmail.com</a>"
+							},
 							{
 								"title" : "",
-								"hint" : "",
-								"content" : ""
+								"hint" : "<strong><u>12th batch</u></strong>",
+								"content" : "Male CR<br /> <strong>Md. Yeamim Aftad</strong><br /> Mobile: <a href='tel:01784110899'>01784110899</a><br /> Email: <a href='mailto:yeamimaftademu@gmail.com'>yeamimaftademu@gmail.com</a>"
 							},
 							{
 								"title" : "",
 								"hint" : "",
-								"content" : ""
+								"content" : "Female CR<br /> <strong>Shekh Shammi Kowser</strong>"
+							},
+							{
+								"title" : "",
+								"hint" : "<strong><u>13th batch</u></strong>",
+								"content" : "Male CR<br /> <strong>Asadu Zzaman Wasim</strong><br /> Mobile: <a href='tel:01747084301'>01747084301</a>, <a href='tel:01752422209'>01752422209</a><br /> Email: <a href='mailto:asadnstu13@gmail.com'>asadnstu13@gmail.com</a>"
 							},
 							{
 								"title" : "",
 								"hint" : "",
-								"content" : ""
+								"content" : "Female CR<br /> <strong>Khadijatul kubra riya</strong>"
+							}
+						]
+					},
+					{
+						"title": "Pharmacy",
+						"hint": "",
+						"contents": [{
+								"title" : "",
+								"hint" : "<strong><u>8th batch</u></strong>",
+								"content" : "<strong>Tushar deb nath</strong><br /> Mobile: <a href='tel:01779430622'>01779430622</a><br /> Email: <a href='mailto:tushardebnath48@gmail.com'>tushardebnath48@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "<strong><u>9th batch</u></strong>",
+								"content" : "Male CR<br /> <strong>Md.Abdur Rahman Ripon</strong><br /> Mobile: <a href='tel:01720822536'>01720822536</a>, <a href='tel:01515613411'>01515613411</a><br /> Email: <a href='mailto:ripon.nstupharma@gmail.com'>ripon.nstupharma@gmail.com</a>"
 							},
 							{
 								"title" : "",
 								"hint" : "",
-								"content" : ""
-							}, 
+								"content" : "Female CR<br /> <strong>Khadiza Begum</strong><br /> Email: <a href='mailto:nipa.nstupharma09@gmail.com'>nipa.nstupharma09@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "<strong><u>10th batch</u></strong>",
+								"content" : "Male CR<br /> <strong>Md Emtiaz Hasan</strong><br /> Mobile: <a href='tel:01867370832'>01867370832</a><br /> Email: <a href='mailto:emtiazhasan94@gmail'>emtiazhasan94@gmail</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "",
+								"content" : "Female CR<br /> <strong>Anamika Datta</strong><br /> Email: <a href='mailto:anamikaanu1141@gmail.com'>anamikaanu1141@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "<strong><u>11th batch</u></strong>",
+								"content" : "Male CR<br /> <strong>Shovon Chowdhury</strong><br /> Mobile: <a href='tel:01684697572'>01684697572</a><br /> Email: <a href='mailto:shovonchowdhury70@gmail.com'>shovonchowdhury70@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "",
+								"content" : "Female CR<br /> <strong>Lata Anjuman</strong><br /> Email: <a href='mailto:lataanjuman.369@gmail.com'>lataanjuman.369@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "<strong><u>12th batch</u></strong>",
+								"content" : "Male CR<br /> <strong>Fahim Salek Gowrab</strong><br /> Mobile: <a href='tel:01688997373'>01688997373</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "",
+								"content" : "Female CR<br /> <strong>Farjahan Akter Nipa</strong>"
+							},
+							{
+								"title" : "",
+								"hint" : "<strong><u>13th batch</u></strong>",
+								"content" : "Male CR<br /> <strong>Jahidul Alam Showrav</strong><br /> Mobile: <a href='tel:01827387362'>01827387362</a><br /> Email: <a href='mailto:jahidulshowrav@gmail.com'>jahidulshowrav@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "",
+								"content" : "Female CR<br /> <strong>Fatima Tuj Johura</strong>"
+							}
+						]
+					},
+					{
+						"title": "Microbiology (MBG)",
+						"hint": "",
+						"contents": [{
+								"title" : "",
+								"hint" : "<strong><u>8th batch</u></strong>",
+								"content" : "<strong>Shah Md. Ataur Rahman</strong><br /> Mobile: <a href='tel:01726117509'>01726117509</a><br /> Email: <a href='mailto:ataurrahman0911@gmail.com'>ataurrahman0911@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "<strong><u>9th batch</u></strong>",
+								"content" : "<strong>Tushar</strong><br /> Mobile: <a href='tel:01734452665'>01718992969</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "<strong><u>10th batch</u></strong>",
+								"content" : "Male CR<br /> <strong>Kamrul Hasan Shimul</strong><br /> Email: <a href='mailto:kamrulhasanshimul208@gmail.com'>kamrulhasanshimul208@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "",
+								"content" : "Female CR<br /> <strong>Maitry Das</strong><br /> Email: <a href='mailto:maitrydas95@gmail.com'>maitrydas95@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "<strong><u>11th batch</u></strong>",
+								"content" : "Male CR<br /> <strong>Nazmul Alam</strong><br /> Mobile: <a href='tel:01920504979'>01920504979</a>, <a href='tel:01787139886'>01787139886</a><br /> Email: <a href='mailto:nazmulalam466453@gmail.com'>nazmulalam466453@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "",
+								"content" : "Female CR<br /> <strong>Mohosena Akter Lisa</strong><br /> Email: <a href='mailto:lisamoho013@gmail.com'>lisamoho013@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "<strong><u>12th batch</u></strong>",
+								"content" : "Male CR<br /> <strong>Suhag Chandra Roy</strong><br /> Mobile: <a href='tel:01863277943'>01863277943</a><br /> Email: <a href='mailto:suhagroy18@gmail.com'>suhagroy18@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "",
+								"content" : "Female CR<br /> <strong>Tania Peas</strong><br /> Email: <a href='mailto:taniapeas98@gmail.com'>taniapeas98@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "<strong><u>13th batch</u></strong>",
+								"content" : "Male CR<br /> <strong>Mohammed kaiser bin wahid ador</strong><br /> Mobile: <a href='tel:01855967713'>01855967713</a><br /> Email: <a href='mailto:kaiserbenwahid@gmail.com'>kaiserbenwahid@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "",
+								"content" : "Female CR<br /> <strong>Ananya Majumder</strong><br /> Email: <a href='mailto:majumderananya09@gmail.com'>majumderananya09@gmail.com</a>"
+							}
+						]
+					},
+					{
+						"title": "Applied Mathematics (A. MATH)",
+						"hint": "",
+						"contents": [{
+								"title" : "",
+								"hint" : "<strong><u>8th batch</u></strong>",
+								"content" : "<strong>Md. Tajul Islam</strong><br /> Mobile: <a href='tel:01620264888'>01620264888</a><br />"
+							},
+							{
+								"title" : "",
+								"hint" : "<strong><u>9th batch</u></strong>",
+								"content" : "<strong>Mosharaf Hossain</strong><br /> Mobile: <a href='tel:01837170397'>01837170397</a><br />"
+							},
+							{
+								"title" : "",
+								"hint" : "<strong><u>10th batch</u></strong>",
+								"content" : "Male CR<br /> <strong>Md. Rafiqul Islam Sumon</strong><br /> Mobile: <a href='tel:01971214507'>01971214507</a><br /> Email: <a href='mailto:risumon07@gmail.com'>risumon07@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "",
+								"content" : "Female CR<br /> <strong>Mishu Bhowmick</strong>"
+							},
+							{
+								"title" : "",
+								"hint" : "<strong><u>11th batch</u></strong>",
+								"content" : "Male CR<br /> <strong>Md. Iftakhar Mahmud</strong><br /> Mobile: <a href='tel:01967909567'>01967909567</a><br /> Email: <a href='mailto:saikatiftakhar@gmail.com'>saikatiftakhar@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "",
+								"content" : "Female CR<br /> <strong>Swarna Rani Chanda</strong><br /> Email: <a href='mailto:swarnanstu97@gmail.com'>swarnanstu97@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "<strong><u>12th batch</u></strong>",
+								"content" : "Male CR<br /> <strong>Mohammad Sanaullah Rabby</strong><br /> Mobile: <a href='tel:01676695828'>01676695828</a><br /> Email: <a href='mailto:mohammadsanaullahrabby@gmail.com'>mohammadsanaullahrabby@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "",
+								"content" : "Female CR<br /> <strong>Jeba Sultana</strong>"
+							},
+							{
+								"title" : "",
+								"hint" : "<strong><u>13th batch</u></strong>",
+								"content" : "Male CR<br /> <strong>Mahmudul Hasan Riyad</strong><br /> Mobile: <a href='tel:01863976474'>01863976474</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "",
+								"content" : "Female CR<br /> <strong>Salma Jahan Oishi</strong>"
+							}
+						]
+					},
+					{
+						"title": "Statistics",
+						"hint": "",
+						"contents": [{
+								"title" : "",
+								"hint" : "<strong><u>12th batch</u></strong>",
+								"content" : "Male CR<br /> <strong>Sabbir Hassan</strong><br /> Mobile: <a href='tel:01787398735'>01787398735</a><br /> Email: <a href='mailto:sabbirhassanstat50@gmail.com'>sabbirhassanstat50@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "",
+								"content" : "Female CR<br /> <strong>Mahmuda Al Neyma</strong><br /> Email: <a href='mailto:mahmuda.neyma98@gmail.com'>mahmuda.neyma98@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "<strong><u>13th batch</u></strong>",
+								"content" : "Male CR<br /> <strong>Emon Dutta</strong><br /> Mobile: <a href='tel:01855473789'>01855473789</a><br /> Email: <a href='mailto:emondutta4@gmail.com'>emondutta4@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "",
+								"content" : "Female CR<br /> <strong>Nilufa aktar</strong>"
+							}
+						]
+					},
+					{
+						"title": "Food Technology and Nutrition Science (FTNS)",
+						"hint": "",
+						"contents": [{
+								"title" : "",
+								"hint" : "<strong><u>8th batch</u></strong>",
+								"content" : "<strong>Md. Nur Alom Prince</strong><br /> Mobile: <a href='tel:01731734741'>01731734741</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "<strong><u>9th batch</u></strong>",
+								"content" : "<strong>Md. Mahmudul Islam Khan</strong><br /> Mobile: <a href='tel:01683889604'>01683889604</a><br /> Email: <a href='mailto:mikshakil@yahoo.com'>mikshakil@yahoo.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "<strong><u>10th batch</u></strong>",
+								"content" : "Male CR<br /> <strong>Jilon Hossain</strong><br /> Mobile: <a href='tel:01626320882'>01626320882</a><br /> Email: <a href='mailto:jilonftns@gmail.com'>jilonftns@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "",
+								"content" : "Female CR<br /> <strong>Nusrat Jahan Jhily</strong><br /> Email: <a href='mailto:nusratjhily1@gmail'>nusratjhily1@gmail</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "<strong><u>11th batch</u></strong>",
+								"content" : "Male CR<br /> <strong>Israfil Sarwer Tuhin</strong><br /> Mobile: <a href='tel:01859106531'>01859106531</a><br /> Email: <a href='mailto:israfilsarwer.nstu@gmail.com'>israfilsarwer.nstu@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "",
+								"content" : "Female CR<br /> <strong>Sushmita Karmokar</strong><br /> Email: <a href='mailto:sushmitakarmokar907@gmail.com'>sushmitakarmokar907@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "<strong><u>12th batch</u></strong>",
+								"content" : "Male CR<br /> <strong>Rakibul Hasan</strong><br /> Mobile: <a href='tel:01624984412'>01624984412</a><br /> Email: <a href='mailto:rakib.ftns2017@gmail.com'>rakib.ftns2017@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "",
+								"content" : "Female CR<br /> <strong>Rekha Akter</strong>"
+							},
+							{
+								"title" : "",
+								"hint" : "<strong><u>13th batch</u></strong>",
+								"content" : "Male CR<br /> <strong>Saiful Rahman</strong><br /> Mobile: <a href='tel:01866307448'>01866307448</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "",
+								"content" : "Female CR<br /> <strong>Maisha Rahman</strong><br /> Email: <a href='mailto:maishasoravica11@gmail.com'>maishasoravica11@gmail.com</a>"
+							}
+						]
+					},
+					{
+						"title": "Environmental Science and Disaster Management (ESDM)",
+						"hint": "",
+						"contents": [{
+								"title" : "",
+								"hint" : "<strong><u>8th batch</u></strong>",
+								"content" : "Male CR<br /> <strong>Md.Obaydullah Al Hasib</strong><br /> Mobile: <a href='mailto:01926863669'>01926863669</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "",
+								"content" : "Female CR<br /> <strong>Jobaida Soma</strong>"
+							},
+							{
+								"title" : "",
+								"hint" : "<strong><u>9th batch</u></strong>",
+								"content" : "<strong>Tajbib Rahman</strong><br /> Mobile: <a  href='tel:01781939371'>01781939371</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "",
+								"content" : "Female CR<br /> <strong>Sidratul Muntaha Luky</strong>"
+							},
+							{
+								"title" : "",
+								"hint" : "<strong><u>10th batch</u></strong>",
+								"content" : "Male CR<br /> <strong>Md. Monjurul Haque Patowary</strong><br /> Mobile: <a href='tel:01728873311'>01728873311</a>, <a href='tel:01838307011'>01838307011</a><br /> Email: <a href='mailto:monjur.nstueshs@gmail.com'>monjur.nstueshs@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "",
+								"content" : "Female CR<br /> <strong>Zarin Tasnim Khan</strong><br /> Email: <a href='mailto:zarinkhan.esdm@gmail.com'>zarinkhan.esdm@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "<strong><u>11th batch</u></strong>",
+								"content" : "Male CR<br /> <strong>Masum-Al-Hasan Mehedi</strong><br /> Mobile: <a href='tel:01876068128'>01876068128</a><br /> Email: <a href='mailto:masummehedi71@gmail.com'>masummehedi71@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "",
+								"content" : "Female CR<br /> <strong>Israt Nahar Mona</strong><br /> Email: <a href='mailto:isratmonanstu1996@gmail.com'>isratmonanstu1996@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "<strong><u>12th batch</u></strong>",
+								"content" : "Male CR<br /> <strong>Khairul Kabir Nishan</strong><br /> Mobile: <a href='tel:01842225174'>01842225174</a><br /> Email: <a href='mailto:khairulkabir73@gmail.com'>khairulkabir73@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "",
+								"content" : "Female CR<br /> <strong>Tania Akter</strong>"
+							},
+							{
+								"title" : "",
+								"hint" : "<strong><u>13th batch</u></strong>",
+								"content" : "Male CR<br /> <strong>Pratik Mojumder</strong><br /> Mobile: <a href='tel:01835477701'>01835477701</a><br /> Email: <a href='mailto:pratikmojumdar@gmail.com'>pratikmojumdar@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "",
+								"content" : "Female CR<br /> <strong>Saida Sanjida Lopa</strong><br /> Email: <a href='mailto:saida.lopa@gmail.com'>saida.lopa@gmail.com</a>"
+							}
+						]
+					},
+					{
+						"title": "Biotechnology and Genetic Engineering (BGE)",
+						"hint": "",
+						"contents": [{
+								"title" : "",
+								"hint" : "<strong><u>8th batch</u></strong><br /> BGE 1st batch",
+								"content" : "Male CR<br /> <strong>MD. MAIN UDDIN</strong><br /> Mobile: <a href='tel:01683228206'>01683228206</a><br /> Email: <a href='mailto:mdmainuddinnstu@gmail.com'>mdmainuddinnstu@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "",
+								"content" : "Female CR<br /> <strong>Etu Rani Paul</strong>"
+							},
+							{
+								"title" : "",
+								"hint" : "<strong><u>9th batch</u></strong><br /> BGE 2nd batch",
+								"content" : "Male CR<br /> <strong>Rakib Khan</strong><br /> Mobile: <a href='tel:01797526799'>01797526799</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "",
+								"content" : "Female CR<br /> <strong>Rarimita Mondal Dola</strong>"
+							},
+							{
+								"title" : "",
+								"hint" : "<strong><u>10th batch</u></strong>",
+								"content" : "<strong>Md Neamat Ullah</strong><br /> Mobile: <a href='tel:01685469746'>01685469746</a><br /> Email: <a href='mailto:neamat.bge@gmail.com'>neamat.bge@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "<strong><u>11th batch</u></strong>",
+								"content" : "Male CR<br /> <strong>Md. Zahidul Islam Shourav</strong><br /> Mobile: <a href='tel:01521326064'>01521326064</a>, <a href='tel:01963656806'>01963656806</a><br /> Email: <a href='mailto:zahidul.shourav@gmai.com'>zahidul.shourav@gmai.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "",
+								"content" : "Female CR<br /> <strong>Fatema-Tuz-Johura</strong><br /> Email: <a href='mailto:fatema.j.dalia@gmail.com'>fatema.j.dalia@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "<strong><u>12th batch</u></strong>",
+								"content" : "Male CR<br /> <strong>Miftah Uddin Mahmud</strong><br /> Mobile: <a href='tel:01998656244'>01998656244</a>, <a href='tel:01521400918'>01521400918</a><br /> Email: <a href='mailto:miftahmahmud02@gmail.com'>miftahmahmud02@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "",
+								"content" : "Female CR<br /> <strong>Wmme Sauda</strong><br /> Email: <a href='mailto:nishatsauda30@gmail.com'>nishatsauda30@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "<strong><u>13th batch</u></strong>",
+								"content" : "Male CR<br /> <strong>MD Salahuddin Mohsin</strong><br /> Mobile: <a href='tel:01741189222'>01741189222</a><br /> Email: <a href='mailto:kazimohsin943@gmail.com'>kazimohsin943@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "",
+								"content" : "Female CR<br /> <strong>Nilufa Yasmin Bristi</strong><br /> Email: <a href='mailto:bristi.nstu@gmail.com'>bristi.nstu@gmail.com</a>"
+							}
+						]
+					},
+					{
+						"title": "Agriculture",
+						"hint": "",
+						"contents": [{
+								"title" : "",
+								"hint" : "<strong><u>8th batch</u></strong>",
+								"content" : "<strong>Abdullah al Noman</strong><br /> Mobile: <a href='tel:01674592648'>01674592648</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "<strong><u>9th batch</u></strong>",
+								"content" : "<strong>Rafat Nur Abdullah Khan</strong><br /> Mobile: <a href='tel:01682923290'>01682923290</a>, <a href='tel:01876068321'>01876068321</a><br /> Email: <a href='mailto:rafatn9610@gmail.com'>rafatn9610@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "<strong><u>10th batch</u></strong>",
+								"content" : "<strong>Belayet Hossain</strong><br /> Mobile: <a href='tel:01835700025'>01835700025</a>, <a href='tel:01786374653'>01786374653</a><br /> Email: <a href='mailto:belayethossainash1514020@gmail.com'>belayethossainash1514020@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "<strong><u>11th batch</u></strong>",
+								"content" : "Male CR<br /> <strong>Istiak joy</strong><br /> Mobile: <a href='tel:01688355402'>01688355402</a><br /> Email: <a href='mailto:istiakjoy40@gmail.com'>istiakjoy40@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "",
+								"content" : "Female CR<br /> <strong>Farhana Yasmin Chowdhury</strong><br /> Email: <a href='mailto:farhana121595@gmail.com'>farhana121595@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "<strong><u>12th batch</u></strong>",
+								"content" : "Male CR<br /> <strong>Rakib Hasan Zisan<strong><br /> Mobile: <a href='tel:01832410601'>01832410601</a><br /> Email: <a href='mailto:rakib.hasan.zisan@gmail.com'>rakib.hasan.zisan@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "",
+								"content" : "Female CR<br /> <strong>Sumaiya Akter</strong>"
+							},
+							{
+								"title" : "",
+								"hint" : "<strong><u>13th batch</u></strong>",
+								"content" : "Male CR<br /> <strong>Md Nahid Hashan</strong><br /> Mobile: <a href='tel:01922964269'>01922964269</a>, <a href='01707695662'>01707695662</a><br /> Email: <a href='mailto:mdnahidagri@gmail.com'>mdnahidagri@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "",
+								"content" : "Female CR<br /> <strong>Jakia Hossain Moon</strong><br /> Email: <a href='mailto:jakiamoonnstu1718@gmail.com'>jakiamoonnstu1718@gmail.com</a>"
+							}
+						]
+					},
+					{
+						"title": "Oceanography",
+						"hint": "",
+						"contents": [{
+								"title" : "",
+								"hint" : "<strong><u>12th batch</u></strong><br /> Oceanography 1st batch",
+								"content" : "Male CR<br /> <strong>Nur pasha Sufian</strong></br /> Mobile: <a href='tel:01854166191'>01854166191</a><br /> Email: <a href='mailto:nurpashasufian@gmail.com'>nurpashasufian@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "",
+								"content" : "Female CR<br /> <strong>Ananya Bhuiya</strong><br /> Email: <a href='mailto:bhuiyaananya@gmail.com'>bhuiyaananya@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "<strong><u>13th batch</u></strong><br /> Oceanography 2nd batch",
+								"content" : "Male CR<br /> <strong>Jaber Bin Abdul Bari</strong><br /> Mobile: <a href='tel:01623929754'>01623929754</a><br /> Email: <a href='mailto:jaberbinabdulbari786@gmail.com'>jaberbinabdulbari786@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "",
+								"content" : "Female CR 1<br /> <strong>Samsun Naher Maisha</strong><br /> Email: <a href='mailto:samsunnahermaisha21@gmail.com'>samsunnahermaisha21@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "",
+								"content" : "Female CR 2<br /> <strong>Bibi Fatema Kakon<strong><br /> Email: <a href='mailto:fatemakaon0@gmail.com'>fatemakaon0@gmail.com</a>"
+							}
+						]
+					},
+					{
+						"title": "Biochemistry and Molecular Biology (BMB)",
+						"hint": "",
+						"contents": [{
+								"title" : "",
+								"hint" : "<strong><u>13th batch</u></strong><br /> BMB 1st batch",
+								"content" : "Male CR<br /> <strong>Azhar Shovon</strong><br /> Mobile: <a href='tel:01907243671'>01907243671</a>, <a href='tel:01907243671'>01907243671</a><br /> Email: <a href='mailto:azharbmb@gmail.com'>azharbmb@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "",
+								"content" : "Female CR<br /> <strong>Mustary Anjum Maria</strong><br /> Email: <a href='mailto:maria2000@gmail.com'>maria2000@gmail.com</a>"
+							}
+						]
+					},
+					{
+						"title": "Economics",
+						"hint": "",
+						"contents": [{
+								"title" : "",
+								"hint" : "<strong><u>8th batch</u></strong>",
+								"content" : "<strong>Md. Mahmudul Islam Khan(Shiblu)</strong><br /> Mobile: <a href='tel:01687004274'>01687004274</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "<strong><u>9th batch</u></strong>",
+								"content" : "<strong>Mohammad Raselar Rahman</strong><br /> Mobile: <a href='tel:01791692050'>01791692050</a><br /> Email: <a href='mailto:raselrhmn@gmail.com'>raselrhmn@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "<strong><u>10th batch</u></strong>",
+								"content" : "Male CR<br /> <strong>Md. Harun</strong><br /> Mobile: <a href='tel:01775912510'>01775912510</a><br /> Email: <a href='mailto:mdharun.economics@gmail.com'>mdharun.economics@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "",
+								"content" : "Female CR<br /> <strong>Thamina Akter</strong><br /> Email: <a href='mailto:nihalikanerjonjanpakhi@gmail.com'>nihalikanerjonjanpakhi@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "<strong><u>11th batch</u></strong>",
+								"content" : "<strong>Didn't select yet.</strong>"
+							},
+							{
+								"title" : "",
+								"hint" : "<strong><u>12th batch</u></strong>",
+								"content" : "Male CR<br /> <strong>Md. Monir</strong><br /> Mobile: <a href='tel:01638029792'>01638029792</a><br /> Email: <a href='mailto:monirnstu@gmail.com'>monirnstu@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "",
+								"content" : "Female CR<br /> <strong>Taiyeba akhter</strong><br /> Email: <a href='mailto:taiyebamunmhn@gmail.com'>taiyebamunmhn@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "<strong><u>13th batch</u></strong>",
+								"content" : "Female CR<br /> <strong>Tahsin Tabassum Ahmed</strong><br /> Email: <a href='mailto:tasuori2210@gmail.com'>tasuori2210@gmail.com</a>"
+							}
+						]
+					},
+					{
+						"title": "Bangladesh and Liberation War Studies (BLWS)",
+						"hint": "",
+						"contents": [{
+								"title" : "",
+								"hint" : "<strong><u>12th batch</u></strong><br /> BLWS 1st batch",
+								"content" : "Male CR<br /> <strong>Sudipta Biswas</strong><br /> Mobile: <a href='tel:01952123890'>01952123890</a>, <a href='tel:01876174008'>01876174008</a><br /> Email: <a href='mailto:sudiptabiswas57@gmail.com'>sudiptabiswas57@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "",
+								"content" : "Female CR<br /> <strong>Subrina Yeasmin</strong><br /> Email: <a href='mailto:subrinayeasmin13@gmail.com'>subrinayeasmin13@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "<strong><u>13th batch</u></strong><br /> BLWS 2nd batch",
+								"content" : "Male CR<br /> <strong>Tanvir Anjum Ornab</strong><br /> Mobile: <a href='tel:01610104974'>01610104974</a>, <a href='tel:01515210279'>01515210279</a><br /> Email: <a href='mailto:ornab78@gmail.com'>ornab78@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "",
+								"content" : "Female CR<br /> <strong>Nazia Hossain Borna</strong><br /> Email: <a href='mailto:nhbarna08@gmail.com'>nhbarna08@gmail.com</a>"
+							}
+						]
+					},
+					{
+						"title": "Sociology",
+						"hint": "",
+						"contents": [{
+								"title" : "",
+								"hint" : "<strong><u>13th batch</u></strong><br /> Sociology 1st batch",
+								"content" : "Male CR<br /> <strong>Abdul Aowal Rahat</strong><br /> Mobile: <a href='tel:01781882451'>01781882451</a>, <a href='tel:01852563054'>01852563054</a><br /> Email: <a href='mailto:abdul.aowa.rahat7@gmail.com'>abdul.aowa.rahat7@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "",
+								"content" : "Female CR<br /> <strong>Jannatul Ferdoush Hoime</strong><br /> Email: <a href='mailto:jannathoime11@gmail.com'>jannathoime11@gmail.com</a>"
+							}
+						]
+					},
+					{
+						"title": "English",
+						"hint": "",
+						"contents": [{
+								"title" : "",
+								"hint" : "<strong><u>12th batch</u></strong>",
+								"content" : "Male CR<br /> <strong>Mobarak Hossain</strong><br /> Mobile: <a href='tel:01785687971'>01785687971</a><br /> Email: <a href='mailto:mobarakhossain1997@yahoo.com'>mobarakhossain1997@yahoo.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "",
+								"content" : "Female CR<br /> <strong>Shorifa Akter</strong>"
+							},
+							{
+								"title" : "",
+								"hint" : "<strong><u>13th batch</u></strong>",
+								"content" : "Male CR<br /> <strong>Shah Md. Riaz Uddin Mazumder</strong>"
+							},
+							{
+								"title" : "",
+								"hint" : "",
+								"content" : "Female CR<br /> <strong>Israt Jahan Aurin</strong>"
+							}
+						]
+					},
+					{
+						"title": "Dept. of Business Administration (DBA)",
+						"hint": "",
+						"contents": [{
+								"title" : "",
+								"hint" : "<strong><u>8th batch</u></strong>",
+								"content" : "<strong>Md. Zahir Hossain</strong><br /> Mobile: <a href='tel:01670636248'>01670636248</a><br /> Email: <a href='mailto:jahirhossain275@gmail.com'>jahirhossain275@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "<strong><u>9th batch</u></strong>",
+								"content" : "Male CR<br /> <strong>Md. Nazmul Haque</strong><br /> Mobile: <a href='tel:01684695778'>01684695778</a><br /> Email: <a href='mailto:mnhaque1995@gmail.com'>mnhaque1995@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "",
+								"content" : "Female CR<br /> <strong>Tonmoye Mojumdar</strong><br /> Email: <a href='mailto:tonmoyetanu@gmail.com'>tonmoyetanu@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "<strong><u>10th batch</u></strong>",
+								"content" : "Male CR<br /> <strong>Nayan</strong><br /> Mobile: <a href='tel:01676056347'>01676056347</a><br /> Email: <a href='mailto:nayan.sk@outlook.com'>nayan.sk@outlook.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "",
+								"content" : "Female CR<br /> <strong>Muntaha Azmi</strong><br /> Email: <a href='mailto:muntahaazmi05@gmail.com'>muntahaazmi05@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "<strong><u>11th batch</u></strong>",
+								"content" : "Male CR<br /> <strong>Foysal</strong><br /> Mobile: <a href='tel:01628161545'>01628161545</a>, <a href='tel:01818245408'>01818245408</a><br /> Email: <a href='mailto:foysalricky@gmail.com'>foysalricky@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "",
+								"content" : "Female CR<br /> <strong>Sayma Afrin Suha</strong><br /> Email: <a href='mailto:saymaafrinsuha@gmail.com'>saymaafrinsuha@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "<strong><u>12th batch</u></strong>",
+								"content" : "Male CR<br /> <strong>Md.Sujauddin Roni</strong><br /> Mobile: <a href='tel:01851727297'>01851727297</a>, <a href='tel:01787598123'>01787598123</a><br /> Email: <a href='mailto:mdsujauddinroni@gmail.com'>mdsujauddinroni@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "",
+								"content" : "Female CR<br /> <strong>Sadia Afrin</strong><br /> Email: <a href='mailto:safrin547@gmail.com'>safrin547@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "<strong><u>13th batch</u></strong>",
+								"content" : "Male CR<br /> <strong>Sarwar Jahan Arafat</strong><br /> Mobile: <a href='tel:01852153126'>01852153126</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "",
+								"content" : "Female CR<br /> <strong>Prome akter</strong>"
+							}
+						]
+					},
+					{
+						"title": "Tourism and Hospitality Management (THM)",
+						"hint": "",
+						"contents": [{
+								"title" : "",
+								"hint" : "<strong><u>13th batch</u></strong>",
+								"content" : "Male CR<br /> <strong>Sayyedul Abrar</strong><br /> Mobile: <a href='tel:01779414745'>01779414745</a>, <a href='tel:01779414745'>01779414745</a><br /> Email: <a href='mailto:sayeedulabrar99@gmail.com'>sayeedulabrar99@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "",
+								"content" : "Male CR<br /> <strong>Sazzad hossain</strong><br /> Mobile: <a href='tel:01813650512'>01813650512</a><br /> Email: <a href='mailto:she891991@gmail.com'>she891991@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "",
+								"content" : "Female CR<br /> <strong>Ummy Hany Urmila</strong><br /> Email: <a href='mailto:ummyhany875@gmail'>ummyhany875@gmail</a>"
+							}
+						]
+					},
+					{
+						"title": "Management Information Systems (MIS)",
+						"hint": "",
+						"contents": [{
+								"title" : "",
+								"hint" : "<strong><u>13th batch</u></strong><br /> MIS 1st batch",
+								"content" : "<strong>Hasib Al Amin</strong><br /> Mobile: <a href='tel:01840602620'>01840602620</a>, <a href='tel:01521333777'>01521333777</a><br /> Email: <a href='mailto:hasib.mis.nstu@gmail.com'>hasib.mis.nstu@gmail.com</a>"
+							},
 							{
 								"title" : "",
 								"hint" : "",
@@ -3937,60 +4582,535 @@
 						]
 					},
 					{
-						"title": "",
+						"title": "Education",
 						"hint": "",
-						"contents": [{}]
+						"contents": [{
+								"title" : "",
+								"hint" : "<strong><u>13th batch</u></strong><br /> Education 1st batch",
+								"content" : "Female CR<br /> <strong>Rubina Ruby</strong>"
+							}
+						]
 					},
 					{
-						"title": "",
+						"title": "IIT",
 						"hint": "",
-						"contents": [{}]
-					},
-					{
-						"title": "",
-						"hint": "",
-						"contents": [{}]
+						"contents": [{
+								"title" : "",
+								"hint" : "<strong><u>13th batch</u></strong><br /> IIT 1st batch",
+								"content" : "<strong>Al adnan sami</strong><br /> Mobile: <a href='tel:01625208031'>01625208031</a>, <a href='tel:01794023854'>01794023854</a><br /> Email: <a href='mailto:aladnansami21@gmial.com'>aladnansami21@gmial.com</a>"
+							}
+						]
 					}
 				]
 			},
-			
+
 			{
 				"item" : "Student Activities",
 				"details" : [{
-						"title": "",
-						"hint": "",
-						"content": ""
+						"title": "NSTU Journalist Association",
+						"contents": [{
+								"title": "",
+								"hint": "<u><strong>President</strong></u>",
+								"content": "<strong>Nazmus Sakib Sadi</strong><br /> <a href='http://www.purboposhchimbd.com/'>purboposhchimbd.com</a><br /> Mobile: <a href='tel:01712746807'>01712746807</a><br /> Email: <a href='mailto:sadi6038@gmail.com'>sadi6038@gmail.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "<u><strong>General Secretary</strong></u>",
+								"content": "<strong>Md. Kamrul Hasan Sakim</strong><br /> <a href='https://www.amadershomoy.com/bn/'>amadershomoy.com</a>, <a href='http://www.banglatribune.com/'>banglatribune.com</a>, <a href='https://www.ekushey-tv.com/'>ekushey-tv.com</a><br /> Mobile: <a href='tel:01723902157'>01723902157</a><br /> Email: <a href='mailto:shakimkamrul@gmail.com'>shakimkamrul@gmail.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "<u><strong>Office secretary</strong></u>",
+								"content": "<strong>Aminul Islam Mohim</strong><br /> <a href='http://thebangladeshtoday.com/'>thebangladeshtoday.com</a>, <a href='http://www.campuslive24.com/'>campuslive24.com</a><br /> Mobile: <a href='tel:01862441033'>01862441033</a><br /> Email: <a href='mailto:aminulnstu@gmail.com'>aminulnstu@gmail.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "<u><strong>Publicity Secretary</strong></u>",
+								"content": "<strong>Ohi Alam</strong><br /> <a href='http://www.protidinersangbad.com/'>protidinersangbad.com</a>, <a href='https://www.rtvonline.com/'>rtvonline.com</a><br /> Mobile: <a href='tel:01677139317'>01677139317</a><br /> Email: <a href='mailto:ohi.alam24@gmail.com'>ohi.alam24@gmail.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "<u><strong>Finance Secretary</strong></u>",
+								"content": "<strong>Rajia Jannat</strong><br /> <a href='https://prothom-prohor.com/'>prothom-prohor.com</a><br /> Mobile: <a href='tel:01838333815'>01838333815</a><br /> Email: <a href='mailto:rajianstu17@gmail.com'>rajianstu17@gmail.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "<u><strong>Members</strong></u>",
+								"content": "<strong>Ahmed Hasan</strong><br /> <a href='https://www.bbc.com/'>bbcjournal</a><br /> Mobile: <a href='tel:01813690549'>01813690549</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "<strong>Aminul Islam</strong><br /> <a href='http://thebangladeshtoday.com/'>thebangladeshtoday.com</a><br /> Mobile: <a href='tel:01862441033'>01862441033</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "<strong>Ohi Alam</strong><br /> <a href='http://www.protidinersangbad.com/'>protidinersangbad.com</a><br /> Mobile: <a href='tel:01677139317'>01677139317</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "<strong>Md. Safwoan Ullah</strong><br /> <a href='https://www.bdmorning.com/'>bdmorning.com</a><br /> Mobile: <a href='tel:01837202852'>01837202852</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "<strong>Rajia Sultana</strong><br /> <a href='http://www.timenewsbd.net/'>timenewsbd.net</a><br /> Mobile: <a  href='tel:01838333815'>01838333815</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "<strong>Sazzad Jobayer</strong><br /> <a href='http://newsexpressbd.com/'>newsexpressbd.com</a><br /> Mobile: <a href='tel:01521324824'>01521324824</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "<strong>Abdur Rahim</strong><br /> <a href='http://www.lastnewsbd.com/en/'>lastnewsbd.com</a><br /> Mobile: <a href='tel:01628058967'>01628058967</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "<strong>Md. Al-Amin (Akash)</strong><br /> <a href='http://www.agriview24.com/'>agriview24.com</a><br /> Mobile: <a href='tel:01747361808'>01747361808</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "<strong>Kamrul Hasan Rifat</strong><br /> <a href='http://www.observerbd.com/'>observerbd.com</a><br /> Mobile: <a href='tel:01834659211'>01834659211</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "<strong>Raihan Hossain</strong><br /> <a href='http://natunfeni.com/'>natunfeni.com</a><br /> Mobile: <a href='tel:01883010031'>01883010031</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "<strong>Monir Hossain</strong><br /> <a href='http://www.currentnews.com.bd/'>currentnews.com.bd</a><br /> Mobile: <a href='tel:01638029792'>01638029792</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "<strong>Mizanur Rahman Sobuj</strong><br /> <a href='http://www.dainik-destiny.com/'>dainik-destiny.com</a>, <a href='http://studentjournalbd.com/'>studentjournalbd.com</a><br /> Mobile: <a href='tel:01746625926'>01746625926</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "<strong>Sajid Ahmed</strong><br /> <a href='http://alokitobhor.com/'>alokitobhor.com</a><br /> Mobile: <a href='tel:01751847864'>01751847864</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "<strong>Himel Shahriar</strong><br /> <a href='https://www.odhikar.news/'>odhikar.news</a><br /> Mobile: <a href='tel:01836273567'>01836273567</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "<strong>Ripon Chandra Shil</strong><br /> <a href='https://www.kaljoyee.com/'>kaljoyee.com</a><br /> Mobile: <a href='tel:01869674230'>01869674230</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "<strong>Sujan Shekh</strong><br /> <a href='https://vorersurjo.com/'>vorersurjo.com</a><br /> Mobile: <a href='tel:01774357182'>01774357182</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "<strong>Md. Farhan</strong><br /> <a href='http://dailycampus.com/'>dailycampus.com</a><br /> Mobile: <a href='tel:01783203359'>01783203359</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "<strong>Mainuddin Pathan</strong><br /> <a href='http://universitytimes24.net/'>universitytimes24.net</a><br /> Mobile: <a href='tel:01859743979'>01859743979</a>"
+							}
+						]
 					},
 					{
-						"title": "",
-						"hint": "",
-						"content": ""
+						"title": "Coastal Environmental Network (Coen)",
+						"contents": [{
+								"title": "",
+								"hint": "",
+								"content": "'Coastal Environment Network(CEN)' is from Department of Environmental Science and Hazard studies of Noakhali Science and technology University.<br /> <br /> It was established with immense hope for maintaining a peaceful, warm, pollution free Environment and to develop mechanisms to protect our sacred sites, land, water, air, natural resources, health of both our people and all living things, and to build economically sustainable communities.<br /> <br /> The Coastal Environment Network (CEN) facilitates networking among environmental organisations and others who share its mandate to protect the Earth and promote ecologically sound ways of life.The CEN works directly with concerned citizens and organisations striving to protect, preserve, and restore the environment. This Coastal Environment Network family is fully determined to gain its ultimate goal of success."
+							},
+							{
+								"title": "",
+								"hint": "<strong><u>Contact Person:</u></strong>",
+								"content": "<strong>Shahriar Md. Arifur Rahman</strong><br /> <strong>Mobile: <a href='tel:01717153711'>01717153711</a></strong><br /> <strong>Email: <a href='mailto:shahriar.arif@gmail.com'>shahriar.arif@gmail.com</a></strong>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "President<br /> <strong>Salma Noor</strong><br /> Email: <a href='mailto:salma34noor@gmail.com'>salma34noor@gmail.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "Vice President<br /> <strong>Muntasir Md. Sakib</strong><br /> Mobile: <a href='tel:01676577586'>01676577586</a><br /> Email: <a href='mailto:muntasirmsakib@gmail.com'>muntasirmsakib@gmail.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "Secretary<br /> <strong>Md. Foysal Hasan</strong><br /> Mobile: <a href='tel:01676125528'>01676125528</a><br /> Email: <a href='mailto:faisalhasan1992@gmail.com'>faisalhasan1992@gmail.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "Joint Secretary<br /> <strong>Tajbib Rahman</strong><br /> Mobile: <a href='tel:01781939371'>01781939371</a><br /> Email: <a href='mailto:tajbibrahman@gmail.com'>tajbibrahman@gmail.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "Treasurer<br /> <strong>Nusrat Jahan Jabin</strong><br /> Email: <a href='mailto:nusratjahanjabin.0210@gmail.com'>nusratjahanjabin.0210@gmail.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "Office Secretary<br /> <strong>Mizanur Rahman</strong><br /> Mobile: <a href='tel:01742160864'>01742160864</a><br /> Email: <a href='mailto:mrahman.miz@gmail.com'>mrahman.miz@gmail.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "Press and Publication Secretary<br /> <strong>Nibas Chandra Deb</strong><br /> Mobile: <a href='tel:01834658022'>01834658022</a><br /> Email: <a href='mailto:nibasdev1609063@gmail.com'>nibasdev1609063@gmail.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "Photography and Documentation<br /> <strong>Khairul Kabir Nishan</strong><br /> Mobile: <a href='tel:0184225174'>0184225174</a><br /> Email: <a href='mailto:khairulkabir73@gmail.com'>khairulkabir73@gmail.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "Executive Member<br /> <strong>Asma Akter Prima</strong><br /> Email: <a href='mailto:pearlyprims@gmail.com'>pearlyprims@gmail.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "Executive Member<br /> <strong>Nasirul Haque</strong><br /> Mobile: <a href='tel:01689493960'>01689493960</a><br /> Email: <a href='mailto:nasirulhaque00@gmail.com'>nasirulhaque00@gmail.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "Executive Member<br /> <strong>Sirajam Munira</strong><br /> Email: <a href='mailto:sirajjammuniranstuian09@gmail.com'>sirajjammuniranstuian09@gmail.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "Executive Member<br /> <strong>Ashim Chandra Das</strong><br /> Mobile: <a href='tel:01839351470'>01839351470</a><br /> Email: <a href='mailto:nstuashim@gmail.com'>nstuashim@gmail.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "Executive Member<br /> <strong>Sabbir Ahmed</strong><br /> Mobile: <a href='tel:01626835283'>01626835283</a><br /> Email: <a href='mailto:ahmedsabbir493@gmail.com'>ahmedsabbir493@gmail.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "<u><strong>Advisory Panel</strong></u>",
+								"content": "<strong>Sovel ahsan chowdhury</strong><br /> Mobile: <a href='tel:01672783818'>01672783818</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "<strong>Mobassaratun Jannat</strong>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "<strong>Shihab ahmad Shahriar</strong><br /> Mobile: <a href='tel:01620878986'>01620878986</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "<strong>Md. Mostaim Billah</strong><br /> Mobile: <a href='tel:01681307522'>01681307522</a>"
+							}
+						]
 					},
 					{
-						"title": "",
-						"hint": "",
-						"content": ""
+						"title": "NSTU Debating Society (NSTUDS)",
+						"contents": [{
+								"title": "",
+								"hint": "",
+								"content": "Upholding the motto 'যুক্তির উচ্ছ্বাসে, চেতনার বিকাশে'  we are here to create enthusiasm about debate among the students of NSTU."
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "Moderator<br /> <strong>Afsana Mousume</strong><br /> Mobile: <a href='tel:01716269848'>01716269848</a><br /> Email: <a href='mailto:afsana.mousume@gmail.com'>afsana.mousume@gmail.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "President (Debate)<br /> <strong>Roksana Aftab Ruhi</strong><br /> Mobile: <a href='tel:01682770435'>01682770435</a><br /> Email: <a href='mailto:aftabroksana@gmail.com'>aftabroksana@gmail.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "President (Admin)<br /> <strong>MD.MAHFUJUR RAHMAN SUNNY</strong><br /> Mobile: <a href='tel:01677429686'>01677429686</a><br /> Email: <a href='mailto:rahmanmahfuj6@gmail.com'>rahmanmahfuj6@gmail.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "Secretary<br /> <strong>Ahmad Ullah</strong><br /> Mobile: <a href='tel:01853585422'>01853585422</a><br /> Email: <a href='mailto:ahmad050289@gmail.com'>ahmad050289@gmail.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "Join-Secretary<br /> <strong>Sabrina Jahan Rimy</strong><br /> Mobile: <a href='tel:01949677313'>01949677313</a><br /> Email: <a href='mailto:sabrinarimi313@gmail.com'>sabrinarimi313@gmail.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "Organizing Secretary<br /> <strong>Md. Zahidul Islam Shourav</strong><br /> Mobile: <a href='tel:01521326064'>01521326064</a><br /> Email: <a href='mailto:zahidul.shourav@gmail.com'>zahidul.shourav@gmail.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "Office Secretary<br /> <strong>Md. Sakib Hossain</strong><br /> Mobile: <a href='tel:01689009100'>01689009100</a><br /> Email: <a href='mailto:oorko71@gmail.com'>oorko71@gmail.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "Press and Publication Secretary<br /> <strong>Ohi Alam</strong><br /> Mobile: <a href='tel:01677139317'>01677139317</a><br /> Email: <a href='mailto:ohi.alam24@gmail.com'>ohi.alam24@gmail.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "Debate and Workshop Affairs Secretary<br /> <strong>Emtiaj Ahmed</strong><br /> Mobile: <a href='tel:01851245934'>01851245934</a><br /> Email: <a href='mailto:emtiajahmed1@gmail.com'>emtiajahmed1@gmail.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "Financial Secretary<br /> <strong>Md. Abdur Rahim</strong><br /> Mobile: <a href='tel:01628058967'>01628-058967</a><br /> Email: <a href='mailto:abdurrahim7346@gmail.com'>abdurrahim7346@gmail.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "Social Welfare Affairs Secretary<br /> <strong>Md. Tashdidul Alam</strong><br /> Mobile: <a href='tel:01846310065'>01846310065</a><br /> Email: <a href='mailto:tashdisayeem@gmail.com'>tashdisayeem@gmail.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "Cultural Affairs Secretary<br /> <strong>Farzana Afrin</strong><br /> Email: <a href='mailto:farzanameli69@gmail.com'>farzanameli69@gmail.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "Members Secretary<br /> <strong>Tamim Hossain</strong><br /> Mobile: <a href='tel:01821987531'>01821987531</a><br /> Email: <a href='mailto:tamimh850@gmail.com'>tamimh850@gmail.com</a>"
+							}
+						]
 					},
 					{
-						"title": "",
-						"hint": "",
-						"content": ""
+						"title": "Luminary",
+						"contents": [{
+								"title": "",
+								"hint": "",
+								"content": "'LUMINARY' (the hope, the inspiration) has been working relentlessly to facilitate the unprivileged children with a mission to make the world a better place for these fortuneless children.<br /> The word Luminary stands for source of light. The organization started its journey in 2015.The pioneers are the students from Department of Business Administration of Noakhali Science & Technology University. The organization endeavors to facilitate the unprivileged children, provide them with proper education also help them nourish their hidden potential. Luminary basically tries to nurture the children around the university campus. The member of the organization devotes their free time during weekend to educate these children. Throughout the process they also realize the necessity of education to become a better human being. At times members are required to go to the parents of child to convince them to send their kids to school or madrasa.<br /> Alongside regular education the organization teaches the children about the life skills such as physical hygiene, better nutrition, how to cross a road and creating social awareness etc. Occasionally Luminary arranges cultural program, sports competition and children film festival. Free books, writing aids, medicine and Eid presents have also been distributed during festivals. These fortuneless innocence’s also gets to have free food during weekend. To make the children realize about the importance of tree plantation, tree plants are also distributed among them.<br /> Currently there are 32 members in the organization striving to change the course life of 95 playmates (unprivileged children) for a better future."
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "<strong>Email: <a href='mailto:luminary.the.hope@gmail.com'>luminary.the.hope@gmail.com</a></strong>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "President<br /> <strong>Farhadul Islam</strong><br /> Mobile: <a href='tel:01787144689'>01787144689</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "Secretary<br /> <strong>Tazrin Jahan</strong>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "Joint Secretary<br /> <strong>Nokibur Rahman</strong>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "Organizing Secretary<br /> <strong>Majharul Islam</strong>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "Deputy Organizing Secretary<br /> <strong>Abu Nayeem Akash</strong>"
+							}
+						]
 					},
 					{
-						"title": "",
-						"hint": "",
-						"content": ""
+						"title": "Blood Donors Society (NSTU)",
+						"contents": [{
+								"title": "",
+								"hint": "",
+								"content": "<p><span class='null'>Blood Donors Society (NSTU) is a blood donating society of NSTU and its main goal is to collect fresh, hygienic blood and raising awareness. Blood Donors Society works for motivating people for voluntary blood donation and taking part in service and awareness program. It dreams by Initiating social movement to build up a healthy society through. It has various other aims: </span></p> <p><span class='null'>1.Blood collecting and donating</span></p> <p><span class='null'>2.Raising awareness concerning blood donating</span></p> <p><span class='null'>3.Celebrating special days concerning blood donating</span></p> <p><span class='null'>4.Collecting blood group of all NSTU students</span></p> <p><span class='null'>5.Arranging blood group campaign</span></p> <p><span class='null'>6.Connecting people with seminars</span></p>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "<strong>Details:</strong> <a href='https://www.facebook.com/groups/blooddonerssociety/'>Facebook Page</a>"
+							}
+						]
 					},
 					{
-						"title": "",
-						"hint": "",
-						"content": ""
+						"title": "NSTU Open Source Network (NSTU OSN)",
+						"contents": [{
+								"title": "",
+								"hint": "",
+								"content": "Open source network activities:<br /> Open Source Network started their journey in Noakhali Science and Technology University from 26 April 2008. Several workshops were arranged by nstu_osn.     * Ubuntu installation and administrative uses<br />     * Open Source philosophy and introducing with PHP, Joomla & wordpress<br />     * Workshop on mid-level Wordpress<br />     * Workshop on fedora core<br />     * Workshop on Red Hat Linux Administration This local OSN does some jobs related to IT application such as software, website development and so on"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "<strong>Details:</strong> <a href='http://www.bdosn.org'>www.bdosn.org</a>"
+							}
+						]
+					},
+					{
+						"title": "Programming Club",
+						"contents": [{
+								"title": "",
+								"hint": "",
+								"content": "Based in the School of Computer Science and IT, CSTE Programming Club provides a stimulating, cooperative environment where students can interact and learn from each other by solving various programming problems. Each year we try to enter teams into regional programming competitions as part of the Association for Computing Machinery International Collegiate Programming Contest (ACM-ICPC).     * Gain and develop good programming skills and general problem solving skills<br />     * Learn how to work in a team<br />     * Develop programming solutions using various data structures, sorting algorithms, arithmetic, algebra, graph algorithms, and number theory<br />     * Start a potential research project which may lead to postgrad studies<br />     * Learn from senior and more experienced students<br />     * Have fun with other fellow students!"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "<strong>Facebook Group:</strong> <a href='https://www.facebook.com/profile.php?id=297499666939182'>https://www.facebook.com/profile.php?id=297499666939182</a>"
+							}
+						]
+					},
+					{
+						"title": "Science Mania",
+						"contents": [{
+								"title": "",
+								"hint": "",
+								"content": "Science Mania Let science thoughts be easy and interesting Science Mania is a science thoughts platform of Noakhali Science and Technology University. The science maniac people of this organization are working on spreading ongoing world, what is going in the science arena, heartthrob science verses technology news, gorgeous approaches of technology and of course easier and modern science. In these days, science and technology is the first and foremast weapon to go ahead. It is a matter of great sorrow that, usually in our country science is described as a hazy and ambiguous thing from the very beginning of our childhood. So our children and young students cherished a fear for science in their heart. But in real view, science is not so. We, science mania believe that science can be interesting and easy. Simple, easy and friendly explanation of science can fight with this fear and make our people interested on science thinking. Beautiful implementation of science and technology in every sector of society can move the world to a new dimension. If you want to know science and spread the science among the people, you are cordially welcome to the family of science mania.<br /> <br /> <strong>Works:</strong><br /> 1. In every weak we organize a weekly discussion.<br /> 2. We organize a seminar monthly<br /> 3. We publish a “Science Deyal Potrika ” in every month."
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "<strong>Our Facebook Page:</strong> <a href='http://www.facebook.com/sciencemania.nstu'>www.facebook.com/sciencemania.nstu</a><br /> <strong>Our Facebook Group:</strong> <a href='http://www.facebook.com/groups/382136268609853'>www.facebook.com/groups/382136268609853</a>"
+							}
+						]
+					},
+					{
+						"title": "STOBOK",
+						"contents": [{
+								"title": "",
+								"hint": "",
+								"content": "An weekly ‘Adda’ and they discuss about the literature, culture, music and the society. They believe that literature can make a cultural revolution in the mindset of the generation. It had brought out a fine Wall Paper, ‘Kothonika’ with fresh literary outputs of university students.<br /> <br /> <strong>Activities:</strong><br /> 1. Publishing: Little Magazine, Wallpaper, Bulletin.<br /> 2. Organizing Cultural Programs: Memories the famous literary person, Sahitta Asor.<br /> 3. Spreading: Beliefs of Independence War, Beliefs of Humanity."
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "<strong>Our Facebook Page:</strong> <a href='http://www.facebook.com/stobok'>www.facebook.com/stobok</a>"
+							}
+						]
+					},
+					{
+						"title": "Pharma Mirror",
+						"contents": [{
+								"title": "",
+								"hint": "",
+								"content": "Pharma Mirror – First online free access professional pharmaceutical magazine of its kind in the world. Pharma Mirror has an International Standard Serial Number ISSN 2219-763X of its own and it has been assigned by ISSN Center, Paris.<br /> <br /> Pharma Mirror is founded by Fahad Hussain, a student of pharmacy department of this university with his team comprised of other few students of the same department. He is also acting as the Editor of this magazine. This is a great achievement of the students of the Pharmacy Department of Noakahali science and Technology University.<br /> <br /> Pharma Mirror is introducing pharmaceutical journalism over the pharma arena. It represents drugs directory, pharma events listing, current pharma job circulars of Bangladesh, pharmaceutical articles, pharmaceutical news & innovation, pharma leader’s interview, featured pharma company profile, pharmacy & medical case studies, pharmacy study materials.<br /> <br /> PharmaMirror is an internationally accepted pharma media and completed successful media partnerships with World's renowned event management companies like Terrapinn Singapore, JFPS Malaysia, Opal Events USA, WTG UK, UBM India, Cphi Conferences, Virtue Insight India, FlemingEurope, BIT LifeScience, IMAPAC, CatalystGlobal etc. in more than 12 countries like USA, UK, China, India, Malaysia, Singapore, Korea, Portugal, Italy, Spain, Bangladesh.<br /> <br /> Pharma Mirror participated at Asia Pharma Expo 2011 with a stall named 'Pharma Mirror'at Bangabondhu Int’l Conference Center; Dhaka, Bangladesh. Pharma Mirror was a also media partner of that event. Pharma Mirror team also participated at FIP World Congress 2011; Hyderabad, India & Biosimilars Congression 2012, UK.<br /> <br /> Pharma Mirror believes in cutting-edge peer reviewed contents over the pharma arena."
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "<strong>Website</strong>: <a href='http://www.PharmaMirror.com'>www.PharmaMirror.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "<strong>Facebook Page</strong>: <a href='http://www.facebook.com/pharmamirror'>www.facebook.com/pharmamirror</a>"
+							}
+						]
+					},
+					{
+						"title": "Biggan Bangla",
+						"contents": [{
+								"title": "",
+								"hint": "",
+								"content": "Biggan Bangla is a science website where they share knowledge all about science. This website is leading by the CSTE 4th Batch. They also publish Galactica Magazine periodically."
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "<strong>Website:</strong> <a href='http://www.bigganbangla.com'>www.bigganbangla.com</a>"
+							}
+						]
+					},
+					{
+						"title": "TechnologyBasic",
+						"contents": [{
+								"title": "",
+								"hint": "",
+								"content": "All Basic Concepts Of Technology In bangla like as wikipedia style ! you can say it a technology dictionary.&nbsp;It&#39;s very helpful site for IT department. This website is leading by CSTE5th Batch."
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "<strong>Website:</strong> <a href='http://www.TechnologyBasic.com'>www.TechnologyBasic.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "<strong>Desktop software:</strong>&nbsp; <a href='http://goo.gl/DMXJ8k'>http://goo.gl/DMXJ8k</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "<strong>Facebook Page:</strong> <a href='http://www.facebook.com/technologybasic'>www.facebook.com/technologybasic</a>"
+							}
+						]
+					},
+					{
+						"title": "Coding(Magazine)",
+						"contents": [{
+								"title": "",
+								"hint": "",
+								"content": "&quot;Coding&quot; Magazine is published by CSTE7th batch. Here they included technical article, story, science fiction and etc."
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "<strong>Download:</strong> <a href='https://www.facebook.com/download/778571238821219/mymagazine.pdf'>download magazine</a>"
+							}
+						]
+					},
+					{
+						"title": "Economicsbd Magazine",
+						"contents": [{
+								"title": "",
+								"hint": "",
+								"content": "It's rudimentary educative magazine, in Bangladesh launched by Md. Mahmudul Islam Khan a student associated with Economics and poverty studies department of the University with his team consists of additional couple of university’s students from the very same department.<br /> <br /> The very proposition of instituting the magazine is to provide miscellaneous info including economical articles, economics events listing, current economical job circulars of Bangladesh, featured of Bank, NGOs profile, economical news and innovation."
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "<strong>Website:</strong> <a href='http://www.economicsbd.com'>www.economicsbd.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "<strong>Facebook Page:</strong> <a href='http://www.facebook.com/economicsbdmagazine'>Economicsbdmagazine</a>"
+							}
+						]
+					},
+					{
+						"title": "Campus Procchod(Quarterly)",
+						"contents": [{
+								"title": "",
+								"hint": "",
+								"content": "<p>Somakolon Media Group</p> <p>Our slogan : Media is for humanity our work.</p> <p>1. To create literature lover</p> <p>2. To create debater</p> <p>3. To create writer for humanity</p> <p>4. To create journalist for humanity our literatured publication: 'quarterly campus procchod'</p> <p>5. To celebrate literature related day</p> <p>6. To create writer & reader platform in nstu</p>"
+							}
+						]
 					}
 				]
 			},
-			
+
 			{
-				"item" : "Message From Developer",
+				"item" : "About NSTUinfo",
 				"details" : [{
 						"title": "",
 						"hint": "",

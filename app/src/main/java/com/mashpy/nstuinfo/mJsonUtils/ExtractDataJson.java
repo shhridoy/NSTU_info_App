@@ -49,7 +49,6 @@ public class ExtractDataJson {
                         version = Double.valueOf(object.getString("data_version").trim());
                     } catch (Exception e) {
                         e.printStackTrace();
-                        Toast.makeText(context, "Exception arise while converting string to double!!", Toast.LENGTH_LONG).show();
                     }
                 }
 
@@ -98,10 +97,8 @@ public class ExtractDataJson {
 
         } catch (JSONException e) {
             e.printStackTrace();
-            Toast.makeText(context, "Exception Arise", Toast.LENGTH_SHORT).show();
         } catch (Exception e) {
             e.printStackTrace();
-            Toast.makeText(context, "Exception Arise", Toast.LENGTH_SHORT).show();
         }
 
         return list;
@@ -176,10 +173,8 @@ public class ExtractDataJson {
 
         } catch (JSONException e) {
             e.printStackTrace();
-            Toast.makeText(context, "Exception Arise", Toast.LENGTH_SHORT).show();
         } catch (Exception e) {
             e.printStackTrace();
-            Toast.makeText(context, "Exception Arise", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -263,10 +258,8 @@ public class ExtractDataJson {
 
         } catch (JSONException e) {
             e.printStackTrace();
-            Toast.makeText(context, "Exception Arise", Toast.LENGTH_SHORT).show();
         } catch (Exception e) {
             e.printStackTrace();
-            Toast.makeText(context, "Exception Arise", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -308,10 +301,8 @@ public class ExtractDataJson {
 
         } catch (JSONException e) {
             e.printStackTrace();
-            Toast.makeText(context, "Exception Arise", Toast.LENGTH_SHORT).show();
         } catch (Exception e) {
             e.printStackTrace();
-            Toast.makeText(context, "Exception Arise", Toast.LENGTH_SHORT).show();
         }
 
         return date;
@@ -371,10 +362,8 @@ public class ExtractDataJson {
 
         } catch (JSONException e) {
             e.printStackTrace();
-            Toast.makeText(context, "Exception Arise", Toast.LENGTH_SHORT).show();
         } catch (Exception e) {
             e.printStackTrace();
-            Toast.makeText(context, "Exception Arise", Toast.LENGTH_SHORT).show();
         }
 
         return contents;
@@ -435,10 +424,8 @@ public class ExtractDataJson {
 
         } catch (JSONException e) {
             e.printStackTrace();
-            Toast.makeText(context, "Exception Arise", Toast.LENGTH_SHORT).show();
         } catch (Exception e) {
             e.printStackTrace();
-            Toast.makeText(context, "Exception Arise", Toast.LENGTH_SHORT).show();
         }
 
         return itemList;
@@ -602,10 +589,8 @@ public class ExtractDataJson {
 
         } catch (JSONException e) {
             e.printStackTrace();
-            Toast.makeText(context, "Exception Arise", Toast.LENGTH_SHORT).show();
         } catch (Exception e) {
             e.printStackTrace();
-            Toast.makeText(context, "Exception Arise", Toast.LENGTH_SHORT).show();
         }
 
         return itemList;

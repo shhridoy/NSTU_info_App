@@ -29,30 +29,11 @@ public class AnimationUtils {
         view.startAnimation(anim);
     }
 
-    public static void bottomToUpAnimation(View view, int duration) {
-        TranslateAnimation animation1 = new TranslateAnimation(0.0f, 0.0f, 1000.0f, 0.0f); // new TranslateAnimation(xFrom,xTo, yFrom,yTo)
-        animation1.setDuration(duration); // animation duration
-        //animation1.setRepeatCount(4); // animation repeat count if u want to repeat
-        animation1.setFillAfter(true);
-        view .startAnimation(animation1);//your_view for mine is imageView
-    }
-
     public static void rightToLeftAnimation (View view, int duration) {
-        TranslateAnimation animation = new TranslateAnimation(1000.0f, 0.0f, 0.0f, 0.0f); // new TranslateAnimation (float fromXDelta,float toXDelta, float fromYDelta, float toYDelta)
-        animation.setDuration(duration); // animation duration
-        //animation.setRepeatCount(8); // animation repeat count
-        //animation.setRepeatMode(2); // repeat animation (left to right, right to left)
+        TranslateAnimation animation = new TranslateAnimation(1000.0f, 0.0f, 0.0f, 0.0f);
+        animation.setDuration(duration);
         animation.setFillAfter(true);
-        view.startAnimation(animation);//your_view for mine is imageView
-    }
-
-    public static void leftToRightAnimation (View view, int duration) {
-        TranslateAnimation animation = new TranslateAnimation(-1000.0f, 0.0f, 0.0f, 0.0f);
-        animation.setDuration(duration); // animation duration
-        //animation.setRepeatCount(8); // animation repeat count
-        //animation.setRepeatMode(2); // repeat animation (left to right, right to left)
-        animation.setFillAfter(true);
-        view.startAnimation(animation);//your_view for mine is imageView
+        view.startAnimation(animation);
     }
 
 }

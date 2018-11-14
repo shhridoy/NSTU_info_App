@@ -190,27 +190,9 @@ public class WebviewActivity extends AppCompatActivity {
         if (id == android.R.id.home){
             finish();
         } else if (id == R.id.menu_item_open_external){
-            AlertDialog.Builder builder=new AlertDialog.Builder(this);
-            builder.setTitle(Html.fromHtml("<font color='#1976D2'>Open in browser!!</font>"));
-            builder.setMessage(Html.fromHtml("<font color='#000000'>Do you want to visit it using external browser?</font>"));
-            builder.setNegativeButton(Html.fromHtml("No"),new DialogInterface.OnClickListener() {
-
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    dialog.cancel();
-                }
-            });
-            builder.setPositiveButton(Html.fromHtml("Yes"),new DialogInterface.OnClickListener() {
-
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    Uri uri = Uri.parse(URL);
-                    Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-                    startActivity(intent);
-                }
-            });
-            AlertDialog alert = builder.create();
-            alert.show();
+            Uri uri = Uri.parse(URL);
+            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+            startActivity(intent);
             return true;
         }
 

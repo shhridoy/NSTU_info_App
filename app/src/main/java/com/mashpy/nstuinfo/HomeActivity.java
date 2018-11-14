@@ -75,6 +75,7 @@ public class HomeActivity extends AppCompatActivity
     private FloatingActionButton fab;
     private DrawerLayout drawer;
     private NavigationView navigationView;
+    MenuItem nav_last;
     private RelativeLayout navLL;
 
     private CoordinatorLayout coordinatorLayout;
@@ -116,6 +117,7 @@ public class HomeActivity extends AppCompatActivity
             }
             itemsList = dataJsonExtract.getMainItemsList();
             loadRecyclerView();
+            nav_last.setTitle(itemsList.get(itemsList.size()-1));
         }
 
         if (ReadWriteJson.readInitialJsonFile(this).equals("")) {
@@ -133,6 +135,7 @@ public class HomeActivity extends AppCompatActivity
                 }
                 itemsList = dataJsonExtract.getMainItemsList();
                 loadRecyclerView();
+                nav_last.setTitle(itemsList.get(itemsList.size()-1));
                 parseUrlAndCheckData(false);
             } else {
                 dataJsonExtract = new ExtractDataJson(this, ReadWriteJson.readDataFile(this));
@@ -141,6 +144,7 @@ public class HomeActivity extends AppCompatActivity
                 }
                 itemsList = dataJsonExtract.getMainItemsList();
                 loadRecyclerView();
+                nav_last.setTitle(itemsList.get(itemsList.size()-1));
             }
         }
 
@@ -236,6 +240,10 @@ public class HomeActivity extends AppCompatActivity
         toggle.syncState();
 
         navigationView = (NavigationView) findViewById(R.id.nav_view);
+
+        Menu menu = navigationView.getMenu();
+        nav_last = menu.findItem(R.id.nav_dev_msg);
+
         navigationView.setNavigationItemSelectedListener(this);
 
         navLL = navigationView.getHeaderView(0).findViewById(R.id.navLL);
@@ -396,6 +404,7 @@ public class HomeActivity extends AppCompatActivity
                         }
                         itemsList = dataJsonExtract.getMainItemsList();
                         loadRecyclerView();
+                        nav_last.setTitle(itemsList.get(itemsList.size()-1));
                         Toast.makeText(getApplicationContext(), "Data is updated!!", Toast.LENGTH_LONG).show();
                         ReadWriteJson.saveDataFile(HomeActivity.this, response);
                         if (initialResponse != null) {
@@ -500,9 +509,6 @@ public class HomeActivity extends AppCompatActivity
         } else if (id == R.id.nav_itemview) {
             itemViewDialog();
         } else if (id == R.id.nav_web_site) {
-            /*Uri uri = Uri.parse("http://nstu.edu.bd/");
-            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-            startActivity(intent);*/
             startActivity(new Intent(this, WebviewActivity.class));
         } else if (id == R.id.nav_dev_msg) {
             if (itemsList != null) {
@@ -543,7 +549,7 @@ public class HomeActivity extends AppCompatActivity
             circleMenu = layout.findViewById(R.id.circleMenu);
         }
 
-        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams( (int) (width*.95), (int) (height*.8) );
+        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams( (int) (width*.95), (int) (height*.84) );
 
         assert mainRL != null;
         mainRL.setLayoutParams(params);
@@ -589,10 +595,8 @@ public class HomeActivity extends AppCompatActivity
                     public void onMenuSelected(int index) {
                         if (index == 0) {
                             Preferences.setDarkTheme(HomeActivity.this, false);
-                            //Toast.makeText(getApplicationContext(), "Activating Light Theme...", Toast.LENGTH_LONG).show();
                         } else if (index == 1) {
                             Preferences.setDarkTheme(HomeActivity.this, true);
-                            //Toast.makeText(getApplicationContext(), "Activating Dark Theme...", Toast.LENGTH_LONG).show();
                         }
                         new Handler().postDelayed(new Runnable() {
                             @Override
