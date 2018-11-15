@@ -1,7 +1,7 @@
 [
 
 	{
-		"data_version": "1.3",
+		"data_version": "1.4",
 		"data": [
 
 			{
@@ -707,7 +707,27 @@
 							{
 								"title": "",
 								"hint": "",
-								"content": "<strong>Mr. Mohammad Ullah</strong> (Leave)<br /> Section Officer (Honours) Mobile: <a  href='tel:01717815750'>01717815750</a><br /> Email: <a  href='mailto:babarmgtjnu@yahoo.com'>babarmgtjnu@yahoo.com</a>"
+								"content": "<strong>Mr. Mohammad Ullah</strong> (Leave)<br /> Section Officer (Honours)<br /> Mobile: <a  href='tel:01717815750'>01717815750</a><br /> Email: <a  href='mailto:babarmgtjnu@yahoo.com'>babarmgtjnu@yahoo.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "<strong>Mrs. Zenat Ara Chowdhury</strong><br /> Mobile: <a  href='tel:01749166690'>01749166690</a><br /> Email: <a  href='mailto:zenatarawazid@gmail.com'>zenatarawazid@gmail.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "Senior Assistant cum Computer operator",
+								"content": "<strong>Mr. Md. Abu Yusuf</strong><br /> Mobile: <a href='tel:01823579366'>01823579366</a><br /> Email: <a href='mailto:manikabuyusuf@gmail.com'>manikabuyusuf@gmail.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "LDA",
+								"content": "<strong>Mr. Md. Anowar Hossain Joy</strong><br /> Mobile: <a href='tel:01839459520'>01839459520</a><br /> Email: <a href='mailto:joy03like@gmail.com'>joy03like@gmail.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "Security Guard",
+								"content": "<strong>Jahed Hossain</strong><br /> Mobile: <a href='tel:01855966218'>01855966218</a>"
 							},
 							{
 								"title": "",
@@ -1219,32 +1239,87 @@
 					{
 						"title": "",
 						"hint": "",
-						"content": "Librarian<br /><strong>Mr. Md. Jahangir Hossain</strong><br />Phone: <a  href='tel:72729'>72729</a><br />Mobile: <a  href='tel:01716068982'>01716068982</a><br />Email: <a  href='mailto:nstulib9@yahoo.com'>nstulib9@yahoo.com</a>"
+						"content": "Librarian<br /> <strong>Mr. Md. Jahangir Hossain</strong><br /> Phone: <a  href='tel:72729'>72729</a><br />Mobile: <a  href='tel:01716068982'>01716068982</a><br /> Email: <a  href='mailto:nstulib9@yahoo.com'>nstulib9@yahoo.com</a>"
 					},
 					{
 						"title": "",
 						"hint": "",
-						"content": "Assistant Librarian<br /><strong>Mr. Md. Salim Mia</strong><br />Mobile: <a  href='tel:01724571661'>01724571661</a><br />Email: <a  href='mailto:mdsalimmia5178@gmail.com'>mdsalimmia5178@gmail.com</a>"
+						"content": "Assistant Librarian<br /> <strong>Mr. Md. Salim Mia</strong><br /> Mobile: <a  href='tel:01724571661'>01724571661</a><br /> Email: <a  href='mailto:mdsalimmia5178@gmail.com'>mdsalimmia5178@gmail.com</a>"
 					},
 					{
 						"title": "",
 						"hint": "",
-						"content": "Documentation Officer<br /><strong>Mr. Md. Babor Ali</strong><br />Mobile: <a  href='tel:01722936805'>01722936805</a><br />Email: <a  href='mailto:baboraliru@gmail.com'>baboraliru@gmail.com</a>"
+						"content": "Assistant Librarian<br /> <strong>Mr. Md. Babor Ali</strong><br /> Mobile: <a  href='tel:01722936805'>01722936805</a><br /> Email: <a  href='mailto:baborali.nstu@gmail.com'>baborali.nstu@gmail.com</a>"
 					},
 					{
 						"title": "",
 						"hint": "",
-						"content": "Assistant Computer Programer<br /><strong>Mr. Foiz Ahmed</strong><br />Mobile: <a  href='tel:01768533746'>01768533746</a><br />Email: <a  href='mailto:foizahmed54@gmail.com'>foizahmed54@gmail.com</a>"
+						"content": "Section Officer<br /> <strong>Mr. Sayed Hossain</strong><br /> Mobile: <a  href='tel:01838322400'>01838322400</a><br /> Email: <a  href='mailto:sayed.nstu@gmail.com'>sayed.nstu@gmail.com</a>"
 					},
 					{
 						"title": "",
 						"hint": "",
-						"content": "Section Officer<br /><strong>Mr. Sayed Hossain</strong><br />Mobile: <a  href='tel:01920664044'>01920664044</a><br />Email: <a  href='mailto:sayed.nstu@gmail.com'>sayed.nstu@gmail.com</a>"
+						"content": "Assistant Programer<br /> <strong>Mr. Foiz Ahmed</strong><br /> Mobile: <a  href='tel:01838322422'>01838322422</a><br /> Email: <a  href='mailto:foiz.nstu@gmail.com'>foiz.nstu@gmail.com</a>"
 					},
 					{
 						"title": "",
 						"hint": "",
-						"content": "Cataloguer<br /><strong>Mr. Helal Uddin</strong><br />Phone: <a  href='tel:01723967788'>01723967788</a><br />Email: <a  href='mailto:helaluddin2928@gmail.com'>helaluddin2928@gmail.com</a>"
+						"content": "Cataloger<br /> <strong>Mr. Helal Uddin</strong><br /> Mobile: <a href='tel:01723967788'>01723967788</a><br /> Email: <a href='mailto:helaluddin29282@gmail.com'>helaluddin29282@gmail.com</a>"
+					},
+					{
+						"title": "",
+						"hint": "",
+						"content": "Cataloger<br /> <strong>Mr. Md. Mohiuddin</strong><br /> Mobile: <a href='tel:01628278517'>01628278517</a><br /> Email: <a href='mailto:mohiuddinnstu37@gmail.com'>mohiuddinnstu37@gmail.com</a>"
+					},
+					{
+						"title": "",
+						"hint": "",
+						"content": "Computer Operator<br /> <strong>Mr. Md. Mohiuddin</strong><br /> Mobile: <a href='tel:01814313731'>01814313731</a>"
+					},
+					{
+						"title": "",
+						"hint": "",
+						"content": "LDA-cum-computer operator<br /> <strong>Mrs. Shahain Akther</strong><br /> Mobile: <a href='tel:01725308388'>01725308388</a>"
+					},
+					{
+						"title": "",
+						"hint": "",
+						"content": "LDA-cum-computer operator<br /> <strong>Mrs. Shahida Sultana</strong><br /> Mobile: <a href='tel:01918171280'>01918171280</a>"
+					},
+					{
+						"title": "",
+						"hint": "",
+						"content": "LDA-cum-computer operator<br /> <strong>Mrs. Sharmin Akhter</strong><br /> Mobile: <a href='tel:01874948780'>01874948780</a>"
+					},
+					{
+						"title": "",
+						"hint": "",
+						"content": "LDA-cum-computer operator<br /> <strong>Mrs. Farvin Akter</strong><br /> Mobile: <a href='tel:01827496481'>01827496481</a>"
+					},
+					{
+						"title": "",
+						"hint": "",
+						"content": "Library Attendant<br /> <strong>Mrs. Rune Akter</strong><br /> Mobile: <a href='tel:01812618202'>01812618202</a>"
+					},
+					{
+						"title": "",
+						"hint": "",
+						"content": "Office Assistant<br /> <strong>Mr. Md. Mohon</strong><br /> Mobile: <a href='tel:01731727718'>01731727718</a>"
+					},
+					{
+						"title": "",
+						"hint": "",
+						"content": "Office Assistant<br /> <strong>Mrs. Julekha Chowdhury</strong><br /> Mobile: <a href='tel:01835001035'>01835001035</a>"
+					},
+					{
+						"title": "",
+						"hint": "",
+						"content": "Cleaner<br /> <strong>Sopon Robi Das</strong><br /> Mobile: <a href='tel:01775698545'>01775698545</a>"
+					},
+					{
+						"title": "",
+						"hint": "",
+						"content": "Cleaner<br /> <strong>Mukta Baspo</strong><br /> Mobile: <a href='tel:01790803468'>01790803468</a>"
 					}
 				]
 			},
@@ -1520,9 +1595,9 @@
 						"title_hint": "",
 						"title": "Electrical and Electronic Engineering (EEE)",
 						"contents": [{
-								"title": "<u><strong>Professor &apm; Chairman</strong></u>",
+								"title": "<u><strong>Professor &amp; Chairman</strong></u>",
 								"hint": "",
-								"content": "<strong>Dr. Md. Abdur Rashid</strong><br /> Mobile: <a  href='tel:01999827326'>01999827326</a><br /> Email: <a  href='mailto:rashid68@yahoo.com'>rashid68@yahoo.com</a>"
+								"content": "<strong>Prof. Dr. Md. Abdur Rashid</strong><br /> Mobile: <a  href='tel:01999827326'>01999827326</a><br /> Email: <a  href='mailto:rashid68@yahoo.com'>rashid68@yahoo.com</a>"
 							},
 							{
 								"title": "<u><strong>Lecturer</strong></u>",
@@ -1532,7 +1607,22 @@
 							{
 								"title": "",
 								"hint": "",
-								"content": "<strong>Mr. Md. Osman Ali</strong> (Temporary)<br /> Mobile: <a  href='tel:01737328055'>01737328055</a><br /> Email: <a  href='mailto:osman2k11@yahoo.com'>osman2k11@yahoo.com</a>"
+								"content": "<strong>Mr. Md. Osman Ali</strong> <br /> Mobile: <a  href='tel:01737328055'>01737328055</a><br /> Email: <a  href='mailto:osman2k11@yahoo.com'>osman2k11@yahoo.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "<strong>Mr. S.M. Jahadun-Nobi</strong> <br /> Mobile: <a  href='tel:01521453101'>01521453101</a><br /> Email: <a  href='mailto:smjnobi@gmail.com'>smjnobi@gmail.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "<strong>Mr. Shakil Mahmud Boby</strong> <br /> Mobile: <a  href='tel:01716631443'>01716631443</a><br /> Email: <a  href='mailto:shakilmahmud.eee97@gmail.com'>shakilmahmud.eee97@gmail.com</a>"
+							},
+							{
+								"title": "",
+								"hint": "",
+								"content": "<strong>Mrs. Saptami Rani</strong> <br /> Mobile: <a  href='tel:01765965365'>01765965365</a><br /> Email: <a  href='mailto:saptamirani53@gmail.com'>saptamirani53@gmail.com</a>"
 							}
 						]
 					},
@@ -2147,22 +2237,27 @@
 						"contents": [{
 								"title": "<u><strong>Assistant Professor &amp; Chairman</strong></u>",
 								"hint": "",
-								"content": "<strong>Mr. Md. Golam Mustafa</strong><br /> Mobile: <a  href='tel:01712186434'>01712186434</a><br/> Email: <a  href='mailto:mustafa.ocn@nstu.edu.bd'>mustafa.ocn@nstu.edu.bd</a>"
+								"content": "<strong>Mr. Md. Golam Mustafa</strong><br /> Mobile: <a  href='tel:01712186434'>01712186434</a><br/> Email: <a  href='mailto:mustafa.nstu2016@gmail.com'>mustafa.nstu2016@gmail.com</a>"
 							},
 							{
 								"title": "<u><strong>Assistant Professor</strong></u>",
 								"hint": "",
-								"content": "<strong>Dr. Md. Abdul Momin Siddique</strong><br /> Mobile: <a  href='tel:01744134451'>01744134451</a><br/> Email: <a  href='mailto:siddique@nstu.edu.bd'>siddique@nstu.edu.bd</a>"
+								"content": "<strong>Dr. Md. Abdul Momin Siddique</strong><br /> Mobile: <a  href='tel:01744134451'>01744134451</a>, <a  href='tel:01825411177'>01825411177</a><br/> Email: <a  href='mailto:siddique.ocn@nstu.edu.bd'>siddique.ocn@nstu.edu.bd</a>"
+							},
+							{
+								"title": "<u><strong>Lecturer</strong></u>",
+								"hint": "",
+								"content": "<strong>Md. Sohel Parvez</strong><br /> Mobile: <a  href='tel:01739924324'>01739924324</a><br/> Email: <a href='mailto:sohel@nstu.edu.bd'>sohel@nstu.edu.bd</a>, <a  href='mailto:msparverz191@gmail.com'>msparverz191@gmail.com</a>"
 							},
 							{
 								"title": "",
 								"hint": "",
-								"content": "<u><strong>Lecturer</strong></u> <strong>Md. Sohel Parvej</strong><br /> Mobile: <a  href='tel:01739924324'>01739924324</a><br/> Email: <a  href='mailto:sohel@nstu.edu.bd'>sohel@nstu.edu.bd</a>"
+								"content": "<strong>Md. Najmus Sakib Khan</strong><br /> Mobile: <a  href='tel:01864222747'>01864222747</a><br/> Email: <a  href='mailto:nsakib.iium@gmail.com'>nsakib.iium@gmail.com</a>"
 							},
 							{
 								"title": "",
 								"hint": "",
-								"content": "<u><strong>Lecturer</strong> (Temporary)</u> <strong>Md. Najmus Sakib Khan</strong><br /> Mobile: <a  href='tel:01864222747'>01864222747</a><br/> Email: <a  href='mailto:nsakib@nstu.edu.bd'>nsakib@nstu.edu.bd</a>"
+								"content": "<strong>Razat Suvra Das</strong><br /> Mobile: <a  href='tel:01715871819'>01715871819</a>, <a  href='tel:01923467639'>01923467639</a><br/> Email: <a  href='mailto:razat.ocn@nstu.edu.bd'>razat.ocn@nstu.edu.bd</a>, <a  href='mailto:razatsuvra@gmail.com'>razatsuvra@gmail.com</a>"
 							}
 						]
 					},
@@ -2619,6 +2714,21 @@
 								"title" : "",
 								"hint" : "<strong><u>Assistant Registrar</u></strong>",
 								"content" : "<strong>Mrs. Riyanta Sultana</strong><br /> Mobile: <a  href='tel:01711124658'>01711124658</a><br /> Email: <a  href='mailto:riyantanstu@gmail.com'>riyantanstu@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "<strong><u>Lower division Assistant cum computer operator</u></strong>",
+								"content" : "<strong>Md. Mahamudul Hasan</strong><br /> Mobile: <a  href='tel:01720267177'>01720267177</a><br /> Email: <a  href='mailto:riyantanstu@gmail.com'>riyantanstu@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "<strong><u>Lab attendent</u></strong>",
+								"content" : "<strong>Mahmudul Hasan</strong><br /> Mobile: <a  href='tel:01744250323'>01744250323</a><br /> Email: <a  href='mailto:nstu11042018@gmail.com'>nstu11042018@gmail.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "<strong><u>Office Assistant</u></strong>",
+								"content" : "<strong>Mosleh Uddin</strong><br /> Mobile: <a  href='tel:01832906207'>01832906207</a><br /> Email: <a  href='mailto:didarkhan39@gmail.com'>didarkhan39@gmail.com</a>"
 							}
 						]
 					},
@@ -2752,8 +2862,18 @@
 						"title": "Department of Oceanography",
 						"contents": [{
 								"title" : "",
+								"hint" : "<u>Section officer</u>",
+								"content" : "<strong>Md. Abdullah Al Mamun</strong><br /> Mobile: <a  href='tel:01720175283'>01720175283</a><br /> Email: <a  href='mailto:nstu_library@yahoo.com'>nstu_library@yahoo.com</a>"
+							},
+							{
+								"title" : "",
+								"hint" : "<u>Master Roll</u>",
+								"content" : "<strong>Md. Yeasin Chowdhury</strong><br /> Mobile: <a  href='tel:01775163057'>01775163057</a>"
+							},
+							{
+								"title" : "",
 								"hint" : "",
-								"content" : "Section officer<br /> <strong>Md. Abdullah Al Mamun</strong><br /> Mobile: <a  href='tel:01720175283'>01720175283</a><br /> Email: <a  href='mailto:nstu_library@yahoo.com'>nstu_library@yahoo.com</a>"
+								"content" : "<strong>Solaiman Rakib</strong><br /> Mobile: <a href='tel:01814138010'>01814138010</a>, <a href='tel:01682514878'>01682514878</a>"
 							}
 						]
 					},
@@ -5112,29 +5232,29 @@
 			{
 				"item" : "About NSTUinfo",
 				"details" : [{
-						"title": "",
+						"title": "About Version 4.0",
 						"hint": "",
-						"content": ""
+						"content": "This app has been updated for the 4th times since 2014. At this time the app has been updated based on NSTU diary 2018. Though we tried to update the recent changes. For the user's concern, even if the app publishes today then you will notice lots of changes between a week. It is normal to have changes in a place like a university. It is really difficult to keep tracks of the changes regularly. So if anyone will found something wrong or irrelevant, please try to inform us about those on the email below:<br /> <a href='mailto:nstuinfoandroid@gmail.com'>nstuinfoandroid@gmail.com</a><br /> We will check your information and then update the information on the server. You will notice the updates on the app instantly as soon as we update the information on the server. So in order to get updated data all you need to do is keep your data connection on and the app will automatically notify you about the data updates. Another way to check if there any updates are available is clicking the pink floating button on the bottom of the app and you need to keep your data connection on as well."
 					},
 					{
-						"title": "",
+						"title": "User Guidelines",
 						"hint": "",
-						"content": ""
+						"content": "In this version of the app, we're trying to focus on the user interfaces. There are two themes available in the app, one of which is light mode and another one is dark mode. Users can change the font appearance and list item view from the navigation drawer. Users don't need to use an external browser to explore the official site of NSTU. Hence they can browse it in the app. There are some animations available too in this version which will help the users to achieve better UI experience.<br /> To have updated data any time, users need to keep their data connection on. If there are any updates available on the server, the app will notify users about that updates while users open the app."
 					},
 					{
-						"title": "",
+						"title": "Owner",
 						"hint": "",
-						"content": ""
+						"content": "<strong>Cyber Center, NSTU</strong>"
 					},
 					{
-						"title": "",
+						"title": "Founder",
 						"hint": "",
-						"content": ""
+						"content": "<strong>Mashpy Rahman</strong><br /> CSTE 5th batch"
 					},
 					{
-						"title": "",
-						"hint": "",
-						"content": ""
+						"title": "Developer",
+						"hint": "Version 4.0",
+						"content": "<strong>Md. Saiful Haque (Hridoy)</strong><br /> CSTE 10th batch<br /> Email: <a href='mailto:md.saifulhq@gmail.com'>md.saifulhq@gmail.com</a>"
 					},
 					{
 						"title": "",
