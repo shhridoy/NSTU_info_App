@@ -10,7 +10,7 @@
 
     <string name="about"><font color='#0D47A1'>About</font></string>
     <string name="title_activity_webview">WebviewActivity</string>
-    <string name="app_customization"><font color='#0D47A1'>App customization</font></string>
+    <string name="preferences"><font color='#0D47A1'>Preferences</font></string>
 
 
 </resources>
