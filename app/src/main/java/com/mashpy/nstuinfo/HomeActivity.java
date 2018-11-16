@@ -199,6 +199,8 @@ public class HomeActivity extends AppCompatActivity
             }
         });
 
+        fab.hide();
+
         mRecyclerView = findViewById(R.id.recyclerView);
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.addItemDecoration(new SpacesItemDecoration(1));
@@ -221,7 +223,7 @@ public class HomeActivity extends AppCompatActivity
                         public void run() {
                             fab.hide();
                         }
-                    }, 6000);
+                    }, 3000);
 
                 }
 
