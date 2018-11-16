@@ -39,6 +39,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.Window;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.PopupWindow;
 import android.widget.RadioButton;
 import android.widget.RelativeLayout;
@@ -72,7 +73,7 @@ public class HomeActivity extends AppCompatActivity
 
     private Toolbar toolbar;
     private TextView appBarTitleTV;
-    private FloatingActionButton fab;
+    private ImageButton syncBtn;
     private DrawerLayout drawer;
     private NavigationView navigationView;
     MenuItem nav_last;
@@ -185,8 +186,8 @@ public class HomeActivity extends AppCompatActivity
         //noinspection ConstantConditions
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
-        fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        syncBtn = findViewById(R.id.syncBtn);
+        syncBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (isInternetOn()) {
@@ -199,7 +200,7 @@ public class HomeActivity extends AppCompatActivity
             }
         });
 
-        fab.hide();
+        syncBtn.setVisibility(View.GONE);
 
         mRecyclerView = findViewById(R.id.recyclerView);
         mRecyclerView.setHasFixedSize(true);
@@ -216,14 +217,14 @@ public class HomeActivity extends AppCompatActivity
                         event.getAction() == MotionEvent.ACTION_UP||
                         event.getAction() == MotionEvent.ACTION_SCROLL) {
 
-                    fab.show();
+                    syncBtn.setVisibility(View.VISIBLE);
 
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
-                            fab.hide();
+                            syncBtn.setVisibility(View.INVISIBLE);
                         }
-                    }, 3000);
+                    }, 4000);
 
                 }
 
